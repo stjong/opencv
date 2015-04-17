@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include <opencv2\videoio\cap_winrt\WinRTVideoCapture.hpp>
+#include <opencv2\videoio.hpp>
 
 // Renders Direct2D and 3D content on the screen.
 namespace VideoCapture
@@ -13,12 +14,15 @@ namespace VideoCapture
         void start();
         void start(int width, int height);
         void stop();
+        void showFrame();
+        Concurrency::task<cv::Mat> getFrameAsync();
 
     private:
         Windows::UI::Xaml::Media::Imaging::WriteableBitmap^ m_bitmap;
-        HWinRTVideoCapture m_capture;
         unsigned int m_width;
         unsigned int m_height;
+        std::function<void(const cv::Mat& mat)> m_callback;
+        cv::VideoCapture m_cvCapture;
 
         Windows::UI::Xaml::Controls::Image^ m_image;
     };

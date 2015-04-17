@@ -83,24 +83,43 @@ void AppMain::start(int width, int height)
     start();
 }
 
+void AppMain::showFrame()
+{
+    create_task(getFrameAsync()).then([this](cv::Mat& frame)
+    {
+        if (!frame.empty()) {
+            m_callback(frame);
+        }
+
+        showFrame();
+    }, task_continuation_context::use_current());
+}
+
+Concurrency::task<cv::Mat> AppMain::getFrameAsync()
+{
+    return create_task([this]() -> cv::Mat
+    {
+        cv::Mat frame;
+        m_cvCapture >> frame; // get a new frame from camera
+
+        return frame;
+    }, task_continuation_context::use_current());
+
+}
+
 void AppMain::start()
 {
     // create a WriteableBitmap
     m_bitmap = ref new WriteableBitmap(m_width, m_height);
 
     // create the Video Capture device
-    cv::VideoCapture cap(0); // open the default camera
-    auto hcap = std::make_shared<cv::VideoCapture>(cap);
+    m_cvCapture = cv::VideoCapture(0); // open the default camera
+    auto hcap = std::make_shared<cv::VideoCapture>(m_cvCapture);
 
-    const std::function<void(const cv::Mat& mat)>& callback = [this](const cv::Mat& mat)
+    m_callback = [this](const cv::Mat& mat)
     {
         if (mat.empty()) return;
 
-        // copy processed image into the WriteableBitmap
-        // Fails here with:
-        //   First-chance exception at 0x76BD4598 (KernelBase.dll) in VideoCapture.Windows.exe: 0x40080201: WinRT originate error (parameters: 0x8001010E, 0x00000051, 0x063AE5F4).
-        //   Microsoft C++ exception : Platform::WrongThreadException ^ at memory location 0x063AEA94.HRESULT : 0x8001010E 
-        //   The application called an interface that was marshalled for a different thread.
         auto buffer = m_bitmap->PixelBuffer;
         auto pointer = GetPointerToPixelData(buffer);
         memcpy(pointer, mat.data, m_width * m_height * mat.step.buf[1]);
@@ -110,42 +129,10 @@ void AppMain::start()
         m_bitmap->Invalidate();
     };
 
-    auto workItem = ref new Windows::System::Threading::WorkItemHandler(
-        [this, hcap, callback](IAsyncAction^ workItem)
+    create_task([](){}).then([this]()
     {
-        cv::Mat edges;
-        for (;;)
-        {
-            cv::Mat frame;
-            *hcap >> frame; // get a new frame from camera
-
-            if (frame.empty()) continue;
-
-            callback(frame);
-        }
-    });
-
-    auto asyncAction = Windows::System::Threading::ThreadPool::RunAsync(workItem);
-
-    //m_capture = WinRTVideoCapture::create(m_width, m_height);
-
-    //// start capturing video. Callback will happen on the UI thread
-    //m_capture->start([this](const cv::Mat& mat) {
-    //    // convert to grayscale
-    //    cv::Mat intermediateMat;
-    //    cv::cvtColor(mat, intermediateMat, CV_RGB2GRAY);
-
-    //    // convert to BGRA
-    //    cv::Mat output;
-    //    cv::cvtColor(intermediateMat, output, CV_GRAY2BGRA);
-
-    //    // copy processed image into the WriteableBitmap
-    //    memcpy(GetPointerToPixelData(m_bitmap->PixelBuffer), output.data, m_width * m_height * 4);
-
-    //    // display the image
-    //    m_image->Source = m_bitmap;
-    //    m_bitmap->Invalidate();
-    //});
+        showFrame();
+    }, task_continuation_context::use_current());
 }
 
 void AppMain::stop()
