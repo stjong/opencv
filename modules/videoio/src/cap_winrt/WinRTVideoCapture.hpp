@@ -31,6 +31,7 @@ public:
     ~WinRTVideoCapture();
     void start(const std::function<void(const cv::Mat& mat)>& callback);
     void stop();
+    CvSize WinRTVideoCapture::getSize();
 
 
 private:
@@ -94,7 +95,11 @@ bool CvCapture_WinRT::open() {
     unsigned offset = 0;
     close();
 
-    m_capture = WinRTVideoCapture::create(640, 360);
+    int width = 640, height = 360;
+    m_capture = WinRTVideoCapture::create(width, height);
+
+    m_frame = cvCreateImage(m_capture->getSize(), 8, 4);
+    cvZero(m_frame);
 
     // start capturing video. Callback will happen on the UI thread
     m_capture->start([this](const cv::Mat& mat) {
@@ -108,12 +113,8 @@ bool CvCapture_WinRT::open() {
 
         if (m_frame) cvReleaseImage(&m_frame);
 
-        //*m_frame = output;
-        //m_frame = new IplImage(output);
-        //*m_frame = output.clone();
-
-        // Fails here. Actual failure takes place at core/copy.cpp:335
-        m_frame = new IplImage(output.clone());
+        // copy constructor is invoked here
+        *m_frame = output;
     });
 
     m_firstframe = offset;

@@ -83,3 +83,8 @@ void WinRTVideoCapture::GrabFrameAsync(::Media::CaptureFrameGrabber^ frameGrabbe
         GrabFrameAsync(frameGrabber);
     }, task_continuation_context::use_current());
 }
+
+// return the size of the image
+CvSize WinRTVideoCapture::getSize() {
+    return cvSize(m_width, m_height);
+}

@@ -92,12 +92,18 @@ void AppMain::start()
     cv::VideoCapture cap(0); // open the default camera
     auto hcap = std::make_shared<cv::VideoCapture>(cap);
 
-    const std::function<void(const cv::Mat& mat)>& callback = [this](const cv::Mat& mat) 
+    const std::function<void(const cv::Mat& mat)>& callback = [this](const cv::Mat& mat)
     {
         if (mat.empty()) return;
 
         // copy processed image into the WriteableBitmap
-        memcpy(GetPointerToPixelData(m_bitmap->PixelBuffer), mat.data, m_width * m_height * 4);
+        // Fails here with:
+        //   First-chance exception at 0x76BD4598 (KernelBase.dll) in VideoCapture.Windows.exe: 0x40080201: WinRT originate error (parameters: 0x8001010E, 0x00000051, 0x063AE5F4).
+        //   Microsoft C++ exception : Platform::WrongThreadException ^ at memory location 0x063AEA94.HRESULT : 0x8001010E 
+        //   The application called an interface that was marshalled for a different thread.
+        auto buffer = m_bitmap->PixelBuffer;
+        auto pointer = GetPointerToPixelData(buffer);
+        memcpy(pointer, mat.data, m_width * m_height * mat.step.buf[1]);
 
         // display the image
         m_image->Source = m_bitmap;
