@@ -88,11 +88,21 @@ void AppMain::showFrame()
     create_task(getFrameAsync()).then([this](cv::Mat& frame)
     {
         if (!frame.empty()) {
-            m_callback(frame);
+            // Executing code on UI thread
+            // NOTE: CoreDispatcher::RunAsync() fails compilation
+            m_image->Dispatcher->RunAsync(
+                Windows::UI::Core::CoreDispatcherPriority::Normal,
+                //ref new DispatchedHandler([this, frame]()
+                ref new DispatchedHandler([=]()
+                    {
+                        m_callback(frame);
+                    }, CallbackContext::Any
+                )
+             );
         }
 
         showFrame();
-    }, task_continuation_context::use_current());
+    }, task_continuation_context::use_arbitrary());
 }
 
 Concurrency::task<cv::Mat> AppMain::getFrameAsync()
@@ -103,7 +113,7 @@ Concurrency::task<cv::Mat> AppMain::getFrameAsync()
         m_cvCapture >> frame; // get a new frame from camera
 
         return frame;
-    }, task_continuation_context::use_current());
+    }, task_continuation_context::use_arbitrary());
 
 }
 
@@ -129,10 +139,7 @@ void AppMain::start()
         m_bitmap->Invalidate();
     };
 
-    create_task([](){}).then([this]()
-    {
-        showFrame();
-    }, task_continuation_context::use_current());
+    showFrame();
 }
 
 void AppMain::stop()
