@@ -25,5 +25,7 @@ namespace VideoCapture
         cv::VideoCapture m_cvCapture;
 
         Windows::UI::Xaml::Controls::Image^ m_image;
+        Windows::UI::Core::CoreDispatcher^ m_dispatcher;
+        cv::Mat m_frame;
     };
 }
