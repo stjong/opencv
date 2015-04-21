@@ -7,8 +7,6 @@
 
 #include "MainPage.g.h"
 #include "AppMain.h"
-
-#include <opencv2\videoio\cap_winrt\WinRTVideoCapture.hpp>
 #include <memory>
 
 namespace VideoCapture

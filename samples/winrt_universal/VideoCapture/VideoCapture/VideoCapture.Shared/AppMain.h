@@ -1,6 +1,5 @@
 ﻿#pragma once
 
-#include <opencv2\videoio\cap_winrt\WinRTVideoCapture.hpp>
 #include <opencv2\videoio.hpp>
 
 // Renders Direct2D and 3D content on the screen.

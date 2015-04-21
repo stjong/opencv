@@ -27,7 +27,6 @@ using namespace Windows::Devices::Enumeration;
 using namespace concurrency;
 
 
-#include <opencv2\videoio\cap_winrt\WinRTVideoCapture.hpp>
 #include <opencv2\imgproc\types_c.h>
 #include <opencv2\core\core.hpp>
 #include <opencv2\imgproc\imgproc.hpp>
