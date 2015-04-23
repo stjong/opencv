@@ -138,4 +138,3 @@ CvCapture* cvCreateCameraCapture_WinRT(int index)
     delete capture;
     return 0;
 }
-

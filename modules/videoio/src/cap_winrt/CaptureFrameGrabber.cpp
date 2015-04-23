@@ -21,8 +21,6 @@ using namespace concurrency;
 using namespace Microsoft::WRL::Details;
 using namespace Microsoft::WRL;
 
-
-
 task<Media::CaptureFrameGrabber^> Media::CaptureFrameGrabber::CreateAsync(_In_ MediaCapture^ capture, _In_ VideoEncodingProperties^ props, CaptureStreamType streamType)
 {
     auto reader = ref new Media::CaptureFrameGrabber(capture, props, streamType);
@@ -83,12 +81,12 @@ Media::CaptureFrameGrabber::~CaptureFrameGrabber()
 
 void Media::CaptureFrameGrabber::ShowCameraSettings()
 {
-#if WINAPI_FAMILY!=WINAPI_FAMILY_PHONE_APP
+//#if WINAPI_FAMILY!=WINAPI_FAMILY_PHONE_APP
     if (_state == State::Started)
     {
         CameraOptionsUI::Show(_capture.Get());
     }
-#endif
+//#endif
 }
 
 task<void> Media::CaptureFrameGrabber::FinishAsync()

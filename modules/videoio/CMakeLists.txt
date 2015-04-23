@@ -38,10 +38,16 @@ file(GLOB videoio_ext_hdrs
 # Enabling it for Windows Phone 8.1 only.
 if(WINRT_8_1)
     list(APPEND videoio_srcs
+        ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt_highgui.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt_video.cpp
         ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt/CaptureFrameGrabber.cpp
         ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt/MediaStreamSink.cpp
         ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt/WinRTVideoCapture.cpp)
     list(APPEND videoio_hdrs
+        ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt.hpp
+        ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt_highgui.hpp
+        ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt_video.hpp
         ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt/WinRTVideoCapture.hpp
         ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt/MFIncludes.hpp
         ${CMAKE_CURRENT_LIST_DIR}/src/cap_winrt/CaptureFrameGrabber.hpp

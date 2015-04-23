@@ -7,65 +7,65 @@
 //
 //*@@@---@@@@******************************************************************
 
-#pragma once
+//#pragma once
 
-#include <windows.h>
-#include <guiddef.h>
-#include <mfidl.h>
-#include <Mfapi.h>
+//#include <windows.h>
+//#include <guiddef.h>
+//#include <mfidl.h>
+//#include <Mfapi.h>
 
-#ifdef WINRT_STORE // Available in Modern Desktop SDK only
-    #include <mfplay.h>
-#endif
-
-#include <mfobjects.h>
-#include <tchar.h>
-#include <strsafe.h>
-#include <Mfreadwrite.h>
-#include <new>
-#include <map>
-#include <vector>
-#include <string>
-#include <stdio.h>
-#include <stdarg.h>
-#include <string.h>
-
-#ifdef _MSC_VER
-#pragma warning(disable:4503)
-#pragma comment(lib, "mfplat")
-#pragma comment(lib, "mf")
-#pragma comment(lib, "mfuuid")
-
-// TODO: not available on ARM (WS 8.1)
 //#ifdef WINRT_STORE // Available in Modern Desktop SDK only
-//    #pragma comment(lib, "Strmiids")
+//    #include <mfplay.h>
 //#endif
 
-#pragma comment(lib, "Mfreadwrite")
+//#include <mfobjects.h>
+//#include <tchar.h>
+//#include <strsafe.h>
+//#include <Mfreadwrite.h>
+//#include <new>
+//#include <map>
+//#include <vector>
+//#include <string>
+//#include <stdio.h>
+//#include <stdarg.h>
+//#include <string.h>
 
-#if (WINVER >= 0x0602) // Available since Win 8
-// TODO: not available on ARM (WS 8.1)
-//#ifdef WINRT_STORE // Available in Modern Desktop SDK only
-//#pragma comment(lib, "MinCore_Downlevel")
+//#ifdef _MSC_VER
+//#pragma warning(disable:4503)
+//#pragma comment(lib, "mfplat")
+//#pragma comment(lib, "mf")
+//#pragma comment(lib, "mfuuid")
+
+//// TODO: not available on ARM (WS 8.1)
+////#ifdef WINRT_STORE // Available in Modern Desktop SDK only
+////    #pragma comment(lib, "Strmiids")
+////#endif
+
+//#pragma comment(lib, "Mfreadwrite")
+
+//#if (WINVER >= 0x0602) // Available since Win 8
+//// TODO: not available on ARM (WS 8.1)
+////#ifdef WINRT_STORE // Available in Modern Desktop SDK only
+////#pragma comment(lib, "MinCore_Downlevel")
+////#endif
+//#endif // WINVER >= 0x0602
+//#endif // _MSC_VER
+
+//#include <mferror.h>
+
+//// for ComPtr usage
+//#include <wrl/client.h>
+//#ifdef __cplusplus_winrt
+//#include <agile.h>
+//#include <vccorlib.h>
 //#endif
-#endif // WINVER >= 0x0602
-#endif // _MSC_VER
 
-#include <mferror.h>
-
-// for ComPtr usage
-#include <wrl/client.h>
-#ifdef __cplusplus_winrt
-#include <agile.h>
-#include <vccorlib.h>
-#endif
-
-#include <wrl\async.h>
-#include <wrl\implements.h>
-#include <wrl\module.h>
-#include <wrl\wrappers\corewrappers.h>
-#include <windows.media.capture.h>
-#include <windows.devices.enumeration.h>
+//#include <wrl\async.h>
+//#include <wrl\implements.h>
+//#include <wrl\module.h>
+//#include <wrl\wrappers\corewrappers.h>
+//#include <windows.media.capture.h>
+//#include <windows.devices.enumeration.h>
 
 #include "MediaStreamSink.hpp"
 #include "MFIncludes.hpp"
@@ -76,9 +76,11 @@ using namespace Platform;
 using namespace Windows::Foundation;
 
 MediaStreamSink::MediaStreamSink(
-    __in const MW::ComPtr<IMFMediaSink>& sink,
+//    __in const MW::ComPtr<IMFMediaSink>& sink,
+    __in const ComPtr<IMFMediaSink>& sink,
     __in DWORD id,
-    __in const MW::ComPtr<IMFMediaType>& mt,
+//    __in const MW::ComPtr<IMFMediaType>& mt,
+    __in const ComPtr<IMFMediaType>& mt,
     __in MediaSampleHandler^ sampleHandler
     )
     : _shutdown(false)
