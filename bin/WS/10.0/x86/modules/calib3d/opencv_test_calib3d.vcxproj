@@ -1,0 +1,286 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="14.0">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{0DF7E4A1-E30B-49B4-A19C-43F200917A7F}</ProjectGUID>
+    <ApplicationType>Windows Store</ApplicationType>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <ApplicationTypeRevision>8.2</ApplicationTypeRevision>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>opencv_test_calib3d</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <AppxPackageArtifactsDir>opencv_test_calib3d.dir\</AppxPackageArtifactsDir>
+    <ProjectPriFullPath>$(TargetDir)resources.pri</ProjectPriFullPath>    <PackageCertificateKeyFile>$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\calib3d\opencv_test_calib3d.dir\Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_test_calib3d.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_test_calib3d</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_test_calib3d.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_test_calib3d</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4324</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ForcedIncludeFiles>$(OCV2015_ROOT)/modules/calib3d/test/test_precomp.hpp</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>$(OCV2015_ROOT)/modules/calib3d/test/test_precomp.hpp</PrecompiledHeaderFile>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message />
+      <Command>setlocal
+link.exe /edit /APPCONTAINER:NO $(TargetPath)
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>MinCore.lib;..\..\lib\Debug\opencv_calib3d300d.lib;..\..\lib\Debug\opencv_ts300d.lib;..\..\lib\Debug\opencv_hal300d.lib;..\..\lib\Debug\opencv_hal300d.lib;..\..\lib\Debug\opencv_videoio300d.lib;..\..\lib\Debug\opencv_hal300d.lib;..\..\lib\Debug\opencv_features2d300d.lib;..\..\lib\Debug\opencv_flann300d.lib;..\..\lib\Debug\opencv_ml300d.lib;..\..\lib\Debug\opencv_imgcodecs300d.lib;..\..\lib\Debug\opencv_imgproc300d.lib;..\..\lib\Debug\opencv_core300d.lib;..\..\lib\Debug\opencv_hal300d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x86/bin/Debug/opencv_test_calib3d.lib</ImportLibrary>
+      <OptimizeReferences>false</OptimizeReferences>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x86/bin/Debug/opencv_test_calib3d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version />
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4324</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ForcedIncludeFiles>$(OCV2015_ROOT)/modules/calib3d/test/test_precomp.hpp</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>$(OCV2015_ROOT)/modules/calib3d/test/test_precomp.hpp</PrecompiledHeaderFile>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message />
+      <Command>setlocal
+link.exe /edit /APPCONTAINER:NO $(TargetPath)
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>MinCore.lib;..\..\lib\Release\opencv_calib3d300.lib;..\..\lib\Release\opencv_ts300.lib;..\..\lib\Release\opencv_hal300.lib;..\..\lib\Release\opencv_hal300.lib;..\..\lib\Release\opencv_videoio300.lib;..\..\lib\Release\opencv_hal300.lib;..\..\lib\Release\opencv_features2d300.lib;..\..\lib\Release\opencv_flann300.lib;..\..\lib\Release\opencv_ml300.lib;..\..\lib\Release\opencv_imgcodecs300.lib;..\..\lib\Release\opencv_imgproc300.lib;..\..\lib\Release\opencv_core300.lib;..\..\lib\Release\opencv_hal300.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x86/bin/Release/opencv_test_calib3d.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x86/bin/Release/opencv_test_calib3d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version />
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\..\..\modules\calib3d\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule $(OCV2015_ROOT)/modules/calib3d/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)/modules/calib3d/CMakeLists.txt;$(OCV2015_ROOT)\modules\calib3d\CMakeLists.txt;$(OCV2015_ROOT)\modules\calib3d\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\calib3d\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule $(OCV2015_ROOT)/modules/calib3d/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)/modules/calib3d/CMakeLists.txt;$(OCV2015_ROOT)\modules\calib3d\CMakeLists.txt;$(OCV2015_ROOT)\modules\calib3d\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\calib3d\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\modules\calib3d\test\test_chessboardgenerator.hpp" />
+    <ClInclude Include="..\..\..\..\..\..\modules\calib3d\test\test_precomp.hpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\opencl\test_stereobm.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_affine3.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_affine3d_estimator.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_cameracalibration.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_cameracalibration_artificial.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_cameracalibration_badarg.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_chessboardgenerator.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_chesscorners.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_chesscorners_badarg.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_chesscorners_timing.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_compose_rt.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_cornerssubpix.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_decompose_projection.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_fisheye.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_fundam.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_homography.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_homography_decomp.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_main.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_modelest.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_posit.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_reproject_image_to_3d.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_solvepnp_ransac.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_stereomatching.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_undistort.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_undistort_badarg.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\calib3d\test\test_undistort_points.cpp" />
+    <ClCompile Include="opencv_test_calib3d_pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)/modules/calib3d/test/test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)/modules/calib3d/test/test_precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <AppxManifest Include="opencv_test_calib3d.dir\package.appxManifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\calib3d\opencv_test_calib3d.dir\SmallLogo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\calib3d\opencv_test_calib3d.dir\Logo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\calib3d\opencv_test_calib3d.dir\StoreLogo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\calib3d\opencv_test_calib3d.dir\SplashScreen.png" />
+    <None Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\calib3d\opencv_test_calib3d.dir\Windows_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/ZERO_CHECK.vcxproj">
+      <Project>BF320EC3-59AB-42DD-ACFB-DF9D72D208D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/calib3d/opencv_calib3d.vcxproj">
+      <Project>6CD7DCF5-624D-439C-B5A6-6EFC337DD03E</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/core/opencv_core.vcxproj">
+      <Project>06554030-066D-4C20-99E3-A55140289E3E</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/features2d/opencv_features2d.vcxproj">
+      <Project>3A1DEC35-E02D-4605-9940-82D845DC9794</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/flann/opencv_flann.vcxproj">
+      <Project>6375E9EA-86CD-4764-8E9B-924B48B06F6E</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/hal/opencv_hal.vcxproj">
+      <Project>A11E3D04-56D6-4B4F-B968-632DD9882E98</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/imgcodecs/opencv_imgcodecs.vcxproj">
+      <Project>D82BD7AA-9B15-4B0A-B7CC-FF20A7746E0D</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/imgproc/opencv_imgproc.vcxproj">
+      <Project>A3D9036C-5493-4820-8BF0-E7111350332E</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/ml/opencv_ml.vcxproj">
+      <Project>43F43CE7-1D4F-4FE2-8380-1EDC9ECF2DD5</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/ts/opencv_ts.vcxproj">
+      <Project>0F4DEAAC-411C-4F6A-BAAA-D21691900D54</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/videoio/opencv_videoio.vcxproj">
+      <Project>D5E517D3-2235-46EE-A4ED-EC48BE8967F1</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"	xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+	IgnorableNamespaces="uap mp">
+
+	<Identity Name="1703D3E0-3A46-44DD-96A2-30F00FDD7041" Publisher="CN=CMake" Version="1.0.0.0" />
+	<mp:PhoneIdentity PhoneProductId="1703D3E0-3A46-44DD-96A2-30F00FDD7041" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<Properties>
+		<DisplayName>opencv_perf_core</DisplayName>
+		<PublisherDisplayName>CMake</PublisherDisplayName>
+		<Logo>opencv_perf_core.dir\StoreLogo.png</Logo>
+	</Properties>
+	<Dependencies>
+		<TargetPlatform Name="Windows.Universal" MinVersion="0.0.0.0" MaxVersionTested="10.0.0.0" />
+	</Dependencies>
+	<Resources>
+		<Resource Language="x-generate" />
+	</Resources>
+	<Applications>
+		<Application Id="App" Executable="opencv_perf_core.exe" EntryPoint="opencv_perf_core.App">
+			<uap:VisualElements
+				DisplayName="opencv_perf_core"
+				Description="opencv_perf_core"
+				BackgroundColor="#336699"
+				ForegroundText="light"
+				Square150x150Logo="opencv_perf_core.dir\Logo.png"
+				Square44x44Logo="opencv_perf_core.dir\SmallLogo.png">
+				<uap:SplashScreen Image="opencv_perf_core.dir\SplashScreen.png" />
+			</uap:VisualElements>
+		</Application>
+	</Applications>
+</Package>

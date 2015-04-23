@@ -1,0 +1,221 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="14.0">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{A384466F-D48C-4FDE-AB9C-C2BCE18CBE5D}</ProjectGUID>
+    <ApplicationType>Windows Store</ApplicationType>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <ApplicationTypeRevision>8.2</ApplicationTypeRevision>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(OCV2015_ROOT)/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/CMakeLists.txt;$(OCV2015_ROOT)\CMakeLists.txt;$(OCV2015_ROOT)\cmake\OpenCVMinDepVersions.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineSystem.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeSystem.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeSystem.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCXXCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompilerId.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCompilerIdDetection.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\Evgeny\Documents\CMake\Modules\CMakeFindBinUtils.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeClDeps.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCXXCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeCXXCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompilerId.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCompilerIdDetection.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\Evgeny\Documents\CMake\Modules\CMakeFindBinUtils.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeClDeps.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeGenericSystem.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\WindowsStore.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\WindowsPaths.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCXXInformation.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\WindowsStore-MSVC-CXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows-MSVC.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeRCCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeRCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeRCInformation.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestRCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestCXXCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestCompilerCommon.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCXXCompilerABI.cpp;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompileFeatures.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Internal\FeatureTesting.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\feature_tests.cxx;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCXXCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeCXXCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCInformation.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\WindowsStore-MSVC-C.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows-MSVC.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestCompilerCommon.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCCompilerABI.c;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompileFeatures.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeCCompiler.cmake;$(OCV2015_ROOT)\cmake\OpenCVUtils.cmake;$(OCV2015_ROOT)\cmake\OpenCVDetectCXXCompiler.cmake;$(OCV2015_ROOT)\cmake\OpenCVVersion.cmake;$(OCV2015_ROOT)\modules\core\include\opencv2\core\version.hpp;C:\Users\Evgeny\Documents\CMake\Modules\FindGit.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;$(OCV2015_ROOT)\cmake\OpenCVCompilerOptions.cmake;$(OCV2015_ROOT)\cmake\OpenCVCRTLinkage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\ProcessorCount.cmake;$(OCV2015_ROOT)\cmake\OpenCVPCHSupport.cmake;$(OCV2015_ROOT)\cmake\OpenCVModule.cmake;C:\Users\Evgeny\Documents\CMake\Modules\TestBigEndian.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c;C:\Users\Evgeny\Documents\CMake\Modules\TestEndianess.c.in;$(OCV2015_ROOT)\cmake\OpenCVFindLibsGrfmt.cmake;$(OCV2015_ROOT)\cmake\OpenCVFindLibsGUI.cmake;$(OCV2015_ROOT)\cmake\OpenCVFindLibsVideo.cmake;$(OCV2015_ROOT)\cmake\checks\vfwtest.cpp;$(OCV2015_ROOT)\cmake\OpenCVFindLibsPerf.cmake;$(OCV2015_ROOT)\cmake\OpenCVDetectPython.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPythonInterp.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPythonInterp.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPythonInterp.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPythonInterp.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;$(OCV2015_ROOT)\cmake\OpenCVDetectApacheAnt.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindJNI.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeFindJavaCommon.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;$(OCV2015_ROOT)\cmake\OpenCVFindMatlab.cmake;$(OCV2015_ROOT)\cmake\OpenCVDetectVTK.cmake;$(OCV2015_ROOT)\cmake\OpenCVExtraTargets.cmake;$(OCV2015_ROOT)\cmake\templates\cmake_uninstall.cmake.in;$(OCV2015_ROOT)\cmake\OpenCVGenHeaders.cmake;$(OCV2015_ROOT)\cmake\templates\cvconfig.h.in;$(OCV2015_ROOT)\cmake\templates\opencv_modules.hpp.in;$(OCV2015_ROOT)\cmake\OpenCVGenPkgconfig.cmake;$(OCV2015_ROOT)\cmake\templates\opencv-XXX.pc.in;$(OCV2015_ROOT)\cmake\OpenCVGenAndroidMK.cmake;$(OCV2015_ROOT)\cmake\OpenCVGenConfig.cmake;$(OCV2015_ROOT)\cmake\templates\OpenCVConfig.cmake.in;$(OCV2015_ROOT)\cmake\templates\OpenCVConfig-version.cmake.in;$(OCV2015_ROOT)\cmake\templates\OpenCVConfig.cmake.in;$(OCV2015_ROOT)\cmake\templates\OpenCVConfig-version.cmake.in;$(OCV2015_ROOT)\cmake\OpenCVGenInfoPlist.cmake;$(OCV2015_ROOT)\cmake\OpenCVGenABI.cmake;$(OCV2015_ROOT)\cmake\OpenCVPackaging.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CPack.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CPackComponent.cmake;C:\Users\Evgeny\Documents\CMake\Templates\CPackConfig.cmake.in;C:\Users\Evgeny\Documents\CMake\Templates\CPackConfig.cmake.in;$(OCV2015_ROOT)\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(OCV2015_ROOT)/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/CMakeLists.txt;$(OCV2015_ROOT)\CMakeLists.txt;$(OCV2015_ROOT)\cmake\OpenCVMinDepVersions.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineSystem.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeSystem.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeSystem.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCXXCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompilerId.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCompilerIdDetection.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\Evgeny\Documents\CMake\Modules\CMakeFindBinUtils.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeClDeps.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCXXCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeCXXCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompilerId.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCompilerIdDetection.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\GNU-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CompilerId\VS-10.vcxproj.in;C:\Users\Evgeny\Documents\CMake\Modules\CMakeFindBinUtils.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeClDeps.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeGenericSystem.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\WindowsStore.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\WindowsPaths.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCXXInformation.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\WindowsStore-MSVC-CXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows-MSVC.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineRCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeRCCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeRCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeRCInformation.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestRCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestCXXCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestCompilerCommon.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCXXCompilerABI.cpp;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompileFeatures.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Internal\FeatureTesting.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\feature_tests.cxx;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCXXCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeCXXCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCInformation.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\WindowsStore-MSVC-C.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Evgeny\Documents\CMake\Modules\Platform\Windows-MSVC.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestCCompiler.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeTestCompilerCommon.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompilerABI.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCCompilerABI.c;C:\Users\Evgeny\Documents\CMake\Modules\CMakeDetermineCompileFeatures.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeCCompiler.cmake.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\3.2.1\CMakeCCompiler.cmake;$(OCV2015_ROOT)\cmake\OpenCVUtils.cmake;$(OCV2015_ROOT)\cmake\OpenCVDetectCXXCompiler.cmake;$(OCV2015_ROOT)\cmake\OpenCVVersion.cmake;$(OCV2015_ROOT)\modules\core\include\opencv2\core\version.hpp;C:\Users\Evgeny\Documents\CMake\Modules\FindGit.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;$(OCV2015_ROOT)\cmake\OpenCVCompilerOptions.cmake;$(OCV2015_ROOT)\cmake\OpenCVCRTLinkage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\ProcessorCount.cmake;$(OCV2015_ROOT)\cmake\OpenCVPCHSupport.cmake;$(OCV2015_ROOT)\cmake\OpenCVModule.cmake;C:\Users\Evgeny\Documents\CMake\Modules\TestBigEndian.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c;C:\Users\Evgeny\Documents\CMake\Modules\TestEndianess.c.in;$(OCV2015_ROOT)\cmake\OpenCVFindLibsGrfmt.cmake;$(OCV2015_ROOT)\cmake\OpenCVFindLibsGUI.cmake;$(OCV2015_ROOT)\cmake\OpenCVFindLibsVideo.cmake;$(OCV2015_ROOT)\cmake\checks\vfwtest.cpp;$(OCV2015_ROOT)\cmake\OpenCVFindLibsPerf.cmake;$(OCV2015_ROOT)\cmake\OpenCVDetectPython.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPythonInterp.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPythonInterp.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPythonInterp.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPythonInterp.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;$(OCV2015_ROOT)\cmake\OpenCVDetectApacheAnt.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindJNI.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeFindJavaCommon.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageHandleStandardArgs.cmake;C:\Users\Evgeny\Documents\CMake\Modules\FindPackageMessage.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CMakeParseArguments.cmake;$(OCV2015_ROOT)\cmake\OpenCVFindMatlab.cmake;$(OCV2015_ROOT)\cmake\OpenCVDetectVTK.cmake;$(OCV2015_ROOT)\cmake\OpenCVExtraTargets.cmake;$(OCV2015_ROOT)\cmake\templates\cmake_uninstall.cmake.in;$(OCV2015_ROOT)\cmake\OpenCVGenHeaders.cmake;$(OCV2015_ROOT)\cmake\templates\cvconfig.h.in;$(OCV2015_ROOT)\cmake\templates\opencv_modules.hpp.in;$(OCV2015_ROOT)\cmake\OpenCVGenPkgconfig.cmake;$(OCV2015_ROOT)\cmake\templates\opencv-XXX.pc.in;$(OCV2015_ROOT)\cmake\OpenCVGenAndroidMK.cmake;$(OCV2015_ROOT)\cmake\OpenCVGenConfig.cmake;$(OCV2015_ROOT)\cmake\templates\OpenCVConfig.cmake.in;$(OCV2015_ROOT)\cmake\templates\OpenCVConfig-version.cmake.in;$(OCV2015_ROOT)\cmake\templates\OpenCVConfig.cmake.in;$(OCV2015_ROOT)\cmake\templates\OpenCVConfig-version.cmake.in;$(OCV2015_ROOT)\cmake\OpenCVGenInfoPlist.cmake;$(OCV2015_ROOT)\cmake\OpenCVGenABI.cmake;$(OCV2015_ROOT)\cmake\OpenCVPackaging.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CPack.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CPackComponent.cmake;C:\Users\Evgeny\Documents\CMake\Templates\CPackConfig.cmake.in;C:\Users\Evgeny\Documents\CMake\Templates\CPackConfig.cmake.in;$(OCV2015_ROOT)\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/ZERO_CHECK.vcxproj">
+      <Project>90ABC76E-A681-40E0-8888-1B6BF123E270</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/3rdparty/libjasper/libjasper.vcxproj">
+      <Project>59618D7C-1EB4-4756-A51F-3C403288CFCD</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/3rdparty/libjpeg/libjpeg.vcxproj">
+      <Project>4E5E98C7-F6C2-4C22-A26C-E61E26C58338</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/3rdparty/libpng/libpng.vcxproj">
+      <Project>13F8A68E-DD80-4B58-B591-4D3E2D7D91F1</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/3rdparty/libtiff/libtiff.vcxproj">
+      <Project>B981F4C5-24D5-4D11-ABDF-A731C2AB26A1</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/calib3d/opencv_calib3d.vcxproj">
+      <Project>D3089852-6F65-4793-A7FF-FF22D307DF47</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/core/opencv_core.vcxproj">
+      <Project>3680CF91-8E11-4CDF-85C5-78A143DEA542</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/features2d/opencv_features2d.vcxproj">
+      <Project>BE803BA8-499C-4476-B3B7-8B2BEB51B485</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/flann/opencv_flann.vcxproj">
+      <Project>9143EFFD-5CB9-4717-8275-B029EC9E595E</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/hal/opencv_hal.vcxproj">
+      <Project>46FBE4CE-236F-4CCC-9338-9B5D792389AC</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgcodecs/opencv_imgcodecs.vcxproj">
+      <Project>B6ED639E-2284-4DA7-846A-85E805FB6F9C</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgproc/opencv_imgproc.vcxproj">
+      <Project>C55618BF-CA22-4623-B649-AA3704C1B035</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/ml/opencv_ml.vcxproj">
+      <Project>92EE2F55-3CD4-42EA-A045-1E746139977D</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/objdetect/opencv_objdetect.vcxproj">
+      <Project>1545A7B4-CE7B-4DD2-AEAD-7804E4900D34</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/calib3d/opencv_perf_calib3d.vcxproj">
+      <Project>4DB3B175-F373-45FB-B8A9-374723DB6D6F</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/core/opencv_perf_core.vcxproj">
+      <Project>C22DFC9D-2469-42CC-BB1D-9230CD3582CF</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/features2d/opencv_perf_features2d.vcxproj">
+      <Project>D7FFD23B-FBCC-4936-8ADC-5FA76E29BC7B</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgcodecs/opencv_perf_imgcodecs.vcxproj">
+      <Project>CA6AC6A2-0B25-43B3-9BE0-0746E41AE489</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgproc/opencv_perf_imgproc.vcxproj">
+      <Project>B4DBDF36-4860-4CBE-A16C-D2D747CE5B25</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/objdetect/opencv_perf_objdetect.vcxproj">
+      <Project>06EFABBE-1908-44C4-B624-B4691027B963</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/photo/opencv_perf_photo.vcxproj">
+      <Project>6AA52740-F637-4B15-B39A-2AD341AC8103</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/stitching/opencv_perf_stitching.vcxproj">
+      <Project>C6D19AD6-36CB-4470-B79A-019216D95BE8</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/video/opencv_perf_video.vcxproj">
+      <Project>8263272D-0959-41A7-89D1-4188B8BFD03B</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/videoio/opencv_perf_videoio.vcxproj">
+      <Project>8C8EF366-70EC-4767-B965-60C8FF54D664</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/photo/opencv_photo.vcxproj">
+      <Project>34E43028-8B80-4624-81C0-BB32A9CA6B0E</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/shape/opencv_shape.vcxproj">
+      <Project>4721B837-36EF-41FA-BAB0-D207F31380DD</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/stitching/opencv_stitching.vcxproj">
+      <Project>C081C1D1-32EF-4FD4-AF3C-A9FCEB8485F1</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/calib3d/opencv_test_calib3d.vcxproj">
+      <Project>61F06E59-5851-40D0-B1D0-532126D9468C</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/core/opencv_test_core.vcxproj">
+      <Project>B38E2BA8-B071-4FD3-871A-1D938ECF26CB</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/features2d/opencv_test_features2d.vcxproj">
+      <Project>CA16160D-2C1B-4271-9716-63304D7756CC</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/flann/opencv_test_flann.vcxproj">
+      <Project>DEEA4247-8ABC-4DC2-9E1E-150CEF1061EB</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgcodecs/opencv_test_imgcodecs.vcxproj">
+      <Project>77A3F632-A9B9-45F3-A36D-4FC2B8854F4C</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgproc/opencv_test_imgproc.vcxproj">
+      <Project>0A1BC145-B3F3-476D-807F-6FB4A361900B</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/ml/opencv_test_ml.vcxproj">
+      <Project>C4F72540-CBFA-4144-9466-5C0F2606E069</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/objdetect/opencv_test_objdetect.vcxproj">
+      <Project>221119CB-A8C3-41C0-AE46-B704882D5E29</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/photo/opencv_test_photo.vcxproj">
+      <Project>67550E9F-F56A-42C4-985D-439815F8777F</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/shape/opencv_test_shape.vcxproj">
+      <Project>E203B53E-A038-4177-919A-F0FDBE300825</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/stitching/opencv_test_stitching.vcxproj">
+      <Project>66F43DB5-AC2B-4472-901D-3E51800E3A6A</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/video/opencv_test_video.vcxproj">
+      <Project>963B1BD4-029C-4733-990F-FE351818BC8A</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/videoio/opencv_test_videoio.vcxproj">
+      <Project>62B9A087-AD46-4A4B-B307-775B2CCFC51E</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/ts/opencv_ts.vcxproj">
+      <Project>B39FF9F3-1ADB-4BAF-9793-786961E79178</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/video/opencv_video.vcxproj">
+      <Project>479093CA-DDB2-4AAC-8B57-46AD1A0CECB7</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/videoio/opencv_videoio.vcxproj">
+      <Project>F5729503-88C7-478D-8B52-10EA1EC77690</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/videostab/opencv_videostab.vcxproj">
+      <Project>3AAF2245-0091-44E7-A1AD-7DD1A84AE397</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/3rdparty/zlib/zlib.vcxproj">
+      <Project>4DD76E69-7C7E-4D68-876F-11D84BF80C7D</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

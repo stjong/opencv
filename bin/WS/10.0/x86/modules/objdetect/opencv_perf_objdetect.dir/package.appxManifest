@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"	xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+	IgnorableNamespaces="uap mp">
+
+	<Identity Name="C589D37F-6C8E-45B5-9A41-5C19725EC297" Publisher="CN=CMake" Version="1.0.0.0" />
+	<mp:PhoneIdentity PhoneProductId="C589D37F-6C8E-45B5-9A41-5C19725EC297" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<Properties>
+		<DisplayName>opencv_perf_objdetect</DisplayName>
+		<PublisherDisplayName>CMake</PublisherDisplayName>
+		<Logo>opencv_perf_objdetect.dir\StoreLogo.png</Logo>
+	</Properties>
+	<Dependencies>
+		<TargetPlatform Name="Windows.Universal" MinVersion="0.0.0.0" MaxVersionTested="10.0.0.0" />
+	</Dependencies>
+	<Resources>
+		<Resource Language="x-generate" />
+	</Resources>
+	<Applications>
+		<Application Id="App" Executable="opencv_perf_objdetect.exe" EntryPoint="opencv_perf_objdetect.App">
+			<uap:VisualElements
+				DisplayName="opencv_perf_objdetect"
+				Description="opencv_perf_objdetect"
+				BackgroundColor="#336699"
+				ForegroundText="light"
+				Square150x150Logo="opencv_perf_objdetect.dir\Logo.png"
+				Square44x44Logo="opencv_perf_objdetect.dir\SmallLogo.png">
+				<uap:SplashScreen Image="opencv_perf_objdetect.dir\SplashScreen.png" />
+			</uap:VisualElements>
+		</Application>
+	</Applications>
+</Package>

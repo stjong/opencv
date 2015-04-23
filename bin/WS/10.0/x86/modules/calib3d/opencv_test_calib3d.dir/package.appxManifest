@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"	xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+	IgnorableNamespaces="uap mp">
+
+	<Identity Name="0DF7E4A1-E30B-49B4-A19C-43F200917A7F" Publisher="CN=CMake" Version="1.0.0.0" />
+	<mp:PhoneIdentity PhoneProductId="0DF7E4A1-E30B-49B4-A19C-43F200917A7F" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<Properties>
+		<DisplayName>opencv_test_calib3d</DisplayName>
+		<PublisherDisplayName>CMake</PublisherDisplayName>
+		<Logo>opencv_test_calib3d.dir\StoreLogo.png</Logo>
+	</Properties>
+	<Dependencies>
+		<TargetPlatform Name="Windows.Universal" MinVersion="0.0.0.0" MaxVersionTested="10.0.0.0" />
+	</Dependencies>
+	<Resources>
+		<Resource Language="x-generate" />
+	</Resources>
+	<Applications>
+		<Application Id="App" Executable="opencv_test_calib3d.exe" EntryPoint="opencv_test_calib3d.App">
+			<uap:VisualElements
+				DisplayName="opencv_test_calib3d"
+				Description="opencv_test_calib3d"
+				BackgroundColor="#336699"
+				ForegroundText="light"
+				Square150x150Logo="opencv_test_calib3d.dir\Logo.png"
+				Square44x44Logo="opencv_test_calib3d.dir\SmallLogo.png">
+				<uap:SplashScreen Image="opencv_test_calib3d.dir\SplashScreen.png" />
+			</uap:VisualElements>
+		</Application>
+	</Applications>
+</Package>

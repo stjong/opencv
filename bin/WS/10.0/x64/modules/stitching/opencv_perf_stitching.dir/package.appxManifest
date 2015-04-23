@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"	xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+	IgnorableNamespaces="uap mp">
+
+	<Identity Name="C6D19AD6-36CB-4470-B79A-019216D95BE8" Publisher="CN=CMake" Version="1.0.0.0" />
+	<mp:PhoneIdentity PhoneProductId="C6D19AD6-36CB-4470-B79A-019216D95BE8" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<Properties>
+		<DisplayName>opencv_perf_stitching</DisplayName>
+		<PublisherDisplayName>CMake</PublisherDisplayName>
+		<Logo>opencv_perf_stitching.dir\StoreLogo.png</Logo>
+	</Properties>
+	<Dependencies>
+		<TargetPlatform Name="Windows.Universal" MinVersion="0.0.0.0" MaxVersionTested="10.0.0.0" />
+	</Dependencies>
+	<Resources>
+		<Resource Language="x-generate" />
+	</Resources>
+	<Applications>
+		<Application Id="App" Executable="opencv_perf_stitching.exe" EntryPoint="opencv_perf_stitching.App">
+			<uap:VisualElements
+				DisplayName="opencv_perf_stitching"
+				Description="opencv_perf_stitching"
+				BackgroundColor="#336699"
+				ForegroundText="light"
+				Square150x150Logo="opencv_perf_stitching.dir\Logo.png"
+				Square44x44Logo="opencv_perf_stitching.dir\SmallLogo.png">
+				<uap:SplashScreen Image="opencv_perf_stitching.dir\SplashScreen.png" />
+			</uap:VisualElements>
+		</Application>
+	</Applications>
+</Package>

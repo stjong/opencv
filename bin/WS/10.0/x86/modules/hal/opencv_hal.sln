@@ -1,0 +1,74 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{F295A635-9E1F-4A9C-B8AF-A39A104F8AE8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A11E3D04-56D6-4B4F-B968-632DD9882E98} = {A11E3D04-56D6-4B4F-B968-632DD9882E98}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj", "{6F48730D-2B2B-419F-A4C8-85B55962C680}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F295A635-9E1F-4A9C-B8AF-A39A104F8AE8} = {F295A635-9E1F-4A9C-B8AF-A39A104F8AE8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PACKAGE", "PACKAGE.vcxproj", "{1584244F-E7B4-4A1F-A30F-2EA8CCC283BF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F295A635-9E1F-4A9C-B8AF-A39A104F8AE8} = {F295A635-9E1F-4A9C-B8AF-A39A104F8AE8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "..\..\ZERO_CHECK.vcxproj", "{BF320EC3-59AB-42DD-ACFB-DF9D72D208D2}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv_hal", "opencv_hal.vcxproj", "{A11E3D04-56D6-4B4F-B968-632DD9882E98}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BF320EC3-59AB-42DD-ACFB-DF9D72D208D2} = {BF320EC3-59AB-42DD-ACFB-DF9D72D208D2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv_hal_object", "opencv_hal_object.vcxproj", "{0222B8C5-23A3-41CB-9660-DA31FF85D688}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BF320EC3-59AB-42DD-ACFB-DF9D72D208D2} = {BF320EC3-59AB-42DD-ACFB-DF9D72D208D2}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CMakeTargets", "CMakeTargets", "{6BFC1B6C-43FE-4AFB-B75B-C5244B8F7274}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{A58D610D-8FB5-4CE0-B836-3D1DD1165E70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "object_libraries", "object_libraries", "{32089197-E277-48ED-8B4E-CBEF54015653}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F295A635-9E1F-4A9C-B8AF-A39A104F8AE8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F295A635-9E1F-4A9C-B8AF-A39A104F8AE8}.Debug|Win32.Build.0 = Debug|Win32
+		{F295A635-9E1F-4A9C-B8AF-A39A104F8AE8}.Release|Win32.ActiveCfg = Release|Win32
+		{F295A635-9E1F-4A9C-B8AF-A39A104F8AE8}.Release|Win32.Build.0 = Release|Win32
+		{6F48730D-2B2B-419F-A4C8-85B55962C680}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6F48730D-2B2B-419F-A4C8-85B55962C680}.Release|Win32.ActiveCfg = Release|Win32
+		{1584244F-E7B4-4A1F-A30F-2EA8CCC283BF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1584244F-E7B4-4A1F-A30F-2EA8CCC283BF}.Release|Win32.ActiveCfg = Release|Win32
+		{BF320EC3-59AB-42DD-ACFB-DF9D72D208D2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF320EC3-59AB-42DD-ACFB-DF9D72D208D2}.Debug|Win32.Build.0 = Debug|Win32
+		{BF320EC3-59AB-42DD-ACFB-DF9D72D208D2}.Release|Win32.ActiveCfg = Release|Win32
+		{BF320EC3-59AB-42DD-ACFB-DF9D72D208D2}.Release|Win32.Build.0 = Release|Win32
+		{A11E3D04-56D6-4B4F-B968-632DD9882E98}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A11E3D04-56D6-4B4F-B968-632DD9882E98}.Debug|Win32.Build.0 = Debug|Win32
+		{A11E3D04-56D6-4B4F-B968-632DD9882E98}.Release|Win32.ActiveCfg = Release|Win32
+		{A11E3D04-56D6-4B4F-B968-632DD9882E98}.Release|Win32.Build.0 = Release|Win32
+		{0222B8C5-23A3-41CB-9660-DA31FF85D688}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0222B8C5-23A3-41CB-9660-DA31FF85D688}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F48730D-2B2B-419F-A4C8-85B55962C680} = {6BFC1B6C-43FE-4AFB-B75B-C5244B8F7274}
+		{1584244F-E7B4-4A1F-A30F-2EA8CCC283BF} = {6BFC1B6C-43FE-4AFB-B75B-C5244B8F7274}
+		{BF320EC3-59AB-42DD-ACFB-DF9D72D208D2} = {6BFC1B6C-43FE-4AFB-B75B-C5244B8F7274}
+		{A11E3D04-56D6-4B4F-B968-632DD9882E98} = {A58D610D-8FB5-4CE0-B836-3D1DD1165E70}
+		{0222B8C5-23A3-41CB-9660-DA31FF85D688} = {32089197-E277-48ED-8B4E-CBEF54015653}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

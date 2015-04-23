@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\modules\shape\src\aff_trans.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\shape\src\emdL1.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\shape\src\haus_dis.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\shape\src\hist_cost.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\shape\src\precomp.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\shape\src\sc_dis.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\shape\src\tps_trans.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv_shape_pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\modules\shape\include\opencv2\shape.hpp">
+      <Filter>Include\opencv2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\modules\shape\include\opencv2\shape\emdL1.hpp">
+      <Filter>Include\opencv2\shape</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\modules\shape\include\opencv2\shape\hist_cost.hpp">
+      <Filter>Include\opencv2\shape</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\modules\shape\include\opencv2\shape\shape.hpp">
+      <Filter>Include\opencv2\shape</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\modules\shape\include\opencv2\shape\shape_distance.hpp">
+      <Filter>Include\opencv2\shape</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\modules\shape\include\opencv2\shape\shape_transformer.hpp">
+      <Filter>Include\opencv2\shape</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\modules\shape\src\emdL1_def.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\modules\shape\src\precomp.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\modules\shape\src\scd_def.hpp">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\cvconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\opencv2\opencv_modules.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\..\..\modules\shape\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include\opencv2\shape">
+      <UniqueIdentifier>{A6B30D7B-3EDA-40F3-99E2-DE3B04B1A463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\opencv2">
+      <UniqueIdentifier>{9164F5F0-C622-4547-8D20-A69D7F392537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{624780B5-B7C1-404E-B533-966EA1E3BC87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3CED23A0-2386-47BA-BB8E-36E0DC910DE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{5B91C1A5-259E-4DBC-BB9E-82A41D9665A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{864B4160-28F0-4815-AC27-3D7E348EFDE5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

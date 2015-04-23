@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"	xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+	IgnorableNamespaces="uap mp">
+
+	<Identity Name="62B9A087-AD46-4A4B-B307-775B2CCFC51E" Publisher="CN=CMake" Version="1.0.0.0" />
+	<mp:PhoneIdentity PhoneProductId="62B9A087-AD46-4A4B-B307-775B2CCFC51E" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<Properties>
+		<DisplayName>opencv_test_videoio</DisplayName>
+		<PublisherDisplayName>CMake</PublisherDisplayName>
+		<Logo>opencv_test_videoio.dir\StoreLogo.png</Logo>
+	</Properties>
+	<Dependencies>
+		<TargetPlatform Name="Windows.Universal" MinVersion="0.0.0.0" MaxVersionTested="10.0.0.0" />
+	</Dependencies>
+	<Resources>
+		<Resource Language="x-generate" />
+	</Resources>
+	<Applications>
+		<Application Id="App" Executable="opencv_test_videoio.exe" EntryPoint="opencv_test_videoio.App">
+			<uap:VisualElements
+				DisplayName="opencv_test_videoio"
+				Description="opencv_test_videoio"
+				BackgroundColor="#336699"
+				ForegroundText="light"
+				Square150x150Logo="opencv_test_videoio.dir\Logo.png"
+				Square44x44Logo="opencv_test_videoio.dir\SmallLogo.png">
+				<uap:SplashScreen Image="opencv_test_videoio.dir\SplashScreen.png" />
+			</uap:VisualElements>
+		</Application>
+	</Applications>
+</Package>

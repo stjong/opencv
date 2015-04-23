@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+	xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"	xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+	xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+	IgnorableNamespaces="uap mp">
+
+	<Identity Name="CA16160D-2C1B-4271-9716-63304D7756CC" Publisher="CN=CMake" Version="1.0.0.0" />
+	<mp:PhoneIdentity PhoneProductId="CA16160D-2C1B-4271-9716-63304D7756CC" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+	<Properties>
+		<DisplayName>opencv_test_features2d</DisplayName>
+		<PublisherDisplayName>CMake</PublisherDisplayName>
+		<Logo>opencv_test_features2d.dir\StoreLogo.png</Logo>
+	</Properties>
+	<Dependencies>
+		<TargetPlatform Name="Windows.Universal" MinVersion="0.0.0.0" MaxVersionTested="10.0.0.0" />
+	</Dependencies>
+	<Resources>
+		<Resource Language="x-generate" />
+	</Resources>
+	<Applications>
+		<Application Id="App" Executable="opencv_test_features2d.exe" EntryPoint="opencv_test_features2d.App">
+			<uap:VisualElements
+				DisplayName="opencv_test_features2d"
+				Description="opencv_test_features2d"
+				BackgroundColor="#336699"
+				ForegroundText="light"
+				Square150x150Logo="opencv_test_features2d.dir\Logo.png"
+				Square44x44Logo="opencv_test_features2d.dir\SmallLogo.png">
+				<uap:SplashScreen Image="opencv_test_features2d.dir\SplashScreen.png" />
+			</uap:VisualElements>
+		</Application>
+	</Applications>
+</Package>
