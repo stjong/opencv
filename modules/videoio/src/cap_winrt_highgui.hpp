@@ -52,13 +52,13 @@ enum {
 };
 
 
-// class HighguiBridge is needed because the interface for 
+// class HighguiBridge is needed because the interface for
 // VideoCapture_WinRT in cap_winrt.hpp is fixed by OpenCV
 
 __declspec(dllexport) bool initGrabber(int device, int w, int h);
 __declspec(dllexport) void closeGrabber();
 __declspec(dllexport) void copyOutput();
-__declspec(dllexport) void sliderChanged1(double value);
+//__declspec(dllexport) void sliderChanged1(double value);
 __declspec(dllexport) void allocateBuffers(int width, int height);
 
 

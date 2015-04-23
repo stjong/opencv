@@ -114,11 +114,11 @@ void copyOutput()
 }
 
 // nb on UI thread
-void sliderChanged1(double value)
-{
-    auto i = (int)value;
-    if (HighguiBridge::getInstance().slider1ValPtr != nullptr)
-        *HighguiBridge::getInstance().slider1ValPtr = i;
-}
+//void sliderChanged1(double value)
+//{
+//    auto i = (int)value;
+//    if (HighguiBridge::getInstance().slider1ValPtr != nullptr)
+//        *HighguiBridge::getInstance().slider1ValPtr = i;
+//}
 
 // end
