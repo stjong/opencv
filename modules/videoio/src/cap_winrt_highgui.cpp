@@ -45,6 +45,11 @@ using namespace ::Concurrency;
 
 using namespace ::std;
 
+void imshow_winrt(cv::InputArray matToShow)
+{
+    HighguiBridge::getInstance().imshow(matToShow);
+}
+
 // non-blocking
 bool initGrabber(int device, int w, int h)
 {
@@ -101,7 +106,7 @@ void HighguiBridge::AllocateOutputBuffers()
     backOutputBuffer = ref new WriteableBitmap(width, height);
 }
 
-void imshow_winrt(cv::InputArray img)
+void HighguiBridge::imshow(cv::InputArray img)
 {
     HighguiBridge::getInstance().SwapOutputBuffers();
     HighguiBridge::getInstance().requestForUIthreadAsync(UPDATE_IMAGE_ELEMENT);

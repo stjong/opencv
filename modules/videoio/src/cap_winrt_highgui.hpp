@@ -37,6 +37,7 @@
 #include <ppltasks.h>
 #include <concrt.h>
 #include <agile.h>
+#include <opencv2\core.hpp>
 
 #include <mutex>
 #include <memory>
@@ -61,6 +62,8 @@ __declspec(dllexport) void copyOutput();
 //__declspec(dllexport) void sliderChanged1(double value);
 __declspec(dllexport) void allocateBuffers(int width, int height);
 
+__declspec(dllexport) void imshow_winrt(cv::InputArray matToShow);
+
 
 // singleton
 class HighguiBridge
@@ -83,7 +86,7 @@ public:
     void createTrackbar( int* valptr );             // unhides trackbar and sets value
     void setTrackbarPos(int pos) {}                 // unhides trackbar and sets its position
 
-    // void imshow(cv::InputArray matToShow);          // shows Mat in the cvImage element
+    void imshow(cv::InputArray matToShow);          // shows Mat in the cvImage element
     // TODO: modify in window.cpp: void cv::imshow( const String& winname, InputArray _img )
 
     // namedWindow                                  // no op: only one XAML window used

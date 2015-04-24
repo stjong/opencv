@@ -32,6 +32,8 @@
 #include <opencv2/features2d.hpp>
 #include <opencv2/videoio.hpp>
 
+#include "../src/cap_winrt_highgui.hpp"
+
 using namespace cv;
 
 void cvMain()
@@ -86,6 +88,7 @@ void cvMain()
 #endif
 
         //imshow("", frame);
+        imshow_winrt(frame);
     }
 }
 
