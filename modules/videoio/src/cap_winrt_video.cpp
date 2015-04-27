@@ -58,7 +58,7 @@ using namespace Windows::Devices::Enumeration;
 #pragma comment(lib, "mf")
 #pragma comment(lib, "mfuuid")
 
-#if WINAPI_FAMILY!=WINAPI_FAMILY_PHONE_APP
+#if (WINAPI_FAMILY!=WINAPI_FAMILY_PHONE_APP) && !defined(_M_ARM)
 #pragma comment(lib, "Shlwapi")
 #endif
 
