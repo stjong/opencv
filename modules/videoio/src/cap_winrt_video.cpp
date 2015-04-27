@@ -57,7 +57,10 @@ using namespace Windows::Devices::Enumeration;
 #pragma comment(lib, "mfplat")
 #pragma comment(lib, "mf")
 #pragma comment(lib, "mfuuid")
+
+#if WINAPI_FAMILY!=WINAPI_FAMILY_PHONE_APP
 #pragma comment(lib, "Shlwapi")
+#endif
 
 #include "cap_winrt_highgui.hpp"
 
