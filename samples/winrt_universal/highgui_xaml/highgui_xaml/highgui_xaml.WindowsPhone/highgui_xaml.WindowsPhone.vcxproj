@@ -67,11 +67,21 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(OPENCV_WINRT_INSTALL_DIR)WP\8.1\x86\x86\vc12\lib;$(VC_LibraryPath_x86);$(WindowsPhoneSDK_LibraryPath_x86);</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <LibraryPath>$(OPENCV_WINRT_INSTALL_DIR)WP\8.1\ARM\ARM\vc12\lib;$(VC_LibraryPath_x86);$(VC_LibraryPath_ARM);$(WindowsPhoneSDK_LibraryPath_arm);</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>../../../../../modules/core/include;../../../../../modules/flann/include;../../../../../modules/videoio/include;../../../../../modules/hal/include;../../../../../modules/imgproc/include;../../../../../modules/features2d/include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv_core300d.lib;opencv_imgproc300d.lib;opencv_videoio300d.lib;WindowsPhoneCore.lib;RuntimeObject.lib;PhoneAppModelHost.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -83,7 +93,11 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>../../../../../modules/core/include;../../../../../modules/flann/include;../../../../../modules/videoio/include;../../../../../modules/hal/include;../../../../../modules/imgproc/include;../../../../../modules/features2d/include;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv_core300d.lib;opencv_imgproc300d.lib;opencv_videoio300d.lib;WindowsPhoneCore.lib;RuntimeObject.lib;PhoneAppModelHost.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -118,6 +132,17 @@
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\bin\WP\8.1\x86\modules\core\opencv_core.vcxproj">
+      <Project>{cd0d8b48-2c88-414f-971b-024a35d1d4db}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\bin\WP\8.1\x86\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{f3a65244-4b4b-491b-bf4b-d82cbb8a0260}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\bin\WP\8.1\x86\modules\videoio\opencv_videoio.vcxproj">
+      <Project>{0ad2478a-46e4-47a3-910f-66d38e8b267c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
