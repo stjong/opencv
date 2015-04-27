@@ -81,12 +81,12 @@ Media::CaptureFrameGrabber::~CaptureFrameGrabber()
 
 void Media::CaptureFrameGrabber::ShowCameraSettings()
 {
-//#if WINAPI_FAMILY!=WINAPI_FAMILY_PHONE_APP
+#if WINAPI_FAMILY!=WINAPI_FAMILY_PHONE_APP
     if (_state == State::Started)
     {
         CameraOptionsUI::Show(_capture.Get());
     }
-//#endif
+#endif
 }
 
 task<void> Media::CaptureFrameGrabber::FinishAsync()
