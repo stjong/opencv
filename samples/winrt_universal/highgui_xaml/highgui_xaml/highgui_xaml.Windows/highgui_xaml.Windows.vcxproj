@@ -167,7 +167,6 @@
     <Image Include="Assets\SplashScreen.scale-100.png" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="MainPage.xaml.cpp">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClCompile>

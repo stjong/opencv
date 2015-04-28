@@ -93,3 +93,4 @@ void cvMain()
         imshow_winrt(frame);
     }
 }
+
