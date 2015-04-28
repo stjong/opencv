@@ -10,6 +10,8 @@
 4. Jump to **Short way** or **Long way** depending on your aims and preferences
 
 #### Short way (using pregenerated projects):
+**Note:** pregenerated projects were tested using VS2015 CTP6 (exact version 14.0.22609.0 D14REL). It is not guaranteed that they would work with another pre-release or release version.
+
 1. Set environment variable ```OCV2015_ROOT``` to the OpenCV location (e.g. ```Path\to\OCV\opencv```)
 2. Jump to **Common build steps**
 
