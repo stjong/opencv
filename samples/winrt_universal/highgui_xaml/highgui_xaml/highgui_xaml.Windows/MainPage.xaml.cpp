@@ -122,8 +122,6 @@ IAsyncActionWithProgress<int>^ MainPage::TaskWithProgressAsync()
     });
 }
 
-
-
 void highgui_xaml::MainPage::OnVisibilityChanged(Platform::Object ^sender,
     Windows::UI::Core::VisibilityChangedEventArgs ^e)
 {
