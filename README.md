@@ -6,7 +6,7 @@
 
 1. You might need to install this if you haven't already: http://www.microsoft.com/en-US/download/details.aspx?id=40784
 2. Set ```OPENCV_TEST_DATA_PATH``` environment variable to location of ```opencv_extra/testdata``` to get tests work correctly. Also, set ```OPENCV_PERF_VALIDATION_DIR``` environment variable in case you are planning to run performance tests.
-3. *In case you'd like to adjust some flags that are defaulted by script, go to "Manual build" section.* Otherwise go to ```platforms/winrt``` and execute ```>> setup_winrt.bat "WS" "8.1" "x64"```.
+3. *In case you'd like to adjust some flags that are defaulted by script, go to "[Manual build](https://github.com/MSOpenTech/opencv/tree/test-arm#manual-build)" section.* Otherwise go to ```platforms/winrt``` and execute ```>> setup_winrt.bat "WS" "8.1" "x64"```.
 This will generate all of the files needed to build open_cv projects for selected platform in ```opencv\bin\...```. Open the ```opencv\bin\WS\8.1\x64``` directory and open the ```OpenCV.sln```.
 4. Set OCV solution to Release mode and build all of the projects. They should build without errors and generate executables in "bin\WS\8.1\x64\bin\Release\"
 5. Running tests:
@@ -26,6 +26,16 @@ This will generate all of the files needed to build open_cv projects for selecte
  - Add any required parameters to this command and execute it: ```cmake -G "Visual Studio 12 2013 Win64" -DCMAKE_SYSTEM_NAME:String=WindowsStore -DCMAKE_SYSTEM_VERSION:String=8.1 -DCMAKE_VS_EFFECTIVE_PLATFORMS:String=x64 -DCMAKE_INSTALL_PREFIX:PATH=.\install\WS\8.1\x64\ ..```
 - Build solution for the required configuration and separately build INSTALL project 
 - You need to set ```OPENCV_WINRT_INSTALL_DIR``` to use installed OCV with WinRT samples
+ 
+#### Running version w/ APPCONTAINER
+**Note:** supposed to be used for ARM devices but should also work for x86, x64
+
+1. Set ```OPENCV_TEST_DATA_PATH``` and ```OPENCV_PERF_VALIDATION_DIR``` (see "[Build notes](https://github.com/MSOpenTech/opencv/tree/test-arm#build-notes)" section for details) environment variables, generate solutions using any way described above
+2. Run ```upd_winrt_capabilities.py``` Python script to update projects capabilities
+3. Open solution and build Debug or Release configuration
+4. For each test/perf project you need to start choose "*Add existing item*", add ```resources.pri``` file from the corresponding project folder and set "*Content*" property to "*True*"
+5. Run test/perf project via ```Debug -> Start New Instance```
+6. Find resulting logs into Documents folder (it is possible that logs will be placed to OneDrive or Local Documents, check both)
 
 #### Resources
 
