@@ -560,6 +560,9 @@ wchar_t* ctow(const char* c, size_t max) {
     return w;
 }
 
+Windows::Storage::StorageFile^ logFile;
+Platform::String^ logFileName;
+
 class WinRTLog
 {
 public:
@@ -570,6 +573,18 @@ public:
 
     ~WinRTLog()
     {
+        CoInitializeEx(NULL, COINITBASE_MULTITHREADED);
+        if (!logFile)
+        {
+            Windows::Storage::StorageFolder^ docFolder = Windows::Storage::KnownFolders::DocumentsLibrary;
+            task<Windows::Storage::StorageFile^> GetFromDocs(docFolder->CreateFileAsync(logFileName, Windows::Storage::CreationCollisionOption::ReplaceExisting));
+            GetFromDocs.then([=](Windows::Storage::StorageFile^ file) mutable {
+                logFile = file;
+            }).wait();
+        }
+        task<void> writeLog(Windows::Storage::FileIO::AppendTextAsync(logFile, (ref new Platform::String(ctow(s.str().c_str(), s.str().length() + 1))) + "\n"));
+        writeLog.wait();
+
         Platform::Details::Console::WriteLine(ref new Platform::String(ctow(s.str().c_str(), s.str().length() + 1)));
     }
 private:
@@ -6643,6 +6658,9 @@ void InitGoogleTestImpl(int* argc, CharType** argv) {
   if (*argc <= 0) return;
 
   internal::g_executable_path = internal::StreamableToString(argv[0]);
+  wchar_t* temp;
+  temp = wcsstr(ctow(internal::g_executable_path.c_str(), internal::g_executable_path.length() + 1), L"opencv_test_");
+  logFileName = ref new Platform::String(temp) + L".log";
 
 #if GTEST_HAS_DEATH_TEST
 
