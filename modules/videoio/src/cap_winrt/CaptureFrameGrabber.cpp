@@ -81,7 +81,8 @@ Media::CaptureFrameGrabber::~CaptureFrameGrabber()
 
 void Media::CaptureFrameGrabber::ShowCameraSettings()
 {
-#if WINAPI_FAMILY!=WINAPI_FAMILY_PHONE_APP
+// TODO: Define phone properly on Win10
+#if 0// WINAPI_FAMILY!=WINAPI_FAMILY_PHONE_APP
     if (_state == State::Started)
     {
         CameraOptionsUI::Show(_capture.Get());

@@ -44,8 +44,9 @@
 #include "cap_dshow.hpp"
 // Dave
 //#include "cap_winrt.hpp"
+#define WINRT_WMF (WINRT && !defined WINRT_8_0)
 
-#ifdef WINRT_8_1
+#ifdef WINRT_WMF
 #include "cap_winrt.hpp"
 #include "cap_winrt_highgui.hpp"
 #endif
@@ -128,7 +129,7 @@ CV_IMPL CvCapture * cvCreateCameraCapture (int index)
 {
     int  domains[] =
     {
-#ifdef WINRT_8_1
+#ifdef WINRT_WMF
         CV_CAP_WINRT,
 #elif  WINRT_8_0
         // not supported
@@ -193,7 +194,7 @@ CV_IMPL CvCapture * cvCreateCameraCapture (int index)
     // try every possibly installed camera API
     for (int i = 0; domains[i] >= 0; i++)
     {
-#if defined(WINRT_8_1)         || \
+#if defined(WINRT_WMF)         || \
     defined(HAVE_MSMF)         || \
     defined(HAVE_TYZX)         || \
     defined(HAVE_VFW)          || \
@@ -224,7 +225,7 @@ CV_IMPL CvCapture * cvCreateCameraCapture (int index)
 
         switch (domains[i])
         {
-#ifdef WINRT_8_1
+#ifdef WINRT_WMF
         case CV_CAP_WINRT:
             capture = cvCreateCameraCapture_WinRT (index);
             if (capture)
@@ -529,7 +530,7 @@ static Ptr<IVideoCapture> IVideoCapture_create(int index)
 #ifdef HAVE_INTELPERC
         CV_CAP_INTELPERC,
 #endif
-#ifdef WINRT_8_1
+#ifdef WINRT_WMF
         CAP_WINRT,
 #endif
         -1, -1
@@ -549,7 +550,7 @@ static Ptr<IVideoCapture> IVideoCapture_create(int index)
     {
 #if defined(HAVE_DSHOW)        || \
     defined(HAVE_INTELPERC)    || \
-    defined(WINRT_8_1)         || \
+    defined(WINRT_WMF)         || \
     (0)
         Ptr<IVideoCapture> capture;
 
@@ -565,7 +566,7 @@ static Ptr<IVideoCapture> IVideoCapture_create(int index)
                 capture = makePtr<VideoCapture_IntelPerC>();
                 break; // CV_CAP_INTEL_PERC
 #endif
-#ifdef WINRT_8_1
+#ifdef WINRT_WMF
         case CAP_WINRT:
             capture = Ptr<IVideoCapture>(new cv::VideoCapture_WinRT(index));
             if (capture)
@@ -695,7 +696,7 @@ bool VideoCapture::read(OutputArray image)
 
 VideoCapture& VideoCapture::operator >> (Mat& image)
 {
-#ifdef WINRT_8_1
+#ifdef WINRT_WMF
     if (grab())
     {
         if (retrieve(image))

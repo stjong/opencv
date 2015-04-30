@@ -22,33 +22,33 @@
     <ProjectGuid>{d7a82e7f-1535-4eec-aba9-2c8447669d33}</ProjectGuid>
     <RootNamespace>highgui_xaml</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
-    <ApplicationType>Windows Phone</ApplicationType>
-    <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
+    <ApplicationType>Windows store</ApplicationType>
+    <ApplicationTypeRevision>8.2</ApplicationTypeRevision>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120_wp81</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120_wp81</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120_wp81</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120_wp81</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <Import Project="..\highgui_xaml.Shared\highgui_xaml.Shared.vcxitems" Label="Shared" />
@@ -68,7 +68,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>$(OPENCV_WINRT_INSTALL_DIR)WP\8.1\x86\x86\vc12\lib;$(VC_LibraryPath_x86);$(WindowsPhoneSDK_LibraryPath_x86);</LibraryPath>
+    <LibraryPath>$(OPENCV_WINRT_INSTALL_DIR)WP\8.1\x86\x86\vc12\lib;$(VC_LibraryPath_x86);$(WindowsPhoneSDK_LibraryPath_x86);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <LibraryPath>$(OPENCV_WINRT_INSTALL_DIR)WP\8.1\ARM\ARM\vc12\lib;$(VC_LibraryPath_x86);$(VC_LibraryPath_ARM);$(WindowsPhoneSDK_LibraryPath_arm);</LibraryPath>
@@ -97,6 +97,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>opencv_core300d.lib;opencv_imgproc300d.lib;opencv_videoio300d.lib;WindowsPhoneCore.lib;RuntimeObject.lib;PhoneAppModelHost.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\..\vs2015\WS\10.0\x86\lib\Debug\;$(WindowsSdkDir)Extension SDKs\Windows Mobile\10.0.0.1\Lib\um\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -104,6 +105,10 @@
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>..\..\..\..\..\vs2015\WS\10.0\x86\lib\Release;$(WindowsSdkDir)Extension SDKs\Windows Mobile\10.0.0.1\Lib\um\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mincore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="MainPage.xaml.h">
@@ -134,14 +139,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\bin\WP\8.1\x86\modules\core\opencv_core.vcxproj">
-      <Project>{cd0d8b48-2c88-414f-971b-024a35d1d4db}</Project>
+    <ProjectReference Include="..\..\..\..\..\vs2015\WS\10.0\x86\modules\core\opencv_core.vcxproj">
+      <Project>{0b693504-dc28-40f7-8f44-c6cc4dc0b02e}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\bin\WP\8.1\x86\modules\imgproc\opencv_imgproc.vcxproj">
-      <Project>{f3a65244-4b4b-491b-bf4b-d82cbb8a0260}</Project>
+    <ProjectReference Include="..\..\..\..\..\vs2015\WS\10.0\x86\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{184c4566-b665-4b92-83e6-bc4b71fe8b95}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\bin\WP\8.1\x86\modules\videoio\opencv_videoio.vcxproj">
-      <Project>{0ad2478a-46e4-47a3-910f-66d38e8b267c}</Project>
+    <ProjectReference Include="..\..\..\..\..\vs2015\WS\10.0\x86\modules\videoio\opencv_videoio.vcxproj">
+      <Project>{49897c63-7afb-4004-81f5-bbf6e53d9bb6}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

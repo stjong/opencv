@@ -39,6 +39,10 @@
 //
 //M*/
 
+#ifdef WINRT_WMF
+CvCapture* cvCreateCameraCapture_WinRT(int index);
+#endif
+
 #ifndef __VIDEOIO_H_
 #define __VIDEOIO_H_
 
@@ -115,10 +119,6 @@ CvVideoWriter* cvCreateVideoWriter_Win32( const char* filename, int fourcc,
 CvVideoWriter* cvCreateVideoWriter_VFW( const char* filename, int fourcc,
                                         double fps, CvSize frameSize, int is_color );
 CvCapture* cvCreateCameraCapture_DShow( int index );
-
-#ifdef WINRT_8_1
-CvCapture* cvCreateCameraCapture_WinRT(int index);
-#endif
 
 CvCapture* cvCreateCameraCapture_MSMF( int index );
 CvCapture* cvCreateFileCapture_MSMF (const char* filename);
