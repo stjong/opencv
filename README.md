@@ -11,7 +11,9 @@
 #### Short way (using pregenerated projects):
 **Note:** 
 Use pregenerated projects from bin_VS2015_RC folder if you are working with Visual Studio 2015 RC (Version 14.0.22823.1 D14REL) on Windows 10 OS (build 10074 or 10075).
+
 Use pregenerated projects from bin folder if you are still working with Visual Studio 2015 CTP6 (Version 14.0.22609.0 D14REL).
+
 These projects were tested with specific versions of Visual Studio 2015 and might not work correctly with other pre-release versions.
 
 1. Set environment variable ```OCV2015_ROOT``` to the OpenCV location (e.g. ```Path\to\OCV\opencv```)
