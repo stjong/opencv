@@ -5,12 +5,14 @@
 ### How to build:
 
 1. Set ```OPENCV_TEST_DATA_PATH``` environment variable to location of ```opencv_extra/testdata``` to get tests work correctly. Also, set ```OPENCV_PERF_VALIDATION_DIR``` environment variable in case you are planning to run performance tests.
-2. Install VS2015 CTP6 from [there](https://www.visualstudio.com/en-us/downloads/visual-studio-2015-ctp-vs)
-3. Install Windows 10 SDK from [there](https://dev.windows.com/en-US/windows-10-developer-preview-tools)
-4. Jump to **Short way** or **Long way** depending on your aims and preferences
+2. Install VS2015 RC from [there](https://www.visualstudio.com/).  Select "Universal Windows App Development Tools" using Custom setup option.
+3. Jump to **Short way** or **Long way** depending on your aims and preferences
 
 #### Short way (using pregenerated projects):
-**Note:** pregenerated projects were tested using VS2015 CTP6 (exact version 14.0.22609.0 D14REL). It is not guaranteed that they would work with another pre-release or release version.
+**Note:** 
+Use pregenerated projects from bin_VS2015_RC folder if you are working with Visual Studio 2015 RC (Version 14.0.22823.1 D14REL) on Windows 10 OS (build 10074 or 10075).
+Use pregenerated projects from bin folder if you are still working with Visual Studio 2015 CTP6 (Version 14.0.22609.0 D14REL).
+These projects were tested with specific versions of Visual Studio 2015 and might not work correctly with other pre-release versions.
 
 1. Set environment variable ```OCV2015_ROOT``` to the OpenCV location (e.g. ```Path\to\OCV\opencv```)
 2. Jump to **Common build steps**

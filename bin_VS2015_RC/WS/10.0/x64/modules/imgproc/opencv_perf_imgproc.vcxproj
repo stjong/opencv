@@ -1,0 +1,296 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="14.0">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{3A28D4EA-9381-4ACC-9D60-ABD6F12514D5}</ProjectGUID>
+    <ApplicationType>Windows Store</ApplicationType>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <ApplicationTypeRevision>8.2</ApplicationTypeRevision>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>opencv_perf_imgproc</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <AppxPackageArtifactsDir>opencv_perf_imgproc.dir\</AppxPackageArtifactsDir>
+    <ProjectPriFullPath>$(TargetDir)resources.pri</ProjectPriFullPath>    <PackageCertificateKeyFile>$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\imgproc\opencv_perf_imgproc.dir\Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_perf_imgproc.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_perf_imgproc</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_perf_imgproc.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_perf_imgproc</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\imgproc\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4324</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ForcedIncludeFiles>$(OCV2015_ROOT)/modules/imgproc/perf/perf_precomp.hpp</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>$(OCV2015_ROOT)/modules/imgproc/perf/perf_precomp.hpp</PrecompiledHeaderFile>
+      <ProcessorNumber>1</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\imgproc\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\imgproc\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message />
+      <Command>setlocal
+link.exe /edit /APPCONTAINER:NO $(TargetPath)
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>MinCore.lib;..\..\lib\Debug\opencv_ts300d.lib;..\..\lib\Debug\opencv_hal300d.lib;..\..\lib\Debug\opencv_hal300d.lib;..\..\lib\Debug\opencv_videoio300d.lib;..\..\lib\Debug\opencv_hal300d.lib;..\..\lib\Debug\opencv_imgcodecs300d.lib;..\..\lib\Debug\opencv_imgproc300d.lib;..\..\lib\Debug\opencv_core300d.lib;..\..\lib\Debug\opencv_hal300d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Debug/opencv_perf_imgproc.lib</ImportLibrary>
+      <OptimizeReferences>false</OptimizeReferences>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Debug/opencv_perf_imgproc.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version />
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\imgproc\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4251;4324</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ForcedIncludeFiles>$(OCV2015_ROOT)/modules/imgproc/perf/perf_precomp.hpp</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>$(OCV2015_ROOT)/modules/imgproc/perf/perf_precomp.hpp</PrecompiledHeaderFile>
+      <ProcessorNumber>1</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\imgproc\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\imgproc\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message />
+      <Command>setlocal
+link.exe /edit /APPCONTAINER:NO $(TargetPath)
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>MinCore.lib;..\..\lib\Release\opencv_ts300.lib;..\..\lib\Release\opencv_hal300.lib;..\..\lib\Release\opencv_hal300.lib;..\..\lib\Release\opencv_videoio300.lib;..\..\lib\Release\opencv_hal300.lib;..\..\lib\Release\opencv_imgcodecs300.lib;..\..\lib\Release\opencv_imgproc300.lib;..\..\lib\Release\opencv_core300.lib;..\..\lib\Release\opencv_hal300.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Release/opencv_perf_imgproc.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Release/opencv_perf_imgproc.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version />
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\..\..\modules\imgproc\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(OCV2015_ROOT)/modules/imgproc/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/modules/imgproc/CMakeLists.txt;$(OCV2015_ROOT)\modules\imgproc\CMakeLists.txt;$(OCV2015_ROOT)\modules\imgproc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\imgproc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(OCV2015_ROOT)/modules/imgproc/CMakeLists.txt</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/modules/imgproc/CMakeLists.txt;$(OCV2015_ROOT)\modules\imgproc\CMakeLists.txt;$(OCV2015_ROOT)\modules\imgproc\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\imgproc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\modules\imgproc\perf\perf_precomp.hpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_3vs4.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_accumulate.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_blend.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_color.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_filters.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_gftt.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_houghLines.cpp">
+      <ObjectFileName>$(IntDir)/perf/opencl/perf_houghLines.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_imgproc.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_imgwarp.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_matchTemplate.cpp">
+      <ObjectFileName>$(IntDir)/perf/opencl/perf_matchTemplate.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_moments.cpp">
+      <ObjectFileName>$(IntDir)/perf/opencl/perf_moments.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\opencl\perf_pyramid.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_bilateral.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_blur.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_canny.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_corners.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_cvt_color.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_distanceTransform.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_filter2d.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_floodfill.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_goodFeaturesToTrack.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_histogram.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_houghLines.cpp">
+      <ObjectFileName>$(IntDir)/perf/perf_houghLines.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_integral.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_main.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_matchTemplate.cpp">
+      <ObjectFileName>$(IntDir)/perf/perf_matchTemplate.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_moments.cpp">
+      <ObjectFileName>$(IntDir)/perf/perf_moments.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_morph.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_phasecorr.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_pyramids.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_remap.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_resize.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_sepfilters.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_threshold.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\imgproc\perf\perf_warp.cpp" />
+    <ClCompile Include="opencv_perf_imgproc_pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/modules/imgproc/perf/perf_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/modules/imgproc/perf/perf_precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <AppxManifest Include="opencv_perf_imgproc.dir\package.appxManifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\imgproc\opencv_perf_imgproc.dir\SmallLogo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\imgproc\opencv_perf_imgproc.dir\Logo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\imgproc\opencv_perf_imgproc.dir\StoreLogo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\imgproc\opencv_perf_imgproc.dir\SplashScreen.png" />
+    <None Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\imgproc\opencv_perf_imgproc.dir\Windows_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/ZERO_CHECK.vcxproj">
+      <Project>A2D8558F-F1C3-49C2-917C-C2A91FCDE0E7</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/core/opencv_core.vcxproj">
+      <Project>3A981105-210D-4525-8207-9388C5287E03</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/hal/opencv_hal.vcxproj">
+      <Project>282787A0-CAB3-4D69-80C6-A5D5F3D585D7</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgcodecs/opencv_imgcodecs.vcxproj">
+      <Project>B2A3210F-700D-4DC7-AA39-BB8FE350D177</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgproc/opencv_imgproc.vcxproj">
+      <Project>E45EE2BE-C86E-43F8-A65E-5F2FA62F623D</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/ts/opencv_ts.vcxproj">
+      <Project>C4F8CEF5-1BAA-4777-A156-12593CF7BEC3</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/videoio/opencv_videoio.vcxproj">
+      <Project>E57D17E7-82C6-47D9-8E66-AFCF82DFECF9</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
