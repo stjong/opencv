@@ -1,32 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="dfafcbf2-a525-4ed0-9b6c-4e8bd5a9c0ba" Publisher="CN=daver_000" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="dfafcbf2-a525-4ed0-9b6c-4e8bd5a9c0ba" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity
+    Name="de6dbc40-d832-4411-ac9e-6e7a38b71352"
+    Publisher="CN=v-evgena"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="de6dbc40-d832-4411-ac9e-6e7a38b71352" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
   <Properties>
-    <DisplayName>highgui_xaml.WindowsPhone</DisplayName>
-    <PublisherDisplayName>daver_000</PublisherDisplayName>
+    <DisplayName>App1</DisplayName>
+    <PublisherDisplayName>v-evgena</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-  <Prerequisites>
-    <OSMinVersion>6.3.1</OSMinVersion>
-    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
-  </Prerequisites>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10069.0" MaxVersionTested="10.0.10069.0" />
+  </Dependencies>
+
   <Resources>
-    <Resource Language="x-generate" />
+    <Resource Language="x-generate"/>
   </Resources>
+
   <Applications>
-    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="highgui_xaml_WindowsPhone.App">
-      <m3:VisualElements DisplayName="highgui_xaml.WindowsPhone" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="highgui_xaml.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
-        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
-        </m3:DefaultTile>
-        <m3:SplashScreen Image="Assets\SplashScreen.png" />
-        <m3:ApplicationView MinWidth="width320" />
-        <!--Used in XAML Designer. DO NOT REMOVE-->
-      </m3:VisualElements>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="App1.App">
+      <uap:VisualElements
+        DisplayName="App1"
+        Square150x150Logo="Assets\Logo.png"
+        Square44x44Logo="Assets\SmallLogo.png"
+        Description="App1"
+        BackgroundColor="#464646">
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
     </Application>
   </Applications>
+
   <Capabilities>
-    <Capability Name="internetClientServer" />
+    <Capability Name="internetClient" />
     <DeviceCapability Name="webcam" />
   </Capabilities>
 </Package>

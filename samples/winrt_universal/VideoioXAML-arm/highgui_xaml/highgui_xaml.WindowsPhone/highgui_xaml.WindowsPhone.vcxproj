@@ -88,7 +88,12 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\hal\include\;$(OCV2015_ROOT)\modules\imgproc\include\;$(OCV2015_ROOT)\modules\features2d\include\;$(OCV2015_ROOT)\modules\flann\include\;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(OCV2015_ROOT)\vs2015\WS\10.0\ARM\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core300.lib;opencv_imgproc300.lib;opencv_videoio300.lib;WindowsApp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -105,6 +110,7 @@
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\hal\include\;$(OCV2015_ROOT)\modules\imgproc\include\;$(OCV2015_ROOT)\modules\features2d\include\;$(OCV2015_ROOT)\modules\flann\include\;%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
