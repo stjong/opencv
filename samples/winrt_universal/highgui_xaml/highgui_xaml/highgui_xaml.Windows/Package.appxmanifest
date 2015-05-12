@@ -1,25 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="dd4947e8-f250-49d1-be17-4442dfea2737" Publisher="CN=daver_000" Version="1.0.0.0" />
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity
+    Name="de6dbc40-d832-4411-ac9e-6e7a38b71352"
+    Publisher="CN=v-evgena"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="de6dbc40-d832-4411-ac9e-6e7a38b71352" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
   <Properties>
-    <DisplayName>highgui_xaml.Windows</DisplayName>
-    <PublisherDisplayName>daver_000</PublisherDisplayName>
+    <DisplayName>App1</DisplayName>
+    <PublisherDisplayName>v-evgena</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-  <Prerequisites>
-    <OSMinVersion>6.3.0</OSMinVersion>
-    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
-  </Prerequisites>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10069.0" MaxVersionTested="10.0.10069.0" />
+  </Dependencies>
+
   <Resources>
-    <Resource Language="x-generate" />
+    <Resource Language="x-generate"/>
   </Resources>
+
   <Applications>
-    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="highgui_xaml_Windows.App">
-      <m2:VisualElements DisplayName="highgui_xaml.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="highgui_xaml.Windows" ForegroundText="light" BackgroundColor="#464646">
-        <m2:SplashScreen Image="Assets\SplashScreen.png" />
-      </m2:VisualElements>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="App1.App">
+      <uap:VisualElements
+        DisplayName="App1"
+        Square150x150Logo="Assets\Logo.png"
+        Square44x44Logo="Assets\SmallLogo.png"
+        Description="App1"
+        BackgroundColor="#464646">
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
     </Application>
   </Applications>
+
   <Capabilities>
     <Capability Name="internetClient" />
     <DeviceCapability Name="webcam" />
