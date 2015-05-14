@@ -42,11 +42,11 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\lib\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\lib\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libtiff.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libtiffd</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\lib\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\lib\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libtiff.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libtiff</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
@@ -54,7 +54,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>false</CompileAsWinRT>
@@ -76,10 +76,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -93,7 +93,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>false</CompileAsWinRT>
@@ -115,10 +115,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -133,11 +133,11 @@
     <CustomBuild Include="..\..\..\..\..\..\3rdparty\libtiff\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/libtiff/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/3rdparty/libtiff/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\libtiff\CMakeLists.txt;C:\Projects\CMake\Modules\CheckFunctionExists.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;$(OCV2015_ROOT)\3rdparty\libtiff\tif_config.h.cmakein;$(OCV2015_ROOT)\3rdparty\libtiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/libtiff/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/3rdparty/libtiff/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\libtiff\CMakeLists.txt;C:\Projects\CMake\Modules\CheckFunctionExists.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;$(OCV2015_ROOT)\3rdparty\libtiff\tif_config.h.cmakein;$(OCV2015_ROOT)\3rdparty\libtiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -312,10 +312,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/ZERO_CHECK.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/ZERO_CHECK.vcxproj">
       <Project>A2D8558F-F1C3-49C2-917C-C2A91FCDE0E7</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/3rdparty/zlib/zlib.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/3rdparty/zlib/zlib.vcxproj">
       <Project>7998438F-6903-470B-A2EF-793CFBD6C112</Project>
     </ProjectReference>
   </ItemGroup>

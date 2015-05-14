@@ -46,7 +46,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -56,7 +56,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -68,24 +68,24 @@
     <CustomBuild Include="..\..\..\..\..\..\modules\stitching\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(OCV2015_ROOT)/modules/stitching/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/modules/stitching/CMakeLists.txt;$(OCV2015_ROOT)\modules\stitching\CMakeLists.txt;$(OCV2015_ROOT)\modules\stitching\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(OCV2015_ROOT)/modules/stitching/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/modules/stitching/CMakeLists.txt;$(OCV2015_ROOT)\modules\stitching\CMakeLists.txt;$(OCV2015_ROOT)\modules\stitching\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/stitching/opencv_perf_stitching.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/stitching/opencv_perf_stitching.vcxproj">
       <Project>97C7C448-77F7-449C-A3FF-86A9A37A7966</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/stitching/opencv_stitching.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/stitching/opencv_stitching.vcxproj">
       <Project>35F20107-62F9-49E4-BE36-303FE1405DF6</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/stitching/opencv_test_stitching.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/stitching/opencv_test_stitching.vcxproj">
       <Project>FF6F6F02-267D-46BC-8EFB-FC686D7844E4</Project>
     </ProjectReference>
   </ItemGroup>

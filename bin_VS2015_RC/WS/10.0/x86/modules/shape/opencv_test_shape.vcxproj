@@ -42,17 +42,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <AppxPackageArtifactsDir>opencv_test_shape.dir\</AppxPackageArtifactsDir>
-    <ProjectPriFullPath>$(TargetDir)resources.pri</ProjectPriFullPath>    <PackageCertificateKeyFile>$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\shape\opencv_test_shape.dir\Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <ProjectPriFullPath>$(TargetDir)resources.pri</ProjectPriFullPath>    <PackageCertificateKeyFile>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\shape\opencv_test_shape.dir\Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\bin\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\bin\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_test_shape.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_test_shape</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\bin\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\bin\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_test_shape.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_test_shape</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
@@ -62,7 +62,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>true</CompileAsWinRT>
@@ -85,10 +85,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -115,9 +115,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x86/bin/Debug/opencv_test_shape.lib</ImportLibrary>
+      <ImportLibrary>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/bin/Debug/opencv_test_shape.lib</ImportLibrary>
       <OptimizeReferences>false</OptimizeReferences>
-      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x86/bin/Debug/opencv_test_shape.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/bin/Debug/opencv_test_shape.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version />
     </Link>
@@ -128,7 +128,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>true</CompileAsWinRT>
@@ -151,10 +151,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\shape\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\video\include;$(OCV2015_ROOT)\modules\shape\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -180,8 +180,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x86/bin/Release/opencv_test_shape.lib</ImportLibrary>
-      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x86/bin/Release/opencv_test_shape.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/bin/Release/opencv_test_shape.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/bin/Release/opencv_test_shape.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version />
     </Link>
@@ -193,11 +193,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <CustomBuild Include="..\..\..\..\..\..\modules\shape\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule $(OCV2015_ROOT)/modules/shape/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)/modules/shape/CMakeLists.txt;$(OCV2015_ROOT)\modules\shape\CMakeLists.txt;$(OCV2015_ROOT)\modules\shape\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\shape\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\shape\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule $(OCV2015_ROOT)/modules/shape/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)/modules/shape/CMakeLists.txt;$(OCV2015_ROOT)\modules\shape\CMakeLists.txt;$(OCV2015_ROOT)\modules\shape\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\shape\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\shape\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -214,38 +214,38 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <AppxManifest Include="opencv_test_shape.dir\package.appxManifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\shape\opencv_test_shape.dir\SmallLogo.png" />
-    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\shape\opencv_test_shape.dir\Logo.png" />
-    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\shape\opencv_test_shape.dir\StoreLogo.png" />
-    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\shape\opencv_test_shape.dir\SplashScreen.png" />
-    <None Include="$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\shape\opencv_test_shape.dir\Windows_TemporaryKey.pfx" />
+    <Image Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\shape\opencv_test_shape.dir\SmallLogo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\shape\opencv_test_shape.dir\Logo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\shape\opencv_test_shape.dir\StoreLogo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\shape\opencv_test_shape.dir\SplashScreen.png" />
+    <None Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\shape\opencv_test_shape.dir\Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/ZERO_CHECK.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/ZERO_CHECK.vcxproj">
       <Project>F634A3F9-2433-4648-B75C-FCB1B3A00E1B</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/core/opencv_core.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/core/opencv_core.vcxproj">
       <Project>0E33B916-C796-43F7-A151-7144AD59CBEF</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/hal/opencv_hal.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/hal/opencv_hal.vcxproj">
       <Project>59E9DEEE-0461-49EA-AE5B-CEA8CD627C3C</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/imgcodecs/opencv_imgcodecs.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/imgcodecs/opencv_imgcodecs.vcxproj">
       <Project>905CE13A-AB95-442B-8901-786DA2A8AD57</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/imgproc/opencv_imgproc.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/imgproc/opencv_imgproc.vcxproj">
       <Project>A10F0613-F9BA-4A65-8FF5-0EC044BEAE2D</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/shape/opencv_shape.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/shape/opencv_shape.vcxproj">
       <Project>559A3D70-B378-42C2-B2BA-D02E430EA1C7</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/ts/opencv_ts.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/ts/opencv_ts.vcxproj">
       <Project>99073386-224A-42FC-8F97-73BFAC86D285</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/video/opencv_video.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/video/opencv_video.vcxproj">
       <Project>0486F3A2-C65E-4114-8C09-192C2E660684</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/videoio/opencv_videoio.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/videoio/opencv_videoio.vcxproj">
       <Project>4C52C36B-8175-4758-990E-2037CC09670C</Project>
     </ProjectReference>
   </ItemGroup>

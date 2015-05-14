@@ -42,17 +42,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <AppxPackageArtifactsDir>opencv_perf_stitching.dir\</AppxPackageArtifactsDir>
-    <ProjectPriFullPath>$(TargetDir)resources.pri</ProjectPriFullPath>    <PackageCertificateKeyFile>$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <ProjectPriFullPath>$(TargetDir)resources.pri</ProjectPriFullPath>    <PackageCertificateKeyFile>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\bin\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\bin\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_perf_stitching.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_perf_stitching</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\bin\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\bin\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_perf_stitching.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_perf_stitching</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
@@ -62,7 +62,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>true</CompileAsWinRT>
@@ -86,10 +86,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -116,9 +116,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Debug/opencv_perf_stitching.lib</ImportLibrary>
+      <ImportLibrary>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/bin/Debug/opencv_perf_stitching.lib</ImportLibrary>
       <OptimizeReferences>false</OptimizeReferences>
-      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Debug/opencv_perf_stitching.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/bin/Debug/opencv_perf_stitching.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version />
     </Link>
@@ -129,7 +129,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>true</CompileAsWinRT>
@@ -153,10 +153,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\stitching\include;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\flann\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\features2d\include;$(OCV2015_ROOT)\modules\calib3d\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\stitching\perf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -182,8 +182,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Release/opencv_perf_stitching.lib</ImportLibrary>
-      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Release/opencv_perf_stitching.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/bin/Release/opencv_perf_stitching.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/bin/Release/opencv_perf_stitching.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version />
     </Link>
@@ -195,11 +195,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <CustomBuild Include="..\..\..\..\..\..\modules\stitching\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(OCV2015_ROOT)/modules/stitching/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/modules/stitching/CMakeLists.txt;$(OCV2015_ROOT)\modules\stitching\CMakeLists.txt;$(OCV2015_ROOT)\modules\stitching\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(OCV2015_ROOT)/modules/stitching/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/modules/stitching/CMakeLists.txt;$(OCV2015_ROOT)\modules\stitching\CMakeLists.txt;$(OCV2015_ROOT)\modules\stitching\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -218,50 +218,50 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <AppxManifest Include="opencv_perf_stitching.dir\package.appxManifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\SmallLogo.png" />
-    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\Logo.png" />
-    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\StoreLogo.png" />
-    <Image Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\SplashScreen.png" />
-    <None Include="$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\Windows_TemporaryKey.pfx" />
+    <Image Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\SmallLogo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\Logo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\StoreLogo.png" />
+    <Image Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\SplashScreen.png" />
+    <None Include="$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\stitching\opencv_perf_stitching.dir\Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/ZERO_CHECK.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/ZERO_CHECK.vcxproj">
       <Project>A2D8558F-F1C3-49C2-917C-C2A91FCDE0E7</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/calib3d/opencv_calib3d.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/calib3d/opencv_calib3d.vcxproj">
       <Project>076C5F83-80CA-4BAD-8B94-9C564463460B</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/core/opencv_core.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/core/opencv_core.vcxproj">
       <Project>3A981105-210D-4525-8207-9388C5287E03</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/features2d/opencv_features2d.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/features2d/opencv_features2d.vcxproj">
       <Project>914BF0FE-7A35-42FF-97A9-1CE83258123D</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/flann/opencv_flann.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/flann/opencv_flann.vcxproj">
       <Project>BE1E4506-FE30-40E7-9D13-D7115EE62FC4</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/hal/opencv_hal.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/hal/opencv_hal.vcxproj">
       <Project>282787A0-CAB3-4D69-80C6-A5D5F3D585D7</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgcodecs/opencv_imgcodecs.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/imgcodecs/opencv_imgcodecs.vcxproj">
       <Project>B2A3210F-700D-4DC7-AA39-BB8FE350D177</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgproc/opencv_imgproc.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/imgproc/opencv_imgproc.vcxproj">
       <Project>E45EE2BE-C86E-43F8-A65E-5F2FA62F623D</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/ml/opencv_ml.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/ml/opencv_ml.vcxproj">
       <Project>EFC5D0AD-B5D4-4249-BC3B-052991E4A83C</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/objdetect/opencv_objdetect.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/objdetect/opencv_objdetect.vcxproj">
       <Project>AFF93A85-AD00-4B43-BDD9-3BE1C7790E45</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/stitching/opencv_stitching.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/stitching/opencv_stitching.vcxproj">
       <Project>35F20107-62F9-49E4-BE36-303FE1405DF6</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/ts/opencv_ts.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/ts/opencv_ts.vcxproj">
       <Project>C4F8CEF5-1BAA-4777-A156-12593CF7BEC3</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/videoio/opencv_videoio.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/videoio/opencv_videoio.vcxproj">
       <Project>E57D17E7-82C6-47D9-8E66-AFCF82DFECF9</Project>
     </ProjectReference>
   </ItemGroup>

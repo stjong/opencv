@@ -42,13 +42,13 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\bin\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\bin\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_objdetect.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_objdetect300d</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
       <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
       <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</GenerateManifest>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\bin\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\bin\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_objdetect.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_objdetect300</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
@@ -58,7 +58,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>false</CompileAsWinRT>
@@ -82,10 +82,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;CVAPI_EXPORTS;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Debug\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -112,9 +112,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x64/lib/Debug/opencv_objdetect300d.lib</ImportLibrary>
+      <ImportLibrary>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/lib/Debug/opencv_objdetect300d.lib</ImportLibrary>
       <OptimizeReferences>false</OptimizeReferences>
-      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Debug/opencv_objdetect300d.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/bin/Debug/opencv_objdetect300d.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version />
     </Link>
@@ -125,7 +125,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>false</CompileAsWinRT>
@@ -149,10 +149,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;CVAPI_EXPORTS;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;CMAKE_INTDIR=\"Release\";CVAPI_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;$(OCV2015_ROOT)\modules\objdetect\include;$(OCV2015_ROOT)\modules\objdetect\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\ml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -178,8 +178,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OCV2015_ROOT)/bin/WS/10.0/x64/lib/Release/opencv_objdetect300.lib</ImportLibrary>
-      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin/WS/10.0/x64/bin/Release/opencv_objdetect300.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/lib/Release/opencv_objdetect300.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/bin/Release/opencv_objdetect300.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version />
     </Link>
@@ -191,23 +191,23 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <CustomBuild Include="..\..\..\..\..\..\modules\objdetect\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(OCV2015_ROOT)/modules/objdetect/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/modules/objdetect/CMakeLists.txt;$(OCV2015_ROOT)\modules\objdetect\CMakeLists.txt;$(OCV2015_ROOT)\modules\objdetect\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(OCV2015_ROOT)/modules/objdetect/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/modules/objdetect/CMakeLists.txt;$(OCV2015_ROOT)\modules\objdetect\CMakeLists.txt;$(OCV2015_ROOT)\modules\objdetect\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\CMakeFiles\72f2622cd487fa7e1cb8bf14510ba0e5\opencl_kernels_objdetect.cpp.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating opencl_kernels_objdetect.cpp, opencl_kernels_objdetect.hpp</Message>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/bin/WS/10.0/x64/CMakeFiles/72f2622cd487fa7e1cb8bf14510ba0e5/opencl_kernels_objdetect.cpp.rule;$(OCV2015_ROOT)\modules\objdetect\src\opencl\cascadedetect.cl;$(OCV2015_ROOT)\modules\objdetect\src\opencl\objdetect_hog.cl;$(OCV2015_ROOT)\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect\opencl_kernels_objdetect.cpp;$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect\opencl_kernels_objdetect.hpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/CMakeFiles/72f2622cd487fa7e1cb8bf14510ba0e5/opencl_kernels_objdetect.cpp.rule;$(OCV2015_ROOT)\modules\objdetect\src\opencl\cascadedetect.cl;$(OCV2015_ROOT)\modules\objdetect\src\opencl\objdetect_hog.cl;$(OCV2015_ROOT)\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect\opencl_kernels_objdetect.cpp;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect\opencl_kernels_objdetect.hpp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating opencl_kernels_objdetect.cpp, opencl_kernels_objdetect.hpp</Message>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/bin/WS/10.0/x64/CMakeFiles/72f2622cd487fa7e1cb8bf14510ba0e5/opencl_kernels_objdetect.cpp.rule;$(OCV2015_ROOT)\modules\objdetect\src\opencl\cascadedetect.cl;$(OCV2015_ROOT)\modules\objdetect\src\opencl\objdetect_hog.cl;$(OCV2015_ROOT)\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect\opencl_kernels_objdetect.cpp;$(OCV2015_ROOT)\bin\WS\10.0\x64\modules\objdetect\opencl_kernels_objdetect.hpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/CMakeFiles/72f2622cd487fa7e1cb8bf14510ba0e5/opencl_kernels_objdetect.cpp.rule;$(OCV2015_ROOT)\modules\objdetect\src\opencl\cascadedetect.cl;$(OCV2015_ROOT)\modules\objdetect\src\opencl\objdetect_hog.cl;$(OCV2015_ROOT)\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect\opencl_kernels_objdetect.cpp;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\modules\objdetect\opencl_kernels_objdetect.hpp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -237,19 +237,19 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="..\..\..\..\..\..\modules\objdetect\src\opencl\objdetect_hog.cl" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/ZERO_CHECK.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/ZERO_CHECK.vcxproj">
       <Project>A2D8558F-F1C3-49C2-917C-C2A91FCDE0E7</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/core/opencv_core.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/core/opencv_core.vcxproj">
       <Project>3A981105-210D-4525-8207-9388C5287E03</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/hal/opencv_hal.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/hal/opencv_hal.vcxproj">
       <Project>282787A0-CAB3-4D69-80C6-A5D5F3D585D7</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/imgproc/opencv_imgproc.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/imgproc/opencv_imgproc.vcxproj">
       <Project>E45EE2BE-C86E-43F8-A65E-5F2FA62F623D</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/modules/ml/opencv_ml.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/modules/ml/opencv_ml.vcxproj">
       <Project>EFC5D0AD-B5D4-4249-BC3B-052991E4A83C</Project>
     </ProjectReference>
   </ItemGroup>

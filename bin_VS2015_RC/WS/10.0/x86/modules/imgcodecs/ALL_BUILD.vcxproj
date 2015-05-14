@@ -46,7 +46,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\3rdparty\libjasper;$(OCV2015_ROOT)\bin\WS\10.0\x86\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libpng;$(OCV2015_ROOT)\3rdparty\libjpeg;$(OCV2015_ROOT)\bin\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\3rdparty\libjasper;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libpng;$(OCV2015_ROOT)\3rdparty\libjpeg;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -56,7 +56,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\3rdparty\libjasper;$(OCV2015_ROOT)\bin\WS\10.0\x86\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libpng;$(OCV2015_ROOT)\3rdparty\libjpeg;$(OCV2015_ROOT)\bin\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\3rdparty\libjasper;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libpng;$(OCV2015_ROOT)\3rdparty\libjpeg;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -68,24 +68,24 @@
     <CustomBuild Include="..\..\..\..\..\..\modules\imgcodecs\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule $(OCV2015_ROOT)/modules/imgcodecs/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)/modules/imgcodecs/CMakeLists.txt;$(OCV2015_ROOT)\modules\imgcodecs\CMakeLists.txt;$(OCV2015_ROOT)\modules\imgcodecs\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\imgcodecs\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\imgcodecs\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule $(OCV2015_ROOT)/modules/imgcodecs/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)/modules/imgcodecs/CMakeLists.txt;$(OCV2015_ROOT)\modules\imgcodecs\CMakeLists.txt;$(OCV2015_ROOT)\modules\imgcodecs\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\imgcodecs\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\imgcodecs\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/imgcodecs/opencv_imgcodecs.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/imgcodecs/opencv_imgcodecs.vcxproj">
       <Project>905CE13A-AB95-442B-8901-786DA2A8AD57</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/imgcodecs/opencv_perf_imgcodecs.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/imgcodecs/opencv_perf_imgcodecs.vcxproj">
       <Project>4356558B-6999-43D6-8347-C48A285BB633</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/imgcodecs/opencv_test_imgcodecs.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/imgcodecs/opencv_test_imgcodecs.vcxproj">
       <Project>5D86F6F0-1EBD-474C-B894-31076D90C9FC</Project>
     </ProjectReference>
   </ItemGroup>

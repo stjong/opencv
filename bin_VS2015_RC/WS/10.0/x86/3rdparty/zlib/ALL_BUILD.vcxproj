@@ -46,7 +46,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -56,7 +56,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -67,19 +67,19 @@
   <ItemGroup>
     <CustomBuild Include="..\..\..\..\..\..\3rdparty\zlib\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt</Message>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;C:\Projects\CMake\Modules\CheckFunctionExists.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckCSourceCompiles.cmake;C:\Projects\CMake\Modules\CheckTypeSize.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\bin\WS\10.0\x86\CMakeFiles\CheckTypeSize\OFF64_T.c;$(OCV2015_ROOT)\3rdparty\zlib\zconf.h.cmakein;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\3rdparty\zlib\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;C:\Projects\CMake\Modules\CheckFunctionExists.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckCSourceCompiles.cmake;C:\Projects\CMake\Modules\CheckTypeSize.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\CMakeFiles\CheckTypeSize\OFF64_T.c;$(OCV2015_ROOT)\3rdparty\zlib\zconf.h.cmakein;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\3rdparty\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt</Message>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;C:\Projects\CMake\Modules\CheckFunctionExists.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckCSourceCompiles.cmake;C:\Projects\CMake\Modules\CheckTypeSize.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\bin\WS\10.0\x86\CMakeFiles\CheckTypeSize\OFF64_T.c;$(OCV2015_ROOT)\3rdparty\zlib\zconf.h.cmakein;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\3rdparty\zlib\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;C:\Projects\CMake\Modules\CheckFunctionExists.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckCSourceCompiles.cmake;C:\Projects\CMake\Modules\CheckTypeSize.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\CMakeFiles\CheckTypeSize\OFF64_T.c;$(OCV2015_ROOT)\3rdparty\zlib\zconf.h.cmakein;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\3rdparty\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/3rdparty/zlib/zlib.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/3rdparty/zlib/zlib.vcxproj">
       <Project>FEC689BC-1763-429D-AC6F-1C9C5A91D17E</Project>
     </ProjectReference>
   </ItemGroup>

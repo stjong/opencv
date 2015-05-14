@@ -46,7 +46,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -56,7 +56,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff;$(OCV2015_ROOT)\3rdparty\libtiff;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -68,18 +68,18 @@
     <CustomBuild Include="..\..\..\..\..\..\3rdparty\libtiff\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/libtiff/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/3rdparty/libtiff/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\libtiff\CMakeLists.txt;C:\Projects\CMake\Modules\CheckFunctionExists.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;$(OCV2015_ROOT)\3rdparty\libtiff\tif_config.h.cmakein;$(OCV2015_ROOT)\3rdparty\libtiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/libtiff/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/3rdparty/libtiff/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\libtiff\CMakeLists.txt;C:\Projects\CMake\Modules\CheckFunctionExists.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.cmake;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckFunctionExists.c;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;C:\Projects\CMake\Modules\CheckIncludeFile.c.in;$(OCV2015_ROOT)\3rdparty\libtiff\tif_config.h.cmakein;$(OCV2015_ROOT)\3rdparty\libtiff\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin\WS\10.0\x64\3rdparty\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x64\3rdparty\libtiff\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x64/3rdparty/libtiff/libtiff.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x64/3rdparty/libtiff/libtiff.vcxproj">
       <Project>B4ED8CDE-B068-4C44-9F2B-540AA98D0BBB</Project>
     </ProjectReference>
   </ItemGroup>

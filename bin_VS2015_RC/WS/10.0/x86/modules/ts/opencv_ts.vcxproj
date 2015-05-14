@@ -42,11 +42,11 @@
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\lib\Debug\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\lib\Debug\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_ts.dir\Debug\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_ts300d</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\lib\Release\</OutDir>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\lib\Release\</OutDir>
       <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_ts.dir\Release\</IntDir>
       <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_ts300</TargetName>
       <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
@@ -54,7 +54,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>true</CompileAsWinRT>
@@ -77,10 +77,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;OPENCV_TEST_DATA_PATH=\"C:\\Projects\\opencv_extra\\testdata\";OPENCV_PERF_VALIDATION_DIR=\"C:\\Projects\\opencv_perf\";CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -99,13 +99,13 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\msvcp$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin/WS/10.0/x86\bin\$(Configuration)\msvcp$(PlatformToolsetVersion)_app.dll"
+copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\msvcp$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86\bin\$(Configuration)\msvcp$(PlatformToolsetVersion)_app.dll"
 if %errorlevel% neq 0 goto :cmEnd
-copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\vccorlib$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin/WS/10.0/x86\bin\$(Configuration)\vccorlib$(PlatformToolsetVersion)_app.dll"
+copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\vccorlib$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86\bin\$(Configuration)\vccorlib$(PlatformToolsetVersion)_app.dll"
 if %errorlevel% neq 0 goto :cmEnd
-copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\vcruntime$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin/WS/10.0/x86\bin\$(Configuration)\vcruntime$(PlatformToolsetVersion)_app.dll"
+copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\vcruntime$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86\bin\$(Configuration)\vcruntime$(PlatformToolsetVersion)_app.dll"
 if %errorlevel% neq 0 goto :cmEnd
-copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\concrt$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin/WS/10.0/x86\bin\$(Configuration)\concrt$(PlatformToolsetVersion)_app.dll"
+copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\concrt$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86\bin\$(Configuration)\concrt$(PlatformToolsetVersion)_app.dll"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -121,7 +121,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <CompileAsWinRT>true</CompileAsWinRT>
@@ -144,10 +144,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;__OPENCV_BUILD=1;OPENCV_TEST_DATA_PATH=\"C:\\Projects\\opencv_extra\\testdata\";OPENCV_PERF_VALIDATION_DIR=\"C:\\Projects\\opencv_perf\";CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86;$(OCV2015_ROOT)\modules\ts\include;$(OCV2015_ROOT)\modules\ts\src;$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\ts;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -166,13 +166,13 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
 setlocal
-copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\msvcp$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin/WS/10.0/x86\bin\$(Configuration)\msvcp$(PlatformToolsetVersion)_app.dll"
+copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\msvcp$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86\bin\$(Configuration)\msvcp$(PlatformToolsetVersion)_app.dll"
 if %errorlevel% neq 0 goto :cmEnd
-copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\vccorlib$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin/WS/10.0/x86\bin\$(Configuration)\vccorlib$(PlatformToolsetVersion)_app.dll"
+copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\vccorlib$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86\bin\$(Configuration)\vccorlib$(PlatformToolsetVersion)_app.dll"
 if %errorlevel% neq 0 goto :cmEnd
-copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\vcruntime$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin/WS/10.0/x86\bin\$(Configuration)\vcruntime$(PlatformToolsetVersion)_app.dll"
+copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\vcruntime$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86\bin\$(Configuration)\vcruntime$(PlatformToolsetVersion)_app.dll"
 if %errorlevel% neq 0 goto :cmEnd
-copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\concrt$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin/WS/10.0/x86\bin\$(Configuration)\concrt$(PlatformToolsetVersion)_app.dll"
+copy /y "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC$(PlatformToolsetVersion).CRT\concrt$(PlatformToolsetVersion).dll" "$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86\bin\$(Configuration)\concrt$(PlatformToolsetVersion)_app.dll"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -189,11 +189,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <CustomBuild Include="..\..\..\..\..\..\modules\ts\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule $(OCV2015_ROOT)/modules/ts/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)/modules/ts/CMakeLists.txt;$(OCV2015_ROOT)\modules\ts\CMakeLists.txt;$(OCV2015_ROOT)\modules\ts\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\ts\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\ts\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule $(OCV2015_ROOT)/modules/ts/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)/modules/ts/CMakeLists.txt;$(OCV2015_ROOT)\modules\ts\CMakeLists.txt;$(OCV2015_ROOT)\modules\ts\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin\WS\10.0\x86\modules\ts\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\bin_VS2015_RC\WS\10.0\x86\modules\ts\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -226,22 +226,22 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/ZERO_CHECK.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/ZERO_CHECK.vcxproj">
       <Project>F634A3F9-2433-4648-B75C-FCB1B3A00E1B</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/core/opencv_core.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/core/opencv_core.vcxproj">
       <Project>0E33B916-C796-43F7-A151-7144AD59CBEF</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/hal/opencv_hal.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/hal/opencv_hal.vcxproj">
       <Project>59E9DEEE-0461-49EA-AE5B-CEA8CD627C3C</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/imgcodecs/opencv_imgcodecs.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/imgcodecs/opencv_imgcodecs.vcxproj">
       <Project>905CE13A-AB95-442B-8901-786DA2A8AD57</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/imgproc/opencv_imgproc.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/imgproc/opencv_imgproc.vcxproj">
       <Project>A10F0613-F9BA-4A65-8FF5-0EC044BEAE2D</Project>
     </ProjectReference>
-    <ProjectReference Include="$(OCV2015_ROOT)/bin/WS/10.0/x86/modules/videoio/opencv_videoio.vcxproj">
+    <ProjectReference Include="$(OCV2015_ROOT)/bin_VS2015_RC/WS/10.0/x86/modules/videoio/opencv_videoio.vcxproj">
       <Project>4C52C36B-8175-4758-990E-2037CC09670C</Project>
     </ProjectReference>
   </ItemGroup>
