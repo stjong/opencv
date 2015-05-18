@@ -1,6 +1,6 @@
-The solution is builded with EM.props
-This property sheet only target ARM (debug|release)
-This assume that folder  $(OCV2015_ROOT)\vs2015\WS\10.0\include content include files for openCV/2015/Win10
+The solution is built with EM.props
+This property sheet only targets ARM (debug|release)
+This assumes that folder  ```$(OCV2015_ROOT)\vs2015\WS\10.0\include``` content includes files for openCV/2015/Win10
 
 
  
