@@ -5,7 +5,7 @@
 #### Build notes
 
 1. You might need to install this if you haven't already: http://www.microsoft.com/en-US/download/details.aspx?id=40784
-2. Set ```OPENCV_TEST_DATA_PATH``` environment variable to location of ```opencv_extra/testdata``` to get tests work correctly. Also, set ```OPENCV_PERF_VALIDATION_DIR``` environment variable in case you are planning to run performance tests.
+2. Set ```OPENCV_TEST_DATA_PATH``` environment variable to location of ```opencv_extra/testdata``` (cloning of [opencv_extra](https://github.com/Itseez/opencv_extra) repo required) to get tests work correctly. Also, set ```OPENCV_PERF_VALIDATION_DIR``` environment variable in case you are planning to run performance tests.
 3. *In case you'd like to adjust some flags that are defaulted by script, go to "Manual build" section.* Otherwise go to ```platforms/winrt``` and execute ```>> setup_winrt.bat "WS" "8.1" "x64"```.
 This will generate all of the files needed to build open_cv projects for selected platform in ```opencv\bin\...```. Open the ```opencv\bin\WS\8.1\x64``` directory and open the ```OpenCV.sln```.
 4. Set OCV solution to Release mode and build all of the projects. They should build without errors and generate executables in "bin\WS\8.1\x64\bin\Release\"
