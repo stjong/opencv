@@ -4,7 +4,7 @@
 
 ### How to build:
 
-1. Set ```OPENCV_TEST_DATA_PATH``` environment variable to location of ```opencv_extra/testdata``` to get tests work correctly. Also, set ```OPENCV_PERF_VALIDATION_DIR``` environment variable in case you are planning to run performance tests.
+1. Set ```OPENCV_TEST_DATA_PATH``` environment variable to location of ```opencv_extra/testdata``` (cloning of [opencv_extra](https://github.com/Itseez/opencv_extra) repo required) to get tests work correctly. Also, set ```OPENCV_PERF_VALIDATION_DIR``` environment variable in case you are planning to run performance tests.
 2. Install VS2015 RC from [there](https://www.visualstudio.com/).  Select "Universal Windows App Development Tools" using Custom setup option.
 3. Jump to **Short way** or **Long way** depending on your aims and preferences
 
@@ -17,7 +17,8 @@ Use pregenerated projects from bin folder if you are still working with Visual S
 These projects were tested with specific versions of Visual Studio 2015 and might not work correctly with other pre-release versions.
 
 1. Set environment variable ```OCV2015_ROOT``` to the OpenCV location (e.g. ```Path\to\OCV\opencv```)
-2. Jump to **Common build steps**
+2. Check if ```OCV2015_ROOT``` displayed properly in VS2015 macros: open any solution, right click on any project, choose "Properties", find any field that supports macros (say, Configuration Properties -> General -> Output Directory), choose "Edit", click "Macros \>\>" button and look for OCV2015_ROOT there. You may need to delete .sdf file to make VS2015 get updated value of environment variable (it looks like VS caches some vars on solution opening)
+3. Jump to **Common build steps**
 
 #### Long way (generating projects on your own):
 
