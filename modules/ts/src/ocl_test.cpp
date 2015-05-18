@@ -297,6 +297,7 @@ double TestUtils::checkRectSimilarity(const Size & sz, std::vector<Rect>& ob1, s
 
 void TestUtils::showDiff(InputArray _src, InputArray _gold, InputArray _actual, double eps, bool alwaysShow)
 {
+#ifndef WINRT
     Mat src = _src.getMat(), actual = _actual.getMat(), gold = _gold.getMat();
 
     Mat diff, diff_thresh;
@@ -324,6 +325,7 @@ void TestUtils::showDiff(InputArray _src, InputArray _gold, InputArray _actual, 
 
         cv::waitKey();
     }
+#endif
 }
 
 } } // namespace cvtest::ocl
