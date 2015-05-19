@@ -1,5 +1,7 @@
 ### OpenCV: Open Source Computer Vision Library
 
+Purpose of this brnach is to work on the issue with video not being seen 'probably' due to camera initialization delay.
+
 [![Gittip](http://img.shields.io/gittip/OpenCV.png)](https://www.gittip.com/OpenCV/)
 
 #### Resources
