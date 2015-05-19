@@ -244,11 +244,12 @@ namespace cv {
             VideoioBridge::getInstance().height = height;
 
             // nb. Mats will be alloc'd on UI thread
-
             // request device init on UI thread - this does not block, and is async
             VideoioBridge::getInstance().requestForUIthreadAsync(OPEN_CAMERA,
                 outArray.size().width, outArray.size().height);
 
+            //std::unique_lock<std::mutex> lk(m);
+            //Sleep(3000);
             started = true;
             return false;
         }

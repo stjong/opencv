@@ -62,6 +62,7 @@ public:
     void    swapOutputBuffers();
 
 
+    bool                        cameraOpened;
     int                         deviceIndex, width, height;
     std::atomic<bool>           bIsFrameNew;
     std::mutex                  inputBufferMutex;   // input is double buffered
@@ -85,6 +86,7 @@ private:
         bIsFrameNew = false;
         currentFrame = 0;
         frameCounter = 0;
+        cameraOpened = false;
     };
 
     // singleton
