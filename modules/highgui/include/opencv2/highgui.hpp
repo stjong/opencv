@@ -122,6 +122,20 @@ It provides easy interface to:
         }
     @endcode
 
+    @defgroup highgui_winrt WinRT support
+
+    This figure explains new functionality implemented with WinRT GUI.
+
+    @code
+        MainPage::MainPage()
+        {
+            InitializeComponent();
+
+            cv::winrt_setFrameContainer(cvImage);
+            cv::winrt_startMessageLoop(cvMain);
+        }
+    @endcode
+
     @defgroup highgui_c C API
 @}
 */
