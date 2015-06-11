@@ -98,8 +98,6 @@ namespace highgui_xaml
             //    break;
             }
         });
-
-
     }
 
     //void MainPage::cvSlider_ValueChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs^ e)
@@ -144,4 +142,16 @@ void highgui_xaml::MainPage::OnVisibilityChanged(Platform::Object ^sender,
         grabberStarted = false;
         closeGrabber();
     }
+}
+
+
+void highgui_xaml::MainPage::comboBox_SelectionChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::SelectionChangedEventArgs^ e)
+{
+	extern int ProcessingMethodIndex;
+
+	char output[1024] = { 0 };
+	(void)sprintf_s(output, 1024, "New selection [%d]\n", MyComboBox->SelectedIndex);
+	OutputDebugStringA(output);
+
+	ProcessingMethodIndex = MyComboBox->SelectedIndex;	
 }

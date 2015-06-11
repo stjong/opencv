@@ -181,6 +181,12 @@ void Video::_GrabFrameAsync(::Media::CaptureFrameGrabber^ frameGrabber) {
                 pbScanline += plPitch;
                 buf += colBytes;
             }
+
+            // stjong remove this later
+            char output[1024] = { 0 };
+            (void)sprintf(output, "New frame 1 [%d]\n", HighguiBridge::getInstance().frameCounter + 1);
+            OutputDebugStringA(output);
+
             HighguiBridge::getInstance().bIsFrameNew = true;
         } else
         {
@@ -212,6 +218,12 @@ void Video::_GrabFrameAsync(::Media::CaptureFrameGrabber^ frameGrabber) {
                 pbScanline += plPitch;
                 buf += colBytes;
             }
+			
+            // remove this later
+            char output[1024] = { 0 };
+            (void)sprintf(output, "New frame 2 [%d]\n", HighguiBridge::getInstance().frameCounter + 1);
+            OutputDebugStringA(output);
+
             HighguiBridge::getInstance().bIsFrameNew = true;
         }
         CHK(buffer->Unlock2D());

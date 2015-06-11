@@ -113,8 +113,8 @@ namespace cv {
             width = outArray.size().width;
             height = outArray.size().height;         
 
-			if (width == 0) width = 640;
-			if (height == 0) height = 480;
+            if (width == 0) width = 640;
+            if (height == 0) height = 480;
 
             HighguiBridge::getInstance().width = width;
             HighguiBridge::getInstance().height = height;
