@@ -111,14 +111,21 @@ namespace cv {
 
             int width, height;
             width = outArray.size().width;
-            height = outArray.size().height;
-            if (width == 0) width = 640;
-            if (height == 0) height = 480;
+            height = outArray.size().height;         
+
+			if (width == 0) width = 640;
+			if (height == 0) height = 480;
 
             HighguiBridge::getInstance().width = width;
             HighguiBridge::getInstance().height = height;
 
             // nb. Mats will be alloc'd on UI thread
+			
+            // [stjong] 
+            // tbd, the reporter may get ahead of reporting status before MainPage() adds handler to process
+            // the action (see samples\winrt_universal\highgui_xaml\highgui_xaml\highgui_xaml.Windows\MainPage.xaml.cpp asyncTask->Progress(). 
+            // Yield here to avoid the race.
+            Sleep(3000);
 
             // request device init on UI thread - this does not block, and is async
             HighguiBridge::getInstance().requestForUIthreadAsync(OPEN_CAMERA,
