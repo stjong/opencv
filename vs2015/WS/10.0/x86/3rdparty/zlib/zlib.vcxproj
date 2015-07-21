@@ -5,9 +5,17 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -30,7 +38,19 @@
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
@@ -48,13 +68,54 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlib.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zlibd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">zlibd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zlib</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">zlib</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\vs2015\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_DEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\vs2015\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\vs2015\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\vs2015\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -128,16 +189,61 @@
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\vs2015\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;WINRT;NO_GETENV;WINRT_STORE;WINVER=_WIN32_WINNT_WIN8;NTDDI_VERSION=NTDDI_WIN8;_WIN32_WINNT=_WIN32_WINNT_WIN8;_VARIADIC_MAX=10;NO_FSEEKO;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\vs2015\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib;$(OCV2015_ROOT)\3rdparty\zlib;$(OCV2015_ROOT)\vs2015\WS\10.0\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\..\..\..\..\3rdparty\zlib\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;C:\Users\Evgeny\Documents\CMake\Modules\CheckFunctionExists.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckCSourceCompiles.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckFunctionExists.c;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\vs2015\WS\10.0\x86\CMakeFiles\CheckTypeSize\OFF64_T.c;$(OCV2015_ROOT)\3rdparty\zlib\zconf.h.cmakein;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;C:\Users\Evgeny\Documents\CMake\Modules\CheckFunctionExists.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckCSourceCompiles.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckFunctionExists.c;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\vs2015\WS\10.0\x86\CMakeFiles\CheckTypeSize\OFF64_T.c;$(OCV2015_ROOT)\3rdparty\zlib\zconf.h.cmakein;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule $(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt</Message>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;C:\Users\Evgeny\Documents\CMake\Modules\CheckFunctionExists.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckCSourceCompiles.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckFunctionExists.c;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\vs2015\WS\10.0\x86\CMakeFiles\CheckTypeSize\OFF64_T.c;$(OCV2015_ROOT)\3rdparty\zlib\zconf.h.cmakein;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)/3rdparty/zlib/CMakeLists.txt;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;C:\Users\Evgeny\Documents\CMake\Modules\CheckFunctionExists.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckCSourceCompiles.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFileCXX.cmake;C:\Users\Evgeny\Documents\CMake\Modules\CheckFunctionExists.c;C:\Users\Evgeny\Documents\CMake\Modules\CheckIncludeFile.c.in;C:\Users\Evgeny\Documents\CMake\Modules\CheckTypeSize.c.in;$(OCV2015_ROOT)\vs2015\WS\10.0\x86\CMakeFiles\CheckTypeSize\OFF64_T.c;$(OCV2015_ROOT)\3rdparty\zlib\zconf.h.cmakein;$(OCV2015_ROOT)\3rdparty\zlib\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OCV2015_ROOT)\vs2015\WS\10.0\x86\3rdparty\zlib\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
