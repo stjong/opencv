@@ -31,17 +31,27 @@ namespace highgui_xaml.WindowsCSharp
         /// <summary>
         /// 
         /// </summary>
-        private readonly CoreDispatcher dispatcher;
-        
+        private readonly CoreDispatcher _dispatcher;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private readonly VideoIo _videoIoCx;
+
         /// <summary>
         /// 
         /// </summary>
         public MainPage()
         {
             this.InitializeComponent();
-            dispatcher = Windows.UI.Core.CoreWindow.GetForCurrentThread().Dispatcher;
+
+            _videoIoCx = new VideoIo();
+            _videoIoCx.Initialize();
+            _videoIoCx.SetImage(OCVImage);
+
+            _dispatcher = Windows.UI.Core.CoreWindow.GetForCurrentThread().Dispatcher;
+
             ThreadPool.RunAsync(new WorkItemHandler((IAsyncAction) => CvMainThread()));
-            
         }
 
         /// <summary>
@@ -73,7 +83,7 @@ namespace highgui_xaml.WindowsCSharp
         public void CvMainThread()
         {
             // TBD need exit event.
-
+#if false
             if (dispatcher != null)
                 dispatcher.RunAsync(
                     CoreDispatcherPriority.Normal,
@@ -91,8 +101,20 @@ namespace highgui_xaml.WindowsCSharp
                             Task.Delay(TimeSpan.FromMilliseconds(100));
                         }
                     });
+#endif
 
-            return;
+            
+            
+            _videoIoCx.StartCapture();
+            while (true)
+            {
+                var mat = new MatCx();
+                _videoIoCx.GetFrame(mat);
+                _videoIoCx.ShowFrame(mat);
+                Task.Delay(TimeSpan.FromMilliseconds(100));
+            }
+
+            
         }
     }
 }

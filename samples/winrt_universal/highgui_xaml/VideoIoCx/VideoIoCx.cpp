@@ -31,14 +31,13 @@ VideoIo::VideoIo()
 }
 
 
-void VideoIo::SetImage(Windows::UI::Xaml::Controls::Image^ cvImage)
+void VideoIo::Initialize()
 {
-    HighguiBridge::getInstance().cvImage = cvImage;
-}
-
-void VideoIo::StartCapture()
-{
-    auto asyncTask = TaskWithProgressAsync();
+    auto asyncTask = create_async([this](progress_reporter<int> reporter)
+                    {
+                        HighguiBridge::getInstance().setReporter(reporter);
+                        // cvMain();
+                    });
 
     asyncTask->Progress = ref new AsyncActionProgressHandler<int>([this](IAsyncActionWithProgress<int>^ act, int progress)
     {
@@ -84,7 +83,15 @@ void VideoIo::StartCapture()
 
         }
     });
+}
 
+void VideoIo::SetImage(Windows::UI::Xaml::Controls::Image^ cvImage)
+{
+    HighguiBridge::getInstance().cvImage = cvImage;
+}
+
+void VideoIo::StartCapture()
+{
     vidCap.open(0);
 }
 
@@ -95,15 +102,12 @@ void VideoIo::StopCapture()
 
 }
 
-
+/*
 IAsyncActionWithProgress<int>^ VideoIo::TaskWithProgressAsync()
 {
-    return create_async([this](progress_reporter<int> reporter)
-    {
-        HighguiBridge::getInstance().setReporter(reporter);
-        // cvMain();
-    });
+    return 
 }
+*/
 
 
 void VideoIo::GetFrame(MatCx^ frame)
