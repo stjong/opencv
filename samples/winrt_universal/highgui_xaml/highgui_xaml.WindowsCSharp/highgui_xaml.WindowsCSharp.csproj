@@ -11,7 +11,7 @@
     <AssemblyName>highgui_xaml.WindowsCSharp</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10150.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.10158.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10150.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
@@ -133,9 +133,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VideoIoCx\VideoIoCx.vcxproj">
-      <Project>{512432c7-f346-42c0-9b60-29e24592dc42}</Project>
-      <Name>VideoIoCx</Name>
+    <ProjectReference Include="..\OpenCV_RT\OpenCV_RT.vcxproj">
+      <Project>{1a84269b-cc76-41f3-a031-c9143ae86df3}</Project>
+      <Name>OpenCV_RT</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

@@ -22,3 +22,6 @@ CMakeCache.txt
 *.suo
 *.log
 *.tlog
+*.lib
+*.pdb
+*.exp

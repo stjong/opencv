@@ -17,7 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
-using VideoIoCx;
+using cvRT;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -37,6 +37,8 @@ namespace highgui_xaml.WindowsCSharp
         /// 
         /// </summary>
         private readonly VideoIo _videoIoCx;
+
+        private int _processingMethodIndex;
 
         /// <summary>
         /// 
@@ -69,7 +71,7 @@ namespace highgui_xaml.WindowsCSharp
 
             var cb = (ComboBox)sender;
 
-            var selectedIndex = cb.SelectedIndex;
+            _processingMethodIndex = cb.SelectedIndex;
             var selectedItem = ((ComboBoxItem)cb.SelectedItem).Content.ToString();
 
             Debug.WriteLine(selectedItem);
@@ -103,18 +105,39 @@ namespace highgui_xaml.WindowsCSharp
                     });
 #endif
 
-            
-            
+
+
             _videoIoCx.StartCapture();
+
             while (true)
             {
-                var mat = new MatCx();
-                _videoIoCx.GetFrame(mat);
-                _videoIoCx.ShowFrame(mat);
-                Task.Delay(TimeSpan.FromMilliseconds(100));
-            }
+                var srcFrame = new Mat();
+                var dstFrame = new Mat();
+                _videoIoCx.GetFrame(srcFrame);
 
-            
+                switch (_processingMethodIndex)
+                {
+                    // passthrough
+                    case 0:
+                        break;
+                    // gray
+                    case 1:
+                        ImgProc.cvtColor(srcFrame, dstFrame, ColorConversionCodes.COLOR_RGBA2GRAY);
+                        ImgProc.cvtColor(dstFrame, srcFrame, ColorConversionCodes.COLOR_GRAY2RGB);
+                        break;
+                    // canny
+                    case 3:
+                        ImgProc.cvtColor(srcFrame, dstFrame, cvRT.ColorConversionCodes.COLOR_RGBA2GRAY);
+                        ImgProc.GaussianBlur(dstFrame, dstFrame, new Size(7, 7), 1.5, 1.5);
+                        ImgProc.Canny(dstFrame, dstFrame, 0, 30, 3);
+                        ImgProc.cvtColor(dstFrame, srcFrame, ColorConversionCodes.COLOR_GRAY2RGB);
+                        break;
+                    default:
+                        break;
+                }
+                _videoIoCx.ShowFrame(srcFrame);
+                Task.Delay(TimeSpan.FromMilliseconds(500));
+            }
         }
     }
 }

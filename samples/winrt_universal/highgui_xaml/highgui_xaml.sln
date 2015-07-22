@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23023.0
+VisualStudioVersion = 14.0.23103.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "highgui_xaml", "highgui_xaml", "{D7F9BEB3-65C8-443A-82C6-9D6A5B2B00FC}"
 EndProject
@@ -46,6 +46,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenCVCx", "OpenCVCx", "{57
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoIoCx", "VideoIoCx\VideoIoCx.vcxproj", "{512432C7-F346-42C0-9B60-29E24592DC42}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenCV_RT", "OpenCV_RT\OpenCV_RT.vcxproj", "{1A84269B-CC76-41F3-A031-C9143AE86DF3}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		highgui_xaml\highgui_xaml.Shared\highgui_xaml.Shared.vcxitems*{d7a82e7f-1535-4eec-aba9-2c8447669d33}*SharedItemsImports = 4
@@ -71,8 +73,6 @@ Global
 		{32FDAB94-F87E-4F0A-89A4-9EC10A3B1D3D}.Debug|Mixed Platforms.Build.0 = Debug|Win32
 		{32FDAB94-F87E-4F0A-89A4-9EC10A3B1D3D}.Debug|Mixed Platforms.Deploy.0 = Debug|Win32
 		{32FDAB94-F87E-4F0A-89A4-9EC10A3B1D3D}.Debug|Win32.ActiveCfg = Debug|Win32
-		{32FDAB94-F87E-4F0A-89A4-9EC10A3B1D3D}.Debug|Win32.Build.0 = Debug|Win32
-		{32FDAB94-F87E-4F0A-89A4-9EC10A3B1D3D}.Debug|Win32.Deploy.0 = Debug|Win32
 		{32FDAB94-F87E-4F0A-89A4-9EC10A3B1D3D}.Debug|x64.ActiveCfg = Debug|x64
 		{32FDAB94-F87E-4F0A-89A4-9EC10A3B1D3D}.Debug|x64.Build.0 = Debug|x64
 		{32FDAB94-F87E-4F0A-89A4-9EC10A3B1D3D}.Debug|x64.Deploy.0 = Debug|x64
@@ -308,7 +308,6 @@ Global
 		{512432C7-F346-42C0-9B60-29E24592DC42}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
 		{512432C7-F346-42C0-9B60-29E24592DC42}.Debug|Mixed Platforms.Build.0 = Debug|Win32
 		{512432C7-F346-42C0-9B60-29E24592DC42}.Debug|Win32.ActiveCfg = Debug|Win32
-		{512432C7-F346-42C0-9B60-29E24592DC42}.Debug|Win32.Build.0 = Debug|Win32
 		{512432C7-F346-42C0-9B60-29E24592DC42}.Debug|x64.ActiveCfg = Debug|x64
 		{512432C7-F346-42C0-9B60-29E24592DC42}.Debug|x64.Build.0 = Debug|x64
 		{512432C7-F346-42C0-9B60-29E24592DC42}.Release|Any CPU.ActiveCfg = Release|Win32
@@ -320,6 +319,24 @@ Global
 		{512432C7-F346-42C0-9B60-29E24592DC42}.Release|Win32.Build.0 = Release|Win32
 		{512432C7-F346-42C0-9B60-29E24592DC42}.Release|x64.ActiveCfg = Release|x64
 		{512432C7-F346-42C0-9B60-29E24592DC42}.Release|x64.Build.0 = Release|x64
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Debug|ARM.Build.0 = Debug|ARM
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Debug|Win32.Build.0 = Debug|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Debug|x64.ActiveCfg = Debug|x64
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Debug|x64.Build.0 = Debug|x64
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Release|Any CPU.ActiveCfg = Release|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Release|ARM.ActiveCfg = Release|ARM
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Release|ARM.Build.0 = Release|ARM
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Release|Win32.ActiveCfg = Release|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Release|Win32.Build.0 = Release|Win32
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Release|x64.ActiveCfg = Release|x64
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -337,5 +354,6 @@ Global
 		{66658554-40D3-42B4-A628-7B0EF3CF5876} = {621D1EFC-D8C3-4D61-9022-2E53EB97F161}
 		{3028B018-4606-441F-9850-F2DF540C2913} = {D7F9BEB3-65C8-443A-82C6-9D6A5B2B00FC}
 		{512432C7-F346-42C0-9B60-29E24592DC42} = {579CD229-6D72-4D57-9352-3EF436043F81}
+		{1A84269B-CC76-41F3-A031-C9143AE86DF3} = {579CD229-6D72-4D57-9352-3EF436043F81}
 	EndGlobalSection
 EndGlobal
