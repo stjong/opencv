@@ -31,11 +31,6 @@ namespace highgui_xaml.WindowsCSharp
         /// <summary>
         /// 
         /// </summary>
-        private readonly CoreDispatcher _dispatcher;
-
-        /// <summary>
-        /// 
-        /// </summary>
         private readonly VideoIo _videoIoCx;
 
         /// <summary>
@@ -49,8 +44,6 @@ namespace highgui_xaml.WindowsCSharp
             _videoIoCx.Initialize();
             _videoIoCx.SetImage(OCVImage);
 
-            _dispatcher = Windows.UI.Core.CoreWindow.GetForCurrentThread().Dispatcher;
-
             ThreadPool.RunAsync(new WorkItemHandler((IAsyncAction) => CvMainThread()));
         }
 
@@ -61,12 +54,6 @@ namespace highgui_xaml.WindowsCSharp
         /// <param name="e"></param>
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-#if false
-            var videoIoCx = new VideoIo();
-            videoIoCx.SetImage(OCVImage);
-            videoIoCx.StartCapture();
-#endif
-
             var cb = (ComboBox)sender;
 
             var selectedIndex = cb.SelectedIndex;
@@ -83,38 +70,17 @@ namespace highgui_xaml.WindowsCSharp
         public void CvMainThread()
         {
             // TBD need exit event.
-#if false
-            if (dispatcher != null)
-                dispatcher.RunAsync(
-                    CoreDispatcherPriority.Normal,
-                    () =>
-                    {
-                        var videoIoCx = new VideoIo();
-                        videoIoCx.SetImage(OCVImage);
-                        videoIoCx.StartCapture();
 
-                        while (true)
-                        {
-                            var mat = new MatCx();
-                            videoIoCx.GetFrame(mat);
-                            videoIoCx.ShowFrame(mat);
-                            Task.Delay(TimeSpan.FromMilliseconds(100));
-                        }
-                    });
-#endif
-
-            
-            
             _videoIoCx.StartCapture();
+
             while (true)
             {
                 var mat = new MatCx();
                 _videoIoCx.GetFrame(mat);
                 _videoIoCx.ShowFrame(mat);
-                Task.Delay(TimeSpan.FromMilliseconds(100));
             }
 
-            
+            _videoIoCx.StopCapture();
         }
     }
 }
