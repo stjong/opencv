@@ -25,9 +25,9 @@ VideoIo::VideoIo()
 void VideoIo::Initialize()
 {
     auto asyncTask = create_async([this](progress_reporter<int> reporter)
-                    {
-                        HighguiBridge::getInstance().setReporter(reporter);                        
-                    });
+                        {
+                            HighguiBridge::getInstance().setReporter(reporter);                        
+                        });
 
     asyncTask->Progress = ref new AsyncActionProgressHandler<int>([this](IAsyncActionWithProgress<int>^ act, int progress)
     {

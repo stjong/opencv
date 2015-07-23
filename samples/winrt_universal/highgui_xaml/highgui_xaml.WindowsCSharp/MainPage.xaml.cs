@@ -31,7 +31,7 @@ namespace highgui_xaml.WindowsCSharp
         /// <summary>
         /// 
         /// </summary>
-        private readonly VideoIo _videoIoCx;
+        private readonly VideoIo _videoIo;
 
         /// <summary>
         /// 
@@ -40,9 +40,9 @@ namespace highgui_xaml.WindowsCSharp
         {
             this.InitializeComponent();
 
-            _videoIoCx = new VideoIo();
-            _videoIoCx.Initialize();
-            _videoIoCx.SetImage(OCVImage);
+            _videoIo = new VideoIo();
+            _videoIo.Initialize();
+            _videoIo.SetImage(OCVImage);
 
             ThreadPool.RunAsync(new WorkItemHandler((IAsyncAction) => CvMainThread()));
         }
@@ -71,16 +71,16 @@ namespace highgui_xaml.WindowsCSharp
         {
             // TBD need exit event.
 
-            _videoIoCx.StartCapture();
+            _videoIo.StartCapture();
 
             while (true)
             {
                 var mat = new MatCx();
-                _videoIoCx.GetFrame(mat);
-                _videoIoCx.ShowFrame(mat);
+                _videoIo.GetFrame(mat);
+                _videoIo.ShowFrame(mat);
             }
 
-            _videoIoCx.StopCapture();
+            _videoIo.StopCapture();
         }
     }
 }
