@@ -133,9 +133,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenCV_RT\OpenCV_RT.vcxproj">
-      <Project>{1a84269b-cc76-41f3-a031-c9143ae86df3}</Project>
-      <Name>OpenCV_RT</Name>
+    <ProjectReference Include="..\..\..\..\modules\opencvRT\opencvRT.vcxproj">
+      <Project>{0ca85b79-912a-4d30-ad07-36450b47feba}</Project>
+      <Name>opencvRT</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
