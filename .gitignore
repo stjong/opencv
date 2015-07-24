@@ -25,3 +25,6 @@ CMakeCache.txt
 *.lib
 *.pdb
 *.exp
+_Resharper*
+debug/
+retail/
