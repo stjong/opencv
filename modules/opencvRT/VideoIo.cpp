@@ -19,10 +19,9 @@ VideoIo::VideoIo()
 void VideoIo::Initialize()
 {
 	auto asyncTask = create_async([this](progress_reporter<int> reporter)
-	{
-		HighguiBridge::getInstance().setReporter(reporter);
-		// cvMain();
-	});
+						{
+							HighguiBridge::getInstance().setReporter(reporter);
+						});
 
 	asyncTask->Progress = ref new AsyncActionProgressHandler<int>([this](IAsyncActionWithProgress<int>^ act, int progress)
 	{
@@ -83,17 +82,8 @@ void VideoIo::StartCapture()
 
 void VideoIo::StopCapture()
 {
-	// tbd
-
+	vidCap.release();
 }
-
-/*
-IAsyncActionWithProgress<int>^ VideoIo::TaskWithProgressAsync()
-{
-return
-}
-*/
-
 
 void VideoIo::GetFrame(Mat^ frame)
 {
@@ -119,59 +109,4 @@ void VideoIo::GetFrame(Mat^ frame)
 void VideoIo::ShowFrame(Mat^ frame)
 {
 	imshow_winrt(frame->RawMat());
-}
-
-void VideoIo::cvMain()
-{
-	/*
-	VideoCapture cam;
-
-	OutputDebugString(L"hello world 1 \r\n");
-
-	cam.open(0);    // open the default camera
-
-	MatCx frame;
-
-	int row = 0;
-	int column = 0;
-
-	int ProcessingMethodIndex = 0;
-
-	// process frames
-	while (1)
-	{
-	cv::Mat* mat = frame.GetMat();
-
-	// get a new frame from camera - this is non-blocking per spec
-	cam >> *frame.GetMat();
-
-	// don't reprocess the same frame again
-	// nb if commented then flashing may occur
-	if (!cam.grab()) continue;
-
-	if (frame.GetMat()->total() == 0)
-	continue;
-
-	// image processing calculations here
-	// nb Mat frame is in RGB24 format (8UC3)
-
-	OutputDebugStringA("processing frame...\r\n");
-
-	switch (ProcessingMethodIndex)
-	{
-	case 0:
-	// just passthrough..
-	break;
-
-	default:
-	break;
-	}
-
-	//imshow("", frame);
-	imshow_winrt(*frame.GetMat());
-	}
-
-
-	OutputDebugString(L"Hello Main Loop");
-	*/
 }

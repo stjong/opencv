@@ -19,7 +19,6 @@ namespace cvRT
 		// Windows::Foundation::IAsyncActionWithProgress<int>^ TaskWithProgressAsync();
 
 	private:
-		void VideoIo::cvMain(); // tbd push this up to C#
 		bool grabberStarted;    // tbd rename this to better variable
 		cv::VideoCapture vidCap;    // tbd comment
 		Windows::Foundation::IAsyncActionWithProgress<int>^ asyncTask;   // tbd comment
