@@ -100,6 +100,7 @@
   <PropertyGroup />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <GenerateManifest>false</GenerateManifest>
+    <OutDir>$(OCV2015_ROOT)\vs2015\WS\10.0\x86\bin\Debug\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <GenerateManifest>false</GenerateManifest>
@@ -125,7 +126,7 @@
       <AdditionalUsingDirectories>$(WindowsSDK_WindowsMetadata);$(AdditionalUsingDirectories)</AdditionalUsingDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\videoio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OCV2015_ROOT)\modules\core\include;$(OCV2015_ROOT)\modules\imgproc\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\imgcodecs\include;$(OCV2015_ROOT)\modules\hal\include;$(OCV2015_ROOT)\modules\videoio\include;$(OCV2015_ROOT)\modules\objdetect\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,6 +134,9 @@
       <AdditionalLibraryDirectories>$(OCV2015_ROOT)\vs2015\WS\10.0\x86\lib\Debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opencv_imgcodecs300d.lib;opencv_core300d.lib;opencv_imgproc300d.lib;opencv_videoio300d.lib;opencv_objdetect300d.lib;WindowsApp.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -227,6 +231,44 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="VideoIo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\libjasper\libjasper.vcxproj">
+      <Project>{1fa1dbc9-8118-4d70-aee5-8b3d355c5dcf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\libjpeg\libjpeg.vcxproj">
+      <Project>{7a037eff-0fb6-4961-ad2b-809399bf9b60}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\libpng\libpng.vcxproj">
+      <Project>{c6e1e561-118c-4c9a-b9e6-43b5293bf77b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\libtiff\libtiff.vcxproj">
+      <Project>{57f0610d-ebbf-4f69-a057-2f05eb1a3f27}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\zlib\zlib.vcxproj">
+      <Project>{9aedcdfb-295a-4672-8080-619851d9ebaf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\modules\core\opencv_core.vcxproj">
+      <Project>{0b693504-dc28-40f7-8f44-c6cc4dc0b02e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\modules\hal\opencv_hal.vcxproj">
+      <Project>{bdade1cb-abdc-488c-b1da-1e2694021912}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\modules\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{71fb2dc1-c572-492b-9683-75bb3683b8c8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{184c4566-b665-4b92-83e6-bc4b71fe8b95}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\modules\ml\opencv_ml.vcxproj">
+      <Project>{66658554-40d3-42b4-a628-7b0ef3cf5876}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\modules\objdetect\opencv_objdetect.vcxproj">
+      <Project>{55fa7dff-4ee7-47f0-a700-2b9e51d1fb55}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\modules\videoio\opencv_videoio.vcxproj">
+      <Project>{49897c63-7afb-4004-81f5-bbf6e53d9bb6}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
