@@ -233,21 +233,6 @@
     <ClCompile Include="VideoIo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\libjasper\libjasper.vcxproj">
-      <Project>{1fa1dbc9-8118-4d70-aee5-8b3d355c5dcf}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\libjpeg\libjpeg.vcxproj">
-      <Project>{7a037eff-0fb6-4961-ad2b-809399bf9b60}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\libpng\libpng.vcxproj">
-      <Project>{c6e1e561-118c-4c9a-b9e6-43b5293bf77b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\libtiff\libtiff.vcxproj">
-      <Project>{57f0610d-ebbf-4f69-a057-2f05eb1a3f27}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\vs2015\WS\10.0\x86\3rdparty\zlib\zlib.vcxproj">
-      <Project>{9aedcdfb-295a-4672-8080-619851d9ebaf}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\vs2015\WS\10.0\x86\modules\core\opencv_core.vcxproj">
       <Project>{0b693504-dc28-40f7-8f44-c6cc4dc0b02e}</Project>
     </ProjectReference>
