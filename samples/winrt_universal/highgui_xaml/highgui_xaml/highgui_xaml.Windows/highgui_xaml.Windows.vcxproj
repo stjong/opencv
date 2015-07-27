@@ -210,6 +210,14 @@
       <Project>{49897c63-7afb-4004-81f5-bbf6e53d9bb6}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\..\..\data\haarcascades\haarcascade_eye_tree_eyeglasses.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Xml>
+    <Xml Include="..\..\..\..\..\data\haarcascades\haarcascade_frontalface_alt.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </Xml>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
