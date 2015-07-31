@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include
+# Install script for directory: C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,21 +29,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv" TYPE FILE FILES
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/cv.h"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/cv.hpp"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/cvaux.h"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/cvaux.hpp"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/cvwimage.h"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/cxcore.h"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/cxcore.hpp"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/cxeigen.hpp"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/cxmisc.h"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/highgui.h"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv/ml.h"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/cv.h"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/cv.hpp"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/cvaux.h"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/cvaux.hpp"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/cvwimage.h"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/cxcore.h"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/cxcore.hpp"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/cxeigen.hpp"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/cxmisc.h"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/highgui.h"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv/ml.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/include/opencv2/opencv.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/include/opencv2/opencv.hpp")
 endif()
 

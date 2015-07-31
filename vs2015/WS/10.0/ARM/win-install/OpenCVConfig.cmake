@@ -34,7 +34,6 @@
 #      - OpenCV_LIB_COMPONENTS           : Present OpenCV modules list
 #      - OpenCV_USE_MANGLED_PATHS        : Mangled OpenCV path flag
 #      - OpenCV_MODULES_SUFFIX           : The suffix for OpenCVModules-XXX.cmake file
-#      - OpenCV_HAVE_ANDROID_CAMERA      : Presence of Android native camera wrappers
 #
 #    Deprecated variables:
 #      - OpenCV_VERSION_TWEAK            : Always "0"
@@ -77,6 +76,13 @@ if("FALSE" STREQUAL "TRUE") # value is defined by package builder (use STREQUAL 
 endif()
 
 if(NOT TARGET opencv_core)
+  # Extract directory name from full path of the file currently being processed.
+  # Note that CMake 2.8.3 introduced CMAKE_CURRENT_LIST_DIR. We reimplement it
+  # for older versions of CMake to support these as well.
+  if(CMAKE_VERSION VERSION_LESS "2.8.3")
+    get_filename_component(CMAKE_CURRENT_LIST_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+  endif()
+
   include(${CMAKE_CURRENT_LIST_DIR}/OpenCVModules${OpenCV_MODULES_SUFFIX}.cmake)
 endif()
 
@@ -120,9 +126,6 @@ if(NOT WIN32 OR ANDROID)
   endif()
 endif()
 
-# Presence of Android native camera wrappers
-set(OpenCV_HAVE_ANDROID_CAMERA OFF)
-
 # ======================================================
 # Include directories to add to the user project:
 # ======================================================
@@ -137,8 +140,8 @@ set(OpenCV_INCLUDE_DIRS "${OpenCV_CONFIG_PATH}/include" "${OpenCV_CONFIG_PATH}/i
 # Provide the libs directories to the caller
 set(OpenCV_LIB_DIR_OPT  CACHE PATH "Path where release OpenCV libraries are located")
 set(OpenCV_LIB_DIR_DBG  CACHE PATH "Path where debug OpenCV libraries are located")
-set(OpenCV_3RDPARTY_LIB_DIR_OPT "${OpenCV_INSTALL_PATH}/staticlib" CACHE PATH "Path where release 3rdparty OpenCV dependencies are located")
-set(OpenCV_3RDPARTY_LIB_DIR_DBG "${OpenCV_INSTALL_PATH}/staticlib" CACHE PATH "Path where debug 3rdparty OpenCV dependencies are located")
+set(OpenCV_3RDPARTY_LIB_DIR_OPT "${OpenCV_INSTALL_PATH}/ARM/vc14/staticlib" CACHE PATH "Path where release 3rdparty OpenCV dependencies are located")
+set(OpenCV_3RDPARTY_LIB_DIR_DBG "${OpenCV_INSTALL_PATH}/ARM/vc14/staticlib" CACHE PATH "Path where debug 3rdparty OpenCV dependencies are located")
 mark_as_advanced(FORCE OpenCV_LIB_DIR_OPT OpenCV_LIB_DIR_DBG OpenCV_3RDPARTY_LIB_DIR_OPT OpenCV_3RDPARTY_LIB_DIR_DBG OpenCV_CONFIG_PATH)
 
 # ======================================================
@@ -316,24 +319,6 @@ foreach(__opttype OPT DBG)
     link_directories(${OpenCV_CUDA_LIBS_RELPATH})
   endif()
 endforeach()
-
-# ==============================================================
-#  Android camera helper macro
-# ==============================================================
-if(OpenCV_HAVE_ANDROID_CAMERA)
-  macro(COPY_NATIVE_CAMERA_LIBS target)
-    get_target_property(target_location ${target} LOCATION)
-    get_filename_component(target_location "${target_location}" PATH)
-    file(GLOB camera_wrappers "${OpenCV_LIB_DIR_OPT}/libnative_camera_r*.so")
-    foreach(wrapper ${camera_wrappers})
-      add_custom_command(
-        TARGET ${target}
-        POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy "${wrapper}" "${target_location}"
-      )
-    endforeach()
-  endmacro()
-endif()
 
 # ==============================================================
 # Compatibility stuff

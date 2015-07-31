@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Evgeny/Documents/Vs2015Samples/opencv/modules/cudacodec
+# Install script for directory: C:/Users/evgen/Documents/SamplesVS2015/master/opencv/modules/cudacodec
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

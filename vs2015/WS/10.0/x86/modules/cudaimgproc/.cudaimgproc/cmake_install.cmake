@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Evgeny/Documents/Vs2015Samples/opencv/modules/cudaimgproc
+# Install script for directory: C:/Users/evgen/Documents/SamplesVS2015/master/opencv/modules/cudaimgproc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -139,6 +139,12 @@
 /* PNG codec */
 #define HAVE_PNG
 
+/* Posix threads (pthreads) */
+/* #undef HAVE_PTHREADS */
+
+/* parallel_for with pthreads */
+/* #undef HAVE_PTHREADS_PF */
+
 /* Qt support */
 /* #undef HAVE_QT */
 
@@ -178,3 +184,6 @@
 /* Define if your processor stores words with the most significant byte
    first (like Motorola and SPARC, unlike Intel and VAX). */
 /* #undef WORDS_BIGENDIAN */
+
+/* gPhoto2 library */
+/* #undef HAVE_GPHOTO2 */

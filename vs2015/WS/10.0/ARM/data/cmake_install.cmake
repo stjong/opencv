@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data
+# Install script for directory: C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,32 +29,32 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "libs")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/etc/haarcascades" TYPE FILE FILES
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_eye.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_frontalcatface.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_frontalcatface_extended.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_frontalface_alt.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_frontalface_alt2.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_frontalface_alt_tree.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_frontalface_default.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_fullbody.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_lefteye_2splits.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_licence_plate_rus_16stages.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_lowerbody.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_profileface.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_righteye_2splits.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_russian_plate_number.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_smile.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/haarcascades/haarcascade_upperbody.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_eye.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_frontalcatface.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_frontalcatface_extended.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_frontalface_alt.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_frontalface_alt2.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_frontalface_alt_tree.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_frontalface_default.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_fullbody.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_lefteye_2splits.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_licence_plate_rus_16stages.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_lowerbody.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_profileface.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_righteye_2splits.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_russian_plate_number.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_smile.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/haarcascades/haarcascade_upperbody.xml"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "libs")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/etc/lbpcascades" TYPE FILE FILES
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/lbpcascades/lbpcascade_frontalcatface.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/lbpcascades/lbpcascade_frontalface.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/lbpcascades/lbpcascade_profileface.xml"
-    "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/data/lbpcascades/lbpcascade_silverware.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/lbpcascades/lbpcascade_frontalcatface.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/lbpcascades/lbpcascade_frontalface.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/lbpcascades/lbpcascade_profileface.xml"
+    "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/data/lbpcascades/lbpcascade_silverware.xml"
     )
 endif()
 

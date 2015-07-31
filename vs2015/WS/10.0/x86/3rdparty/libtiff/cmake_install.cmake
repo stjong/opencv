@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Evgeny/Documents/Vs2015Samples/opencv/3rdparty/libtiff
+# Install script for directory: C:/Users/evgen/Documents/SamplesVS2015/master/opencv/3rdparty/libtiff
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

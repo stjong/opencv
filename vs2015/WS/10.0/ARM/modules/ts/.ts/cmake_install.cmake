@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Evgeny/Documents/Vs2015Samples/opencv/modules/ts
+# Install script for directory: C:/Users/evgen/Documents/SamplesVS2015/master/opencv/modules/ts
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

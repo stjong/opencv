@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Evgeny/Documents/Vs2015Samples/opencv
+# Install script for directory: C:/Users/evgen/Documents/SamplesVS2015/master/opencv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -28,32 +28,36 @@ if(NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/opencv2/opencv_modules.hpp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/cvconfig.h")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/win-install/OpenCVConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/opencv2/opencv_modules.hpp")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/OpenCVModules.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x64/vc14/lib" TYPE FILE FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/win-install/OpenCVConfig.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x64/vc14/lib/OpenCVModules.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
-         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/OpenCVModules.cmake"
-         "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/CMakeFiles/Export/lib/OpenCVModules.cmake")
+         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x64/vc14/lib/OpenCVModules.cmake"
+         "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/CMakeFiles/Export/x64/vc14/lib/OpenCVModules.cmake")
     if(EXPORT_FILE_CHANGED)
-      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/OpenCVModules-*.cmake")
+      file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x64/vc14/lib/OpenCVModules-*.cmake")
       if(OLD_CONFIG_FILES)
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/OpenCVModules.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/x64/vc14/lib/OpenCVModules.cmake\" will be replaced.  Removing files [${OLD_CONFIG_FILES}].")
         file(REMOVE ${OLD_CONFIG_FILES})
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/CMakeFiles/Export/lib/OpenCVModules.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x64/vc14/lib" TYPE FILE FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/CMakeFiles/Export/x64/vc14/lib/OpenCVModules.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/CMakeFiles/Export/lib/OpenCVModules-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x64/vc14/lib" TYPE FILE FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/CMakeFiles/Export/x64/vc14/lib/OpenCVModules-debug.cmake")
   endif()
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE FILE FILES "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/CMakeFiles/Export/lib/OpenCVModules-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/x64/vc14/lib" TYPE FILE FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/CMakeFiles/Export/x64/vc14/lib/OpenCVModules-release.cmake")
   endif()
 endif()
 
@@ -66,7 +70,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Users/ocv_install" TYPE FILE FILES "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/win-install/OpenCVConfig-version.cmake")
+file(INSTALL DESTINATION "C:/Users/ocv_install" TYPE FILE FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/win-install/OpenCVConfig-version.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
@@ -78,7 +82,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Users/ocv_install" TYPE FILE FILES "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/cmake/OpenCVConfig.cmake")
+file(INSTALL DESTINATION "C:/Users/ocv_install" TYPE FILE FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/cmake/OpenCVConfig.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "libs")
@@ -90,20 +94,20 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "libs")
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "C:/Users/ocv_install" TYPE FILE PERMISSIONS OWNER_READ GROUP_READ WORLD_READ FILES "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/LICENSE")
+file(INSTALL DESTINATION "C:/Users/ocv_install" TYPE FILE PERMISSIONS OWNER_READ GROUP_READ WORLD_READ FILES "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/LICENSE")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/3rdparty/zlib/cmake_install.cmake")
-  include("C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/3rdparty/libtiff/cmake_install.cmake")
-  include("C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/3rdparty/libjpeg/cmake_install.cmake")
-  include("C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/3rdparty/libjasper/cmake_install.cmake")
-  include("C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/3rdparty/libpng/cmake_install.cmake")
-  include("C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/include/cmake_install.cmake")
-  include("C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/modules/cmake_install.cmake")
-  include("C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/doc/cmake_install.cmake")
-  include("C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/data/cmake_install.cmake")
+  include("C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/3rdparty/zlib/cmake_install.cmake")
+  include("C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/3rdparty/libtiff/cmake_install.cmake")
+  include("C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/3rdparty/libjpeg/cmake_install.cmake")
+  include("C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/3rdparty/libjasper/cmake_install.cmake")
+  include("C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/3rdparty/libpng/cmake_install.cmake")
+  include("C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/include/cmake_install.cmake")
+  include("C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/modules/cmake_install.cmake")
+  include("C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/doc/cmake_install.cmake")
+  include("C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/data/cmake_install.cmake")
 
 endif()
 
@@ -115,5 +119,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Evgeny/Documents/Vs2015Samples/opencv/vs2015/WS/10.0/x64/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/evgen/Documents/SamplesVS2015/master/opencv/vs2015/WS/10.0/x64/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

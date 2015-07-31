@@ -34,7 +34,7 @@
 #include <opencv2/features2d.hpp>
 #include <opencv2/videoio.hpp>
 
-#include "../src/cap_winrt_highgui.hpp"
+#include "../src/cap_winrt_bridge.hpp"
 
 using namespace cv;
 
@@ -90,7 +90,7 @@ void cvMain()
 #endif
 
         //imshow("", frame);
-        imshow_winrt(frame);
+        VideoioBridge::getInstance().imshow();
     }
 }
 
