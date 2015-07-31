@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{CFE23885-172B-4055-BDBB-0AF3AD31D718}</ProjectGUID>
+    <ProjectGUID>{CC20AD3F-31FF-4959-A673-F914906C9417}</ProjectGUID>
     <ApplicationType>Windows Store</ApplicationType>
     <DefaultLanguage>en-US</DefaultLanguage>
     <ApplicationTypeRevision>8.2</ApplicationTypeRevision>

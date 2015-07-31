@@ -75,7 +75,7 @@
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>$(OCV2015_ROOT)/modules/features2d/src/precomp.hpp</PrecompiledHeaderFile>
-      <ProcessorNumber>4</ProcessorNumber>
+      <ProcessorNumber>1</ProcessorNumber>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level4</WarningLevel>
@@ -129,7 +129,7 @@
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>$(OCV2015_ROOT)/modules/features2d/src/precomp.hpp</PrecompiledHeaderFile>
-      <ProcessorNumber>4</ProcessorNumber>
+      <ProcessorNumber>1</ProcessorNumber>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level4</WarningLevel>
@@ -177,13 +177,13 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\CMakeFiles\75296a40227af633b4a164e7e2a75dcd\opencl_kernels_features2d.cpp.rule">
+    <CustomBuild Include="..\..\CMakeFiles\3461e432ab4c2794d62b65c6cfeed1c7\opencl_kernels_features2d.cpp.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Generating opencl_kernels_features2d.cpp, opencl_kernels_features2d.hpp</Message>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/CMakeFiles/75296a40227af633b4a164e7e2a75dcd/opencl_kernels_features2d.cpp.rule;$(OCV2015_ROOT)\modules\features2d\src\opencl\brute_force_match.cl;$(OCV2015_ROOT)\modules\features2d\src\opencl\fast.cl;$(OCV2015_ROOT)\modules\features2d\src\opencl\orb.cl;$(OCV2015_ROOT)\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/CMakeFiles/3461e432ab4c2794d62b65c6cfeed1c7/opencl_kernels_features2d.cpp.rule;$(OCV2015_ROOT)\modules\features2d\src\opencl\brute_force_match.cl;$(OCV2015_ROOT)\modules\features2d\src\opencl\fast.cl;$(OCV2015_ROOT)\modules\features2d\src\opencl\orb.cl;$(OCV2015_ROOT)\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(OCV2015_ROOT)\vs2015\WS\10.0\ARM\modules\features2d\opencl_kernels_features2d.cpp;$(OCV2015_ROOT)\vs2015\WS\10.0\ARM\modules\features2d\opencl_kernels_features2d.hpp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Generating opencl_kernels_features2d.cpp, opencl_kernels_features2d.hpp</Message>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/CMakeFiles/75296a40227af633b4a164e7e2a75dcd/opencl_kernels_features2d.cpp.rule;$(OCV2015_ROOT)\modules\features2d\src\opencl\brute_force_match.cl;$(OCV2015_ROOT)\modules\features2d\src\opencl\fast.cl;$(OCV2015_ROOT)\modules\features2d\src\opencl\orb.cl;$(OCV2015_ROOT)\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/CMakeFiles/3461e432ab4c2794d62b65c6cfeed1c7/opencl_kernels_features2d.cpp.rule;$(OCV2015_ROOT)\modules\features2d\src\opencl\brute_force_match.cl;$(OCV2015_ROOT)\modules\features2d\src\opencl\fast.cl;$(OCV2015_ROOT)\modules\features2d\src\opencl\orb.cl;$(OCV2015_ROOT)\cmake\cl2cpp.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(OCV2015_ROOT)\vs2015\WS\10.0\ARM\modules\features2d\opencl_kernels_features2d.cpp;$(OCV2015_ROOT)\vs2015\WS\10.0\ARM\modules\features2d\opencl_kernels_features2d.hpp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</LinkObjects>
     </CustomBuild>
@@ -192,6 +192,7 @@
     <ClInclude Include="..\..\..\..\..\..\modules\features2d\include\opencv2\features2d.hpp" />
     <ClInclude Include="..\..\..\..\..\..\modules\features2d\include\opencv2\features2d\features2d.hpp" />
     <ClInclude Include="opencl_kernels_features2d.hpp" />
+    <ClInclude Include="..\..\..\..\..\..\modules\features2d\src\agast_score.hpp" />
     <ClInclude Include="..\..\..\..\..\..\modules\features2d\src\fast_score.hpp" />
     <ClInclude Include="..\..\..\..\..\..\modules\features2d\src\precomp.hpp" />
     <ClInclude Include="..\..\..\..\..\..\modules\features2d\src\kaze\AKAZEConfig.h" />
@@ -204,6 +205,8 @@
     <ClInclude Include="..\..\..\..\..\..\modules\features2d\src\kaze\utils.h" />
     <ClInclude Include="..\..\cvconfig.h" />
     <ClInclude Include="..\..\opencv2\opencv_modules.hpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\features2d\src\agast.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\features2d\src\agast_score.cpp" />
     <ClCompile Include="..\..\..\..\..\..\modules\features2d\src\akaze.cpp" />
     <ClCompile Include="..\..\..\..\..\..\modules\features2d\src\bagofwords.cpp" />
     <ClCompile Include="..\..\..\..\..\..\modules\features2d\src\blobdetector.cpp" />
@@ -237,22 +240,22 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/ZERO_CHECK.vcxproj">
-      <Project>CCCBEF53-2327-49BA-A925-CFF559F71ADD</Project>
+      <Project>14BF26F8-F9CC-4B1D-AF14-75250463B102</Project>
     </ProjectReference>
     <ProjectReference Include="$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/modules/core/opencv_core.vcxproj">
-      <Project>ECE18095-8161-4B36-8639-62A3B6FA2E16</Project>
+      <Project>0316DD57-4D5D-4E1A-88B2-6534F3107542</Project>
     </ProjectReference>
     <ProjectReference Include="$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/modules/flann/opencv_flann.vcxproj">
-      <Project>498DFC13-A902-443F-9B47-8236F05F63C9</Project>
+      <Project>E3916DE2-D6B3-4FA6-9A14-32F9CE5DCC96</Project>
     </ProjectReference>
     <ProjectReference Include="$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/modules/hal/opencv_hal.vcxproj">
-      <Project>B1267A35-BDEC-4C85-9266-F5D250AC4209</Project>
+      <Project>ED6F12A1-E1A9-4D89-A606-8F299A1B3E2A</Project>
     </ProjectReference>
     <ProjectReference Include="$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/modules/imgproc/opencv_imgproc.vcxproj">
-      <Project>61F81EC3-F64F-4671-B9DF-0D5184D592DD</Project>
+      <Project>8F0814BE-1833-41FA-B0B2-0424F3EF899A</Project>
     </ProjectReference>
     <ProjectReference Include="$(OCV2015_ROOT)/vs2015/WS/10.0/ARM/modules/ml/opencv_ml.vcxproj">
-      <Project>049E439F-113D-4CE7-AB54-06277E3AE5A2</Project>
+      <Project>B356F9DF-3142-449F-A3D2-C86CAF2E9058</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

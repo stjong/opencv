@@ -152,7 +152,14 @@
     <ClInclude Include="..\..\..\..\..\..\modules\hal\src\precomp.hpp" />
     <ClInclude Include="..\..\cvconfig.h" />
     <ClInclude Include="..\..\opencv2\opencv_modules.hpp" />
-    <ClCompile Include="..\..\..\..\..\..\modules\hal\src\norm.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\hal\src\arithm.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\hal\src\color.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\hal\src\filter.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\hal\src\mathfuncs.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\hal\src\matrix.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\hal\src\resize.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\hal\src\stat.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\modules\hal\src\warp.cpp" />
     <ClCompile Include="opencv_hal_pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(OCV2015_ROOT)/modules/hal/src/precomp.hpp</PrecompiledHeaderFile>
