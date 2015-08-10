@@ -1,5 +1,6 @@
-#include "pch.h"
+// tbd copyrights stuffs
 
+#include "pch.h"
 #include "ImgProc.h"
 
 using namespace cvRT;
@@ -9,15 +10,14 @@ void ImgProc::cvtColor(Mat^ srcImg, Mat^ destImg, ColorConversionCodes conversio
     cv::cvtColor(srcImg->RawMat(), destImg->RawMat(), (int)conversionCode);
 }
 
-void ImgProc::GaussianBlur(Mat^ src, Mat^ dst, Size ksize, double sigmaX)
+void ImgProc::GaussianBlur(Mat^ src, Mat^ dst, cvRT::Size^ ksize, double sigmaX)
 {
     GaussianBlur(src, dst, ksize, sigmaX, 0);
 }
 
-void ImgProc::GaussianBlur(Mat ^ src, Mat ^ dst, Size ksize, double sigmaX, double sigmaY)
-{
-    cv::Size size(ksize.Width, ksize.Height);
-    cv::GaussianBlur(src->RawMat(), dst->RawMat(), size, sigmaX, sigmaY);
+void ImgProc::GaussianBlur(Mat ^ src, Mat ^ dst, cvRT::Size^ ksize, double sigmaX, double sigmaY)
+{    
+    cv::GaussianBlur(src->RawMat(), dst->RawMat(), ksize->GetCvSize(), sigmaX, sigmaY);
 }
 
 void ImgProc::Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2)
@@ -35,9 +35,24 @@ void ImgProc::Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, in
     cv::Canny(src->RawMat(), dst->RawMat(), threshold1, threshold2, apertureSize, L2gradient);
 }
 
-void cvRT::ImgProc::findContours(Mat ^ image, IVector<IVector<Point>^>^ contours, int mode, int method, Point offset)
+void cvRT::ImgProc::EqualizeHist(Mat^ src, Mat^ dst)
 {
-    /*
+    cv::equalizeHist(src->RawMat(), dst->RawMat());
+}
+
+void cvRT::ImgProc::Ellipse(Mat^ src, Point^ center, cvRT::Size^ axes, double angle, double start_angle, double end_angle, Scalar^ scalar, int thickness, int line_type, int shift)
+{
+    cv::ellipse(src->RawMat(), center->GetCvPoint(), axes->GetCvSize(), angle, start_angle, end_angle, scalar->GetCvScalar(), thickness, line_type, shift);
+}
+
+void cvRT::ImgProc::Circle(Mat^ src, Point^ center, int radius, Scalar^ scalar, int thickness, int line_type, int shift)
+{
+    cv::circle(src->RawMat(), center->GetCvPoint(), radius, scalar->GetCvScalar(), thickness, line_type, shift);
+}
+
+/*
+void cvRT::ImgProc::findContours(Mat ^ image, IVector<IVector<Point>^>^ contours, int mode, int method, Point offset)
+{    
     std::vector<std::vector<cv::Point>> cvContours;
     for(IVector<Point>^ row : contours)
     {
@@ -51,20 +66,18 @@ void cvRT::ImgProc::findContours(Mat ^ image, IVector<IVector<Point>^>^ contours
 
     cv::findContours(image->RawMat(), cvContours, mode, method, cv::Point(offset.X, offset.Y));
 
-    for(auto row : CvContour)
-    */
+    for(auto row : CvContour)    
 }
 
 void cvRT::ImgProc::findContours(Mat ^ image, IVector<IVector<Point>^>^ contours, Mat ^ hierarchy, int mode, int method, Point offset)
-{
-    /*
+{    
     cv::findContours(image->RawMat(), contours, hierarchy->RawMat(), mode, method, cv::Point(offset.X, offset.Y));
-    */
 }
 
 void cvRT::ImgProc::drawContours(Mat ^ image, IVector<IVector<Point>^>^ contours, int contourIdx, Windows::UI::Color color, int thickness, int lineType, Mat ^ hierarchy, int maxLevel, Point offset)
-{
-    /*
+{    
     cv::drawContours(image->RawMat(), contours, contourIdx, cv::Scalar(color.R, color.G, color.B), thickness, lineType, hierarchy->RawMat(), maxLevel, cv::Point(offset.X, offset.Y));
-    */
+
 }
+*/
+

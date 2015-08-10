@@ -113,6 +113,8 @@
     <None Include="highgui_xaml.WindowsCSharp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="haarcascade_eye_tree_eyeglasses.xml" />
+    <Content Include="haarcascade_frontalface_alt.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

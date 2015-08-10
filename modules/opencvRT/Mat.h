@@ -1,3 +1,5 @@
+// TBD copyrights stuffs
+
 #pragma once
 
 namespace cvRT
@@ -8,8 +10,12 @@ namespace cvRT
         Mat();
         unsigned int total();
 
+        // tbd need better way
+        Mat^ RectSubMettric(cvRT::Rect^ rect);
+
     internal:
         Mat(cv::Mat& rawMat);
+        Mat(cv::Mat* rawMat);
         cv::Mat& RawMat()
         {
             return *_rawMatHolder;

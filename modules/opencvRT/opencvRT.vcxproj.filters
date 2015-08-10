@@ -11,11 +11,14 @@
     <ClCompile Include="ImgProc.cpp" />
     <ClCompile Include="Mat.cpp" />
     <ClCompile Include="VideoIo.cpp" />
+    <ClCompile Include="CascadeClassifier.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="ImgProc.h" />
     <ClInclude Include="Mat.h" />
     <ClInclude Include="VideoIo.h" />
+    <ClInclude Include="CascadeClassifier.h" />
+    <ClInclude Include="RTTypes.h" />
   </ItemGroup>
 </Project>

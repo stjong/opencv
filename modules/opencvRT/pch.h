@@ -1,4 +1,6 @@
-﻿#pragma once
+﻿// TBD copyrights stuffs.
+
+#pragma once
 
 #include <collection.h>
 #include <ppltasks.h>
@@ -23,7 +25,9 @@
 #include <opencv2/videoio.hpp>
 #include <opencv2/objdetect.hpp>
 
+#include "RTTypes.h"
 #include "Mat.h"
+
 
 using namespace Platform;
 using namespace Windows::Devices::Enumeration;
