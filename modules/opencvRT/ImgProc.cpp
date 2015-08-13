@@ -50,6 +50,16 @@ void cvRT::ImgProc::Circle(Mat^ src, Point^ center, int radius, Scalar^ scalar, 
     cv::circle(src->RawMat(), center->GetCvPoint(), radius, scalar->GetCvScalar(), thickness, line_type, shift);
 }
 
+void cvRT::ImgProc::findContours(_In_ Mat^ image, _Out_ IVector<IVector<Point^>^>^ contours, _Out_ Mat^ hierarchy, _In_ ContourRetrievalAlgorithm mode, _In_ ContourApproximationModes method, _In_ Point^ offset)
+{
+    std::vector<std::vector<cv::Point>> cvContours;
+    std::vector<cv::Vec4i> cvHierarchy;
+
+    cv::findContours(image->RawMat(), cvContours, cvHierarchy, (int)mode, (int)method, offset->GetCvPoint());  
+
+    
+}
+
 /*
 void cvRT::ImgProc::findContours(Mat ^ image, IVector<IVector<Point>^>^ contours, int mode, int method, Point offset)
 {    

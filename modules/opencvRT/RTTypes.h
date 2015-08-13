@@ -4,6 +4,7 @@
 
 namespace cvRT
 {
+    ///////////////////////////////////////////////////////////////////////////
     // cv::Scalar 
     public ref class Scalar sealed
     {
@@ -20,6 +21,7 @@ namespace cvRT
         cv::Scalar* cvScalar;
     };
 
+    ///////////////////////////////////////////////////////////////////////////
     // cv::Point 
     public ref class Point sealed
     {
@@ -36,6 +38,7 @@ namespace cvRT
         cv::Point* cvPoint;
     };
 
+    ///////////////////////////////////////////////////////////////////////////
     // cv::Rect 
     public ref class Rect sealed
     {
@@ -77,6 +80,7 @@ namespace cvRT
         cv::Rect* cvRect;
     };
     
+    ///////////////////////////////////////////////////////////////////////////
     // cv::Size
     public ref class Size sealed
     {
@@ -101,5 +105,29 @@ namespace cvRT
 
     private:
         cv::Size* cvSize;
-    };    
+    };  
+
+    /*
+    ///////////////////////////////////////////////////////////////////////////
+    // cv::Vector
+    public ref class Vector sealed
+    {
+    public:
+        
+
+    internal:
+
+
+    private:
+        union         
+        {
+            cv::Vector<Point> VectorPoint;
+
+        }
+
+
+
+
+    };
+    */
 }

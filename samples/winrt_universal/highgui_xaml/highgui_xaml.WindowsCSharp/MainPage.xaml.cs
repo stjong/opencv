@@ -116,6 +116,21 @@ namespace highgui_xaml.WindowsCSharp
                         ImgProc.cvtColor(dstFrame, srcFrame, ColorConversionCodes.COLOR_GRAY2RGB);
                         break;
 
+                    // contour
+                    case 4:
+                    {
+                        var contours = new List<List<Point>>();
+                        var hierarchy = new List<int>();
+                 
+                        var thresh = 100;
+                        // RNG rng = new RNG(12345);
+                        
+                        ImgProc.Canny(srcFrame, dstFrame, thresh, thresh * 2, 3);
+                        ImgProc.findContours(dstFrame, contours, hierarchy, ContourRetrievalAlgorithm.RETR_TREE, ContourApproximationModes.CHAIN_APPROX_SIMPLE, new Point(0, 0));
+                            
+                        break;
+                    }
+
                     // face detect
                     case 5:
                     {
