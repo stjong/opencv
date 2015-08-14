@@ -96,15 +96,22 @@ void cvRT::ImgProc::DrawContours(Mat ^ image, IVector<IVector<Point^>^>^ contour
 
     for (IVector<Point^>^ aNewVector : contours)
     {
+        std::vector<cv::Point> newVector = std::vector<cv::Point>();
+
         for (auto aPoint : aNewVector)
-        {             
-            
+        {  
+            newVector.push_back(aPoint->GetCvPoint());
         }
+
+        cvContours.push_back(newVector);
     }
 
+    for (auto aVec4i : hierarchy)
+    {
+        cvHierarchy.push_back(aVec4i->GetVec4i());
+    }
 
-
-    cv::drawContours(image->RawMat(), cvContours, contourIdx, color->GetCvScalar(), thickness, lineType, hierarchy, maxLevel, offset->GetCvPoint());       
+    cv::drawContours(image->RawMat(), cvContours, contourIdx, color->GetCvScalar(), thickness, lineType, cvHierarchy, maxLevel, offset->GetCvPoint());
 }
 
 /*

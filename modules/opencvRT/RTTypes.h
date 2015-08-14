@@ -117,12 +117,19 @@ namespace cvRT
             cvVec4i = new cv::Vec4i(i1, i2, i3, i4);
         }
 
+        /*
+        ~Vec4i() {
+            ; 
+            // tbd need destructor free(cvVec4i); 
+        }
+        */
+        
+    internal:
         Vec4i(cv::Vec4i& x)
         {
             cvVec4i = new cv::Vec4i(x);
         }
-        
-    internal:
+
         cv::Vec4i GetVec4i() { return *cvVec4i; }
 
     private:
