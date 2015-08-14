@@ -41,7 +41,9 @@ namespace cvRT
 
 
 		// Contour		
-        static void findContours(Mat^ image, IVector<IVector<Point^>^>^ contours, Mat^ hierarchy, ContourRetrievalAlgorithm mode, ContourApproximationModes method, Point^ offset);
+        static void FindContours(Mat^ image, IVector<IVector<Point^>^>^ contours, IVector<Vec4i^>^ hierarchy, ContourRetrievalAlgorithm mode, ContourApproximationModes method, Point^ offset);
+        static void DrawContours(Mat^ image, IVector<IVector<Point^>^>^ contours, int contourIdx, Scalar^ color, int thickness, int lineType, IVector<Vec4i^>^ hierarchy, int maxLevel, Point^ offset);
+               
 
         /*
 

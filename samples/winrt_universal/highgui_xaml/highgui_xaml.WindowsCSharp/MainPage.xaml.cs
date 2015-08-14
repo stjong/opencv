@@ -21,6 +21,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Foundation.Collections;
 using System.Threading;
+using Windows.Foundation.Metadata;
 using Windows.UI.ViewManagement;
 using cvRT;
 using static Windows.System.Threading.ThreadPool;
@@ -41,7 +42,7 @@ namespace highgui_xaml.WindowsCSharp
         /// </summary>
         private readonly VideoIo _videoIo;
 
-        private int _processingMethodIndex = 5;
+        private int _processingMethodIndex = 4;
 
         /// <summary>
         /// 
@@ -119,14 +120,25 @@ namespace highgui_xaml.WindowsCSharp
                     // contour
                     case 4:
                     {
-                        var contours = new List<List<Point>>();
-                        var hierarchy = new List<int>();
-                 
-                        var thresh = 100;
+                        var contours = new List<IList<Point>>();
+                        var hierarchy = new List<Vec4i>();
+                        
+                        const int thresh = 100;
                         // RNG rng = new RNG(12345);
                         
                         ImgProc.Canny(srcFrame, dstFrame, thresh, thresh * 2, 3);
-                        ImgProc.findContours(dstFrame, contours, hierarchy, ContourRetrievalAlgorithm.RETR_TREE, ContourApproximationModes.CHAIN_APPROX_SIMPLE, new Point(0, 0));
+                        ImgProc.FindContours(dstFrame, contours, hierarchy, ContourRetrievalAlgorithm.RETR_TREE, ContourApproximationModes.CHAIN_APPROX_SIMPLE, new Point(0, 0));
+
+                        // dstFrame = new Scalar(0, 0, 0, 0);
+
+                        for (var i = 0 ; i < contours.Count();  i++)
+                        {
+                            var randGen = new Random();
+
+                            var color = new Scalar(randGen.Next(0, 255), randGen.Next(0, 255), randGen.Next(0, 255), randGen.Next(0, 255));
+
+                            ImgProc.DrawContours(srcFrame, contours, i, color, 2, 8, hierarchy, 0, new Point(0, 0));
+                        }
                             
                         break;
                     }

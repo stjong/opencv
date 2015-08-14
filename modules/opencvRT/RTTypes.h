@@ -106,7 +106,33 @@ namespace cvRT
     private:
         cv::Size* cvSize;
     };  
+    
+    ///////////////////////////////////////////////////////////////////////////
+    // cv::Vec4i
+    public ref class Vec4i sealed 
+    {
+    public:
+        
+    internal:
+        cv::Vec4i GetVec4i() { return *cvVec4i; }
 
+    private:
+        cv::Vec4i* cvVec4i;
+    };
+
+    ///////////////////////////////////////////////////////////////////////////
+    // experimental (tbd)    
+    public ref class ListOfPoints sealed
+    {
+    public:
+
+    internal:
+
+    private:
+        std::vector<int> listOfPoints;
+    };
+    
+    
     /*
     ///////////////////////////////////////////////////////////////////////////
     // cv::Vector
@@ -130,4 +156,5 @@ namespace cvRT
 
     };
     */
+    
 }
