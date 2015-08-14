@@ -112,6 +112,15 @@ namespace cvRT
     public ref class Vec4i sealed 
     {
     public:
+        Vec4i(int i1, int i2, int i3, int i4)
+        {
+            cvVec4i = new cv::Vec4i(i1, i2, i3, i4);
+        }
+
+        Vec4i(cv::Vec4i& x)
+        {
+            cvVec4i = new cv::Vec4i(x);
+        }
         
     internal:
         cv::Vec4i GetVec4i() { return *cvVec4i; }

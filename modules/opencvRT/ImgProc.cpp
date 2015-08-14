@@ -1,7 +1,9 @@
 // tbd copyrights stuffs
 
 #include "pch.h"
+#include "collection.h"
 #include "ImgProc.h"
+
 
 using namespace cvRT;
 
@@ -69,22 +71,40 @@ void cvRT::ImgProc::FindContours(_In_ Mat^ image, _Out_ IVector<IVector<Point^>^
 
     for (std::vector<std::vector<cv::Point>>::iterator it = cvContours.begin(); it != cvContours.end(); it++)
     {
-        // std::Vector<cvRT::Point^>^ newVector = new 
+        std::vector<cvRT::Point^> newVector = std::vector<cvRT::Point^>();
 
         for (std::vector<cv::Point>::iterator it2 = it->begin(); it2 != it->end(); it2++)
         {
-
-
-
+            Point^ newPoint = ref new Point(it2->x, it2->y);
+            newVector.push_back(newPoint);            
         }
+
+        contours->Append(ref new Platform::Collections::Vector<Point^>(std::move(newVector)));
+    }
+
+    for (auto aVec4i : cvHierarchy)
+    {
+        cvRT::Vec4i^ newVec = ref new Vec4i(aVec4i);
     }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 void cvRT::ImgProc::DrawContours(Mat ^ image, IVector<IVector<Point^>^>^ contours, int contourIdx, Scalar ^ color, int thickness, int lineType, IVector<Vec4i^>^ hierarchy, int maxLevel, Point ^ offset)
 {
-    
-    
+    std::vector<std::vector<cv::Point>> cvContours;
+    std::vector<cv::Vec4i> cvHierarchy;
+
+    for (IVector<Point^>^ aNewVector : contours)
+    {
+        for (auto aPoint : aNewVector)
+        {             
+            
+        }
+    }
+
+
+
+    cv::drawContours(image->RawMat(), cvContours, contourIdx, color->GetCvScalar(), thickness, lineType, hierarchy, maxLevel, offset->GetCvPoint());       
 }
 
 /*
