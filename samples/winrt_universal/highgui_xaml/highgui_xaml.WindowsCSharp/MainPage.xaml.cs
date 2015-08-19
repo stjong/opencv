@@ -42,7 +42,7 @@ namespace highgui_xaml.WindowsCSharp
         /// </summary>
         private readonly VideoIo _videoIo;
 
-        private int _processingMethodIndex = 4;
+        private int _processingMethodIndex = 0;
 
         /// <summary>
         /// 
@@ -78,14 +78,14 @@ namespace highgui_xaml.WindowsCSharp
         /// <summary>
         /// Worker thread for image processing.
         /// </summary>
-        public void CvMainThread()
+        public async void CvMainThread()
         {
             var faceCascade = new CascadeClassifier();
             var eyesCascade = new CascadeClassifier();
 
             faceCascade.Load("haarcascade_frontalface_alt.xml");
             eyesCascade.Load("haarcascade_eye_tree_eyeglasses.xml");
-                
+
 
             // TBD need exit event.
 
@@ -97,18 +97,25 @@ namespace highgui_xaml.WindowsCSharp
                 var dstFrame = new Mat();
                 _videoIo.GetFrame(srcFrame);
 
+                if (srcFrame.total() == 0)
+                {
+                    // Wait for next frame
+                    await Task.Delay(TimeSpan.FromMilliseconds(20));
+                    continue;
+                }
+
                 switch (_processingMethodIndex)
                 {
                     // passthrough
                     case 0:
                         break;
-                    
+
                     // gray
                     case 1:
                         ImgProc.cvtColor(srcFrame, dstFrame, ColorConversionCodes.COLOR_RGBA2GRAY);
                         ImgProc.cvtColor(dstFrame, srcFrame, ColorConversionCodes.COLOR_GRAY2RGB);
                         break;
-                    
+
                     // canny
                     case 3:
                         ImgProc.cvtColor(srcFrame, dstFrame, cvRT.ColorConversionCodes.COLOR_RGBA2GRAY);
@@ -119,78 +126,78 @@ namespace highgui_xaml.WindowsCSharp
 
                     // contour
                     case 4:
-                    {
-                        var contours = new List<IList<Point>>();
-                        var hierarchy = new List<Vec4i>();
-                        
-                        const int thresh = 100;
-                        // RNG rng = new RNG(12345);
-                        
-                        ImgProc.Canny(srcFrame, dstFrame, thresh, thresh * 2, 3);
-                        ImgProc.FindContours(dstFrame, contours, hierarchy, ContourRetrievalAlgorithm.RETR_TREE, ContourApproximationModes.CHAIN_APPROX_SIMPLE, new Point(0, 0));
-
-                        // dstFrame = new Scalar(0, 0, 0, 0);
-
-                        for (var i = 0 ; i < contours.Count();  i++)
                         {
-                            var randGen = new Random();
+                            var contours = new List<IList<Point>>();
+                            var hierarchy = new List<Vec4i>();
 
-                            var color = new Scalar(randGen.Next(0, 255), randGen.Next(0, 255), randGen.Next(0, 255), randGen.Next(0, 255));
+                            const int thresh = 100;
+                            // RNG rng = new RNG(12345);
 
-                            ImgProc.DrawContours(srcFrame, contours, i, color, 2, 8, hierarchy, 0, new Point(0, 0));
+                            ImgProc.Canny(srcFrame, dstFrame, thresh, thresh * 2, 3);
+                            ImgProc.FindContours(dstFrame, contours, hierarchy, ContourRetrievalAlgorithm.RETR_TREE, ContourApproximationModes.CHAIN_APPROX_SIMPLE, new Point(0, 0));
+
+                            // dstFrame = new Scalar(0, 0, 0, 0);
+
+                            for (var i = 0; i < contours.Count(); i++)
+                            {
+                                var randGen = new Random();
+
+                                var color = new Scalar(randGen.Next(0, 255), randGen.Next(0, 255), randGen.Next(0, 255), randGen.Next(0, 255));
+
+                                ImgProc.DrawContours(srcFrame, contours, i, color, 2, 8, hierarchy, 0, new Point(0, 0));
+                            }
+
+                            break;
                         }
-                            
-                        break;
-                    }
 
                     // face detect
                     case 5:
-                    {
-                        ImgProc.cvtColor(srcFrame, dstFrame, ColorConversionCodes.COLOR_RGBA2GRAY);
-                        ImgProc.EqualizeHist(dstFrame, dstFrame);
-
-                        // Faces in the frame.
-                        var faces = new List<Rect>();
-
-                        try
                         {
-                            faces = new List<Rect>();
-                            faceCascade.detectMultiScale(dstFrame, faces, 1.1, 2, (int)(0 | CV_HAAR.SCALE_IMAGE), new cvRT.Size(30, 30));
-                        }
-                        catch (Exception ex)
-                        {
-                            Debug.WriteLine("Exception {0}", ex.Message);
-                        }
+                            ImgProc.cvtColor(srcFrame, dstFrame, ColorConversionCodes.COLOR_RGBA2GRAY);
+                            ImgProc.EqualizeHist(dstFrame, dstFrame);
 
-                        // For each face, detect the eyes
-                        foreach (var face in faces)
-                        {
-                            // Draw ellipse for the face.
-                            var faceCenter = new Point(face.X + face.Width / 2, face.Y + face.Height / 2);
-                            ImgProc.Ellipse(srcFrame, faceCenter, new cvRT.Size(face.Width / 2, face.Height / 2), 0, 0, 360, new Scalar(255, 0, 255, 0), 4, 8, 0);
+                            // Faces in the frame.
+                            var faces = new List<Rect>();
 
-                            // Detect the eyes for the face
-                            var faceRoi = dstFrame.RectSubMettric(face);
-                            var eyes = new List<Rect>();
-                            eyesCascade.detectMultiScale(faceRoi, eyes, 1.1, 2, (int) (0 | CASCADE.CASCADE_SCALE_IMAGE),new cvRT.Size(30, 30));
-                            
-                            // Draw the eyes
-                            foreach (var eye in eyes)
+                            try
                             {
-                                var eyeCenter = new Point(face.X + eye.X + eye.Width/2, face.Y + eye.Y + eye.Height/2);
-                                var radius = (int) Math.Round((eye.Width + eye.Height) * 0.25);
-                                ImgProc.Circle(srcFrame, eyeCenter, radius, new Scalar(255, 0, 0, 0), 4, 8, 0);
+                                faces = new List<Rect>();
+                                faceCascade.detectMultiScale(dstFrame, faces, 1.1, 2, (int)(0 | CV_HAAR.SCALE_IMAGE), new cvRT.Size(30, 30));
                             }
-                       }
+                            catch (Exception ex)
+                            {
+                                Debug.WriteLine("Exception {0}", ex.Message);
+                            }
 
-                        break;
-                    }
+                            // For each face, detect the eyes
+                            foreach (var face in faces)
+                            {
+                                // Draw ellipse for the face.
+                                var faceCenter = new Point(face.X + face.Width / 2, face.Y + face.Height / 2);
+                                ImgProc.Ellipse(srcFrame, faceCenter, new cvRT.Size(face.Width / 2, face.Height / 2), 0, 0, 360, new Scalar(255, 0, 255, 0), 4, 8, 0);
+
+                                // Detect the eyes for the face
+                                var faceRoi = dstFrame.RectSubMettric(face);
+                                var eyes = new List<Rect>();
+                                eyesCascade.detectMultiScale(faceRoi, eyes, 1.1, 2, (int)(0 | CASCADE.CASCADE_SCALE_IMAGE), new cvRT.Size(30, 30));
+
+                                // Draw the eyes
+                                foreach (var eye in eyes)
+                                {
+                                    var eyeCenter = new Point(face.X + eye.X + eye.Width / 2, face.Y + eye.Y + eye.Height / 2);
+                                    var radius = (int)Math.Round((eye.Width + eye.Height) * 0.25);
+                                    ImgProc.Circle(srcFrame, eyeCenter, radius, new Scalar(255, 0, 0, 0), 4, 8, 0);
+                                }
+                            }
+
+                            break;
+                        }
 
                     default:
                         break;
                 }
                 _videoIo.ShowFrame(srcFrame);
-                Task.Delay(TimeSpan.FromMilliseconds(500));
+                // Task.Delay(TimeSpan.FromMilliseconds(500));
             }
         }
     }
