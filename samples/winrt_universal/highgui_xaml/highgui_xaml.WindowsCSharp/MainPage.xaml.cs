@@ -189,7 +189,7 @@ namespace highgui_xaml.WindowsCSharp
                     default:
                         break;
                 }
-                _videoIo.ShowFrame(srcFrame);
+                // _videoIo.ShowFrame(srcFrame);
                 Task.Delay(TimeSpan.FromMilliseconds(500));
             }
         }
