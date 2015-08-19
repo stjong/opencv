@@ -87,23 +87,7 @@ void VideoIo::StopCapture()
 
 void VideoIo::GetFrame(Mat^ frame)
 {
-	// [stjong] tbd can't loop forever here.
-	while (1)
-	{
-		vidCap >> frame->RawMat();
-
-		// tbd these are from original sample.  need to look more into this.
-		if (!vidCap.grab())
-			continue;
-
-		// ditto as above.
-		if (frame->RawMat().total() == 0)
-			continue;
-
-		break;
-	}
-
-	OutputDebugString(L"Frame obtained");
+    vidCap >> frame->RawMat();
 }
 
 void VideoIo::ShowFrame(Mat^ frame)
