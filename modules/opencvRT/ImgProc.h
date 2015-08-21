@@ -28,21 +28,20 @@ namespace cvRT
     public ref class ImgProc sealed
     {
     public:
-        static void cvtColor(Mat^ src, Mat^ dst, ColorConversionCodes conversionCode);        
-        static void GaussianBlur(Mat^ src, Mat^ dst, Size^ ksize, double sigmaX);
-        static void GaussianBlur(Mat^ src, Mat^ dst, Size^ ksize, double sigmaX, double sigmaY);
+        void cvtColor(Mat^ src, Mat^ dst, ColorConversionCodes conversionCode);        
+        void GaussianBlur(Mat^ src, Mat^ dst, Size^ ksize, double sigmaX);
+        void GaussianBlur(Mat^ src, Mat^ dst, Size^ ksize, double sigmaX, double sigmaY);
         
-        static void Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2);
-        static void Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, int apertureSize);
-        static void Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, int apertureSize, bool L2gradient);
-        static void EqualizeHist(Mat^ src, Mat^ dst);
-        static void Ellipse(Mat^ src, Point^ center, Size^ axes, double angle, double start_angle, double end_angle, Scalar^ scalar, int thickness, int line_type, int shift);
-        static void Circle(Mat^ src, Point^ center, int radius, Scalar^ scalar, int thickness, int line_type, int shift);     
-
-
+        void Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2);
+        void Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, int apertureSize);
+        void Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, int apertureSize, bool L2gradient);
+        void EqualizeHist(Mat^ src, Mat^ dst);
+        void Ellipse(Mat^ src, Point^ center, Size^ axes, double angle, double start_angle, double end_angle, Scalar^ scalar, int thickness, int line_type, int shift);
+        void Circle(Mat^ src, Point^ center, int radius, Scalar^ scalar, int thickness, int line_type, int shift);     
+        
 		// Contour		
-        static void FindContours(Mat^ image, IVector<IVector<Point^>^>^ contours, IVector<Vec4i^>^ hierarchy, ContourRetrievalAlgorithm mode, ContourApproximationModes method, Point^ offset);
-        static void DrawContours(Mat^ image, IVector<IVector<Point^>^>^ contours, int contourIdx, Scalar^ color, int thickness, int lineType, IVector<Vec4i^>^ hierarchy, int maxLevel, Point^ offset);
+        void FindContours(Mat^ image, VectorOfVectorOfPoint^ contours, VectorOfVec4i^ hierarchy, ContourRetrievalAlgorithm mode, ContourApproximationModes method, Point^ offset);
+        void DrawContours(Mat^ image, VectorOfVectorOfPoint^ contours, int contourIdx, Scalar^ color, int thickness, int lineType, VectorOfVec4i^ hierarchy, int maxLevel, Point^ offset);
                
 
         /*

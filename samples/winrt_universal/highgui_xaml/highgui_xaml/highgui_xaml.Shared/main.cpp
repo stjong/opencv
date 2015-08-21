@@ -184,7 +184,7 @@ void cvMain()
 
             frame = Scalar(0, 0, 0);
 
-            for (size_t i = 0; i < contours.size(); i++)
+            for (size_t i = 0; i < hierarchy.size(); i++)
             {
                 Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
                 drawContours(frame, contours, (int)i, color, 2, 8, hierarchy, 0, Point());

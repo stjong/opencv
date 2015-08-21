@@ -91,10 +91,13 @@ namespace highgui_xaml.WindowsCSharp
 
             _videoIo.StartCapture();
 
+            var srcFrame = new Mat();
+            var dstFrame = new Mat();
+
+            var imgProc = new ImgProc();
+
             while (true)
             {
-                var srcFrame = new Mat();
-                var dstFrame = new Mat();
                 _videoIo.GetFrame(srcFrame);
 
                 switch (_processingMethodIndex)
@@ -105,39 +108,33 @@ namespace highgui_xaml.WindowsCSharp
                     
                     // gray
                     case 1:
-                        ImgProc.cvtColor(srcFrame, dstFrame, ColorConversionCodes.COLOR_RGBA2GRAY);
-                        ImgProc.cvtColor(dstFrame, srcFrame, ColorConversionCodes.COLOR_GRAY2RGB);
+                        imgProc.cvtColor(srcFrame, dstFrame, ColorConversionCodes.COLOR_RGBA2GRAY);
+                        imgProc.cvtColor(dstFrame, srcFrame, ColorConversionCodes.COLOR_GRAY2RGB);
                         break;
                     
                     // canny
                     case 3:
-                        ImgProc.cvtColor(srcFrame, dstFrame, cvRT.ColorConversionCodes.COLOR_RGBA2GRAY);
-                        ImgProc.GaussianBlur(dstFrame, dstFrame, new cvRT.Size(7, 7), 1.5, 1.5);
-                        ImgProc.Canny(dstFrame, dstFrame, 0, 30, 3);
-                        ImgProc.cvtColor(dstFrame, srcFrame, ColorConversionCodes.COLOR_GRAY2RGB);
+                        imgProc.cvtColor(srcFrame, dstFrame, cvRT.ColorConversionCodes.COLOR_RGBA2GRAY);
+                        imgProc.GaussianBlur(dstFrame, dstFrame, new cvRT.Size(7, 7), 1.5, 1.5);
+                        imgProc.Canny(dstFrame, dstFrame, 0, 30, 3);
+                        imgProc.cvtColor(dstFrame, srcFrame, ColorConversionCodes.COLOR_GRAY2RGB);
                         break;
 
                     // contour
                     case 4:
                     {
-                        var contours = new List<IList<Point>>();
-                        var hierarchy = new List<Vec4i>();
-                        
-                        const int thresh = 100;
-                        // RNG rng = new RNG(12345);
-                        
-                        ImgProc.Canny(srcFrame, dstFrame, thresh, thresh * 2, 3);
-                        ImgProc.FindContours(dstFrame, contours, hierarchy, ContourRetrievalAlgorithm.RETR_TREE, ContourApproximationModes.CHAIN_APPROX_SIMPLE, new Point(0, 0));
+                        var contours = new VectorOfVectorOfPoint();
+                        var hierarchy = new VectorOfVec4i();
+                        var color = new Scalar(255, 255, 255, 255);
 
-                        // dstFrame = new Scalar(0, 0, 0, 0);
+                        imgProc.Canny(srcFrame, dstFrame, 100, 100 * 2, 3);
+                        imgProc.FindContours(dstFrame, contours, hierarchy, ContourRetrievalAlgorithm.RETR_TREE, ContourApproximationModes.CHAIN_APPROX_SIMPLE, new Point(0, 0));
+
+                        srcFrame.Set(new Scalar(0, 0, 0, 0));
 
                         for (var i = 0 ; i < contours.Count();  i++)
                         {
-                            var randGen = new Random();
-
-                            var color = new Scalar(randGen.Next(0, 255), randGen.Next(0, 255), randGen.Next(0, 255), randGen.Next(0, 255));
-
-                            ImgProc.DrawContours(srcFrame, contours, i, color, 2, 8, hierarchy, 0, new Point(0, 0));
+                            imgProc.DrawContours(srcFrame, contours, i, color, 2, 8, hierarchy, 0, new Point(0, 0));
                         }
                             
                         break;
@@ -146,8 +143,8 @@ namespace highgui_xaml.WindowsCSharp
                     // face detect
                     case 5:
                     {
-                        ImgProc.cvtColor(srcFrame, dstFrame, ColorConversionCodes.COLOR_RGBA2GRAY);
-                        ImgProc.EqualizeHist(dstFrame, dstFrame);
+                        imgProc.cvtColor(srcFrame, dstFrame, ColorConversionCodes.COLOR_RGBA2GRAY);
+                        imgProc.EqualizeHist(dstFrame, dstFrame);
 
                         // Faces in the frame.
                         var faces = new List<Rect>();
@@ -167,7 +164,7 @@ namespace highgui_xaml.WindowsCSharp
                         {
                             // Draw ellipse for the face.
                             var faceCenter = new Point(face.X + face.Width / 2, face.Y + face.Height / 2);
-                            ImgProc.Ellipse(srcFrame, faceCenter, new cvRT.Size(face.Width / 2, face.Height / 2), 0, 0, 360, new Scalar(255, 0, 255, 0), 4, 8, 0);
+                            imgProc.Ellipse(srcFrame, faceCenter, new cvRT.Size(face.Width / 2, face.Height / 2), 0, 0, 360, new Scalar(255, 0, 255, 0), 4, 8, 0);
 
                             // Detect the eyes for the face
                             var faceRoi = dstFrame.RectSubMettric(face);
@@ -179,18 +176,18 @@ namespace highgui_xaml.WindowsCSharp
                             {
                                 var eyeCenter = new Point(face.X + eye.X + eye.Width/2, face.Y + eye.Y + eye.Height/2);
                                 var radius = (int) Math.Round((eye.Width + eye.Height) * 0.25);
-                                ImgProc.Circle(srcFrame, eyeCenter, radius, new Scalar(255, 0, 0, 0), 4, 8, 0);
+                                imgProc.Circle(srcFrame, eyeCenter, radius, new Scalar(255, 0, 0, 0), 4, 8, 0);
                             }
                        }
 
-                        break;
+                       break;
                     }
 
                     default:
                         break;
                 }
+
                 _videoIo.ShowFrame(srcFrame);
-                Task.Delay(TimeSpan.FromMilliseconds(500));
             }
         }
     }

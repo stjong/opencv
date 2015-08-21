@@ -9,6 +9,7 @@ namespace cvRT
     public:
         Mat();
         unsigned int total();
+        void Set(cvRT::Scalar^ scalar);
 
         // tbd need better way
         Mat^ RectSubMettric(cvRT::Rect^ rect);

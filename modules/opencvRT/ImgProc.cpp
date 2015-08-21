@@ -7,13 +7,17 @@
 
 using namespace cvRT;
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// function for cv::cvtColor
+//
 void ImgProc::cvtColor(Mat^ srcImg, Mat^ destImg, ColorConversionCodes conversionCode)
 {
     cv::cvtColor(srcImg->RawMat(), destImg->RawMat(), (int)conversionCode);
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// function for cv::cvtColor
+//
 void ImgProc::GaussianBlur(Mat^ src, Mat^ dst, cvRT::Size^ ksize, double sigmaX)
 {
     GaussianBlur(src, dst, ksize, sigmaX, 0);
@@ -52,66 +56,25 @@ void cvRT::ImgProc::EqualizeHist(Mat^ src, Mat^ dst)
 ///////////////////////////////////////////////////////////////////////////////
 void cvRT::ImgProc::Ellipse(Mat^ src, Point^ center, cvRT::Size^ axes, double angle, double start_angle, double end_angle, Scalar^ scalar, int thickness, int line_type, int shift)
 {
-    cv::ellipse(src->RawMat(), center->GetCvPoint(), axes->GetCvSize(), angle, start_angle, end_angle, scalar->GetCvScalar(), thickness, line_type, shift);
+    cv::ellipse(src->RawMat(), center->Get(), axes->GetCvSize(), angle, start_angle, end_angle, scalar->Get(), thickness, line_type, shift);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 void cvRT::ImgProc::Circle(Mat^ src, Point^ center, int radius, Scalar^ scalar, int thickness, int line_type, int shift)
 {
-    cv::circle(src->RawMat(), center->GetCvPoint(), radius, scalar->GetCvScalar(), thickness, line_type, shift);
+    cv::circle(src->RawMat(), center->Get(), radius, scalar->Get(), thickness, line_type, shift);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-void cvRT::ImgProc::FindContours(_In_ Mat^ image, _Out_ IVector<IVector<Point^>^>^ contours, _Out_ IVector<Vec4i^>^ hierarchy, _In_ ContourRetrievalAlgorithm mode, _In_ ContourApproximationModes method, _In_ Point^ offset)
-{
-    std::vector<std::vector<cv::Point>> cvContours;
-    std::vector<cv::Vec4i> cvHierarchy;
-
-    cv::findContours(image->RawMat(), cvContours, cvHierarchy, (int)mode, (int)method, offset->GetCvPoint());
-
-    for (std::vector<std::vector<cv::Point>>::iterator it = cvContours.begin(); it != cvContours.end(); it++)
-    {
-        std::vector<cvRT::Point^> newVector = std::vector<cvRT::Point^>();
-
-        for (std::vector<cv::Point>::iterator it2 = it->begin(); it2 != it->end(); it2++)
-        {
-            Point^ newPoint = ref new Point(it2->x, it2->y);
-            newVector.push_back(newPoint);            
-        }
-
-        contours->Append(ref new Platform::Collections::Vector<Point^>(std::move(newVector)));
-    }
-
-    for (auto aVec4i : cvHierarchy)
-    {
-        cvRT::Vec4i^ newVec = ref new Vec4i(aVec4i);
-    }
+void cvRT::ImgProc::FindContours(Mat^ image, VectorOfVectorOfPoint^ contours, VectorOfVec4i^ hierarchy, ContourRetrievalAlgorithm mode, ContourApproximationModes method, Point^ offset)
+{   
+    cv::findContours(image->RawMat(), contours->Get(), hierarchy->Get(), (int)mode, (int)method, offset->Get());
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-void cvRT::ImgProc::DrawContours(Mat ^ image, IVector<IVector<Point^>^>^ contours, int contourIdx, Scalar ^ color, int thickness, int lineType, IVector<Vec4i^>^ hierarchy, int maxLevel, Point ^ offset)
+void cvRT::ImgProc::DrawContours(Mat^ image, VectorOfVectorOfPoint^ contours, int contourIdx, Scalar^ color, int thickness, int lineType, VectorOfVec4i^ hierarchy, int maxLevel, Point^ offset)
 {
-    std::vector<std::vector<cv::Point>> cvContours;
-    std::vector<cv::Vec4i> cvHierarchy;
-
-    for (IVector<Point^>^ aNewVector : contours)
-    {
-        std::vector<cv::Point> newVector = std::vector<cv::Point>();
-
-        for (auto aPoint : aNewVector)
-        {  
-            newVector.push_back(aPoint->GetCvPoint());
-        }
-
-        cvContours.push_back(newVector);
-    }
-
-    for (auto aVec4i : hierarchy)
-    {
-        cvHierarchy.push_back(aVec4i->GetVec4i());
-    }
-
-    cv::drawContours(image->RawMat(), cvContours, contourIdx, color->GetCvScalar(), thickness, lineType, cvHierarchy, maxLevel, offset->GetCvPoint());
+    cv::drawContours(image->RawMat(), contours->Get(), contourIdx, color->Get(), thickness, lineType, hierarchy->Get(), maxLevel, offset->Get());
 }
 
 /*
