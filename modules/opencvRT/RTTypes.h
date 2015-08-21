@@ -91,7 +91,7 @@ namespace cvRT
     };  
 
     //
-    //  for cv::InputArrayOfArrays or cv::OutputArrayOfArrays
+    //  for cv::InputArray or cv::OutputArray
     //
     public ref class VectorOfPoint sealed
     {
@@ -116,7 +116,7 @@ namespace cvRT
     };
     
     //
-    // Commment TBD
+    // for cv::InputArrayOfArrays or cv::OutputArrayOfArrays
     // 
     public ref class VectorOfVectorOfPoint sealed
     {
@@ -124,7 +124,7 @@ namespace cvRT
         VectorOfVectorOfPoint() { ; }
         int Count() { return cvVoVoPoint.size(); }
 
-        // tbd
+        // tbd this is equivalent to [] overload.
         void Index(int index) 
         { 
             

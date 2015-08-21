@@ -36,9 +36,8 @@ namespace cvRT
         FIND_BIGGEST_OBJECT = CV_HAAR_FIND_BIGGEST_OBJECT,
         DO_ROUGH_SEARCH = CV_HAAR_DO_ROUGH_SEARCH
     };    
-
-    // tbd better naming
-    public enum class CASCADE
+    
+    public enum class CASCADE_FLAG
     {      
         CASCADE_DO_CANNY_PRUNING = 1,
         CASCADE_SCALE_IMAGE = 2,

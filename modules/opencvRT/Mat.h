@@ -34,21 +34,13 @@ namespace cvRT
     public:
         Mat();
         unsigned int total();
-        void Set(cvRT::Scalar^ scalar);
-
-        // tbd need better way
-        Mat^ RectSubMettric(cvRT::Rect^ rect);
-
+        void Set(cvRT::Scalar^ scalar);        
+        Mat^ RectOfInterest(cvRT::Rect^ rect);
     internal:
-        Mat(cv::Mat& rawMat);
-        Mat(cv::Mat* rawMat);
-        cv::Mat& RawMat()
-        {
-            return *_rawMatHolder;
-        }
-
+        Mat(cv::Mat& rawMat);        
+        cv::Mat& Get() { return cvMat; }
     private:
-        cv::Mat* _rawMatHolder;
+        cv::Mat cvMat;
     };
 }
 

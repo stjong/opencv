@@ -31,25 +31,25 @@ using namespace cvRT;
 
 Mat::Mat()
 {
-	_rawMatHolder = new cv::Mat();
+    ;
 }
 
 Mat::Mat(cv::Mat& rawMat)
 {
-	_rawMatHolder = new cv::Mat(rawMat);    
+    cvMat = rawMat;
 }
 
-Mat^ Mat::RectSubMettric(cvRT::Rect^ rect)
+Mat^ Mat::RectOfInterest(cvRT::Rect^ rect)
 {
-    return ref new Mat((*_rawMatHolder)(rect->Get()));
+    return ref new Mat(cvMat(rect->Get()));
 }
 
 unsigned int Mat::total()
 {
-    return _rawMatHolder->total();
+    return cvMat.total();
 }
 
 void Mat::Set(cvRT::Scalar^ scalar)
 {
-    RawMat() = scalar->Get();
+    cvMat = scalar->Get();
 }

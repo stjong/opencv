@@ -29,6 +29,7 @@
 
 namespace cvRT
 {
+    // proxy for native VideoIo module.
 	public ref class VideoIo sealed
 	{
 	public:
@@ -39,13 +40,10 @@ namespace cvRT
 		void StopCapture();
 		void GetFrame(Mat^ frame);
 		void ShowFrame(Mat^ frame);
-
 	protected:
-		// Windows::Foundation::IAsyncActionWithProgress<int>^ TaskWithProgressAsync();
-
 	private:
-		bool grabberStarted;    // tbd rename this to better variable
-		cv::VideoCapture vidCap;    // tbd comment
-		Windows::Foundation::IAsyncActionWithProgress<int>^ asyncTask;   // tbd comment
+		bool frameGrabberStarted;    
+		cv::VideoCapture vidCap;    
+		Windows::Foundation::IAsyncActionWithProgress<int>^ asyncTask;
 	};
 }

@@ -50,7 +50,7 @@ void cvRT::CascadeClassifier::detectMultiScale(Mat^ image, IVector<Rect^>^ objec
     std::vector<cv::Rect> returnedObjects;
 
     casCla.detectMultiScale(
-        image->RawMat(),
+        image->Get(),
         returnedObjects,
         scaleFactor,
         minNeighbors,

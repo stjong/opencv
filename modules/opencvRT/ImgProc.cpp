@@ -37,7 +37,7 @@ using namespace cvRT;
 //
 void ImgProc::cvtColor(Mat^ srcImg, Mat^ destImg, ColorConversionCodes conversionCode)
 {
-    cv::cvtColor(srcImg->RawMat(), destImg->RawMat(), (int)conversionCode);
+    cv::cvtColor(srcImg->Get(), destImg->Get(), (int)conversionCode);
 }
 
 //
@@ -53,7 +53,7 @@ void ImgProc::GaussianBlur(Mat^ src, Mat^ dst, cvRT::Size^ ksize, double sigmaX)
 //
 void ImgProc::GaussianBlur(Mat ^ src, Mat ^ dst, cvRT::Size^ ksize, double sigmaX, double sigmaY)
 {    
-    cv::GaussianBlur(src->RawMat(), dst->RawMat(), ksize->GetCvSize(), sigmaX, sigmaY);
+    cv::GaussianBlur(src->Get(), dst->Get(), ksize->GetCvSize(), sigmaX, sigmaY);
 }
 
 //
@@ -77,7 +77,7 @@ void ImgProc::Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, in
 //
 void ImgProc::Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, int apertureSize, bool L2gradient)
 {
-    cv::Canny(src->RawMat(), dst->RawMat(), threshold1, threshold2, apertureSize, L2gradient);
+    cv::Canny(src->Get(), dst->Get(), threshold1, threshold2, apertureSize, L2gradient);
 }
 
 //
@@ -85,7 +85,7 @@ void ImgProc::Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, in
 //
 void cvRT::ImgProc::EqualizeHist(Mat^ src, Mat^ dst)
 {
-    cv::equalizeHist(src->RawMat(), dst->RawMat());
+    cv::equalizeHist(src->Get(), dst->Get());
 }
 
 //
@@ -93,7 +93,7 @@ void cvRT::ImgProc::EqualizeHist(Mat^ src, Mat^ dst)
 //
 void cvRT::ImgProc::Ellipse(Mat^ src, Point^ center, cvRT::Size^ axes, double angle, double start_angle, double end_angle, Scalar^ scalar, int thickness, int line_type, int shift)
 {
-    cv::ellipse(src->RawMat(), center->Get(), axes->GetCvSize(), angle, start_angle, end_angle, scalar->Get(), thickness, line_type, shift);
+    cv::ellipse(src->Get(), center->Get(), axes->GetCvSize(), angle, start_angle, end_angle, scalar->Get(), thickness, line_type, shift);
 }
 
 //
@@ -101,7 +101,7 @@ void cvRT::ImgProc::Ellipse(Mat^ src, Point^ center, cvRT::Size^ axes, double an
 //
 void cvRT::ImgProc::Circle(Mat^ src, Point^ center, int radius, Scalar^ scalar, int thickness, int line_type, int shift)
 {
-    cv::circle(src->RawMat(), center->Get(), radius, scalar->Get(), thickness, line_type, shift);
+    cv::circle(src->Get(), center->Get(), radius, scalar->Get(), thickness, line_type, shift);
 }
 
 //
@@ -109,7 +109,7 @@ void cvRT::ImgProc::Circle(Mat^ src, Point^ center, int radius, Scalar^ scalar, 
 //
 void cvRT::ImgProc::FindContours(Mat^ image, VectorOfVectorOfPoint^ contours, VectorOfVec4i^ hierarchy, ContourRetrievalAlgorithm mode, ContourApproximationModes method, Point^ offset)
 {   
-    cv::findContours(image->RawMat(), contours->Get(), hierarchy->Get(), (int)mode, (int)method, offset->Get());
+    cv::findContours(image->Get(), contours->Get(), hierarchy->Get(), (int)mode, (int)method, offset->Get());
 }
 
 //
@@ -117,5 +117,5 @@ void cvRT::ImgProc::FindContours(Mat^ image, VectorOfVectorOfPoint^ contours, Ve
 //
 void cvRT::ImgProc::DrawContours(Mat^ image, VectorOfVectorOfPoint^ contours, int contourIdx, Scalar^ color, int thickness, int lineType, VectorOfVec4i^ hierarchy, int maxLevel, Point^ offset)
 {
-    cv::drawContours(image->RawMat(), contours->Get(), contourIdx, color->Get(), thickness, lineType, hierarchy->Get(), maxLevel, offset->Get());
+    cv::drawContours(image->Get(), contours->Get(), contourIdx, color->Get(), thickness, lineType, hierarchy->Get(), maxLevel, offset->Get());
 }
