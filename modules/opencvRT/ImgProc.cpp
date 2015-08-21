@@ -1,4 +1,29 @@
-// tbd copyrights stuffs
+// Copyright (c) 2015, Microsoft Open Technologies, Inc.
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification,
+// are permitted provided that the following conditions are met:
+//
+// - Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+// - Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+// - Neither the name of Microsoft Open Technologies, Inc. nor the names
+//   of its contributors may be used to endorse or promote products derived
+//   from this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+// PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+// CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+// EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+// PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+// OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+// WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+// OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+// ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "pch.h"
 #include "collection.h"
@@ -8,7 +33,7 @@
 using namespace cvRT;
 
 //
-// function for cv::cvtColor
+// proxy for cv::cvtColor()
 //
 void ImgProc::cvtColor(Mat^ srcImg, Mat^ destImg, ColorConversionCodes conversionCode)
 {
@@ -16,95 +41,81 @@ void ImgProc::cvtColor(Mat^ srcImg, Mat^ destImg, ColorConversionCodes conversio
 }
 
 //
-// function for cv::cvtColor
+// proxy for cv::cvtColor()
 //
 void ImgProc::GaussianBlur(Mat^ src, Mat^ dst, cvRT::Size^ ksize, double sigmaX)
 {
     GaussianBlur(src, dst, ksize, sigmaX, 0);
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// proxy for cv::GaussianBlur()
+//
 void ImgProc::GaussianBlur(Mat ^ src, Mat ^ dst, cvRT::Size^ ksize, double sigmaX, double sigmaY)
 {    
     cv::GaussianBlur(src->RawMat(), dst->RawMat(), ksize->GetCvSize(), sigmaX, sigmaY);
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// proxy for cv::Canny()
+//
 void ImgProc::Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2)
 {
     Canny(src, dst, threshold1, threshold2, 3, false);
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// proxy for cv::Canny()
+//
 void ImgProc::Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, int apertureSize)
 {
     Canny(src, dst, threshold1, threshold2, apertureSize, false);
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// proxy for cv::Canny()
+//
 void ImgProc::Canny(Mat^ src, Mat^ dst, double threshold1, double threshold2, int apertureSize, bool L2gradient)
 {
     cv::Canny(src->RawMat(), dst->RawMat(), threshold1, threshold2, apertureSize, L2gradient);
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// proxy for cv::EqualizeHist()
+//
 void cvRT::ImgProc::EqualizeHist(Mat^ src, Mat^ dst)
 {
     cv::equalizeHist(src->RawMat(), dst->RawMat());
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// proxy for cv::ellipse()
+//
 void cvRT::ImgProc::Ellipse(Mat^ src, Point^ center, cvRT::Size^ axes, double angle, double start_angle, double end_angle, Scalar^ scalar, int thickness, int line_type, int shift)
 {
     cv::ellipse(src->RawMat(), center->Get(), axes->GetCvSize(), angle, start_angle, end_angle, scalar->Get(), thickness, line_type, shift);
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// proxy for cv::circle()
+//
 void cvRT::ImgProc::Circle(Mat^ src, Point^ center, int radius, Scalar^ scalar, int thickness, int line_type, int shift)
 {
     cv::circle(src->RawMat(), center->Get(), radius, scalar->Get(), thickness, line_type, shift);
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// proxy for cv::findContours()
+//
 void cvRT::ImgProc::FindContours(Mat^ image, VectorOfVectorOfPoint^ contours, VectorOfVec4i^ hierarchy, ContourRetrievalAlgorithm mode, ContourApproximationModes method, Point^ offset)
 {   
     cv::findContours(image->RawMat(), contours->Get(), hierarchy->Get(), (int)mode, (int)method, offset->Get());
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//
+// proxy for cv::drawContours()
+//
 void cvRT::ImgProc::DrawContours(Mat^ image, VectorOfVectorOfPoint^ contours, int contourIdx, Scalar^ color, int thickness, int lineType, VectorOfVec4i^ hierarchy, int maxLevel, Point^ offset)
 {
     cv::drawContours(image->RawMat(), contours->Get(), contourIdx, color->Get(), thickness, lineType, hierarchy->Get(), maxLevel, offset->Get());
 }
-
-/*
-void cvRT::ImgProc::findContours(Mat ^ image, IVector<IVector<Point>^>^ contours, int mode, int method, Point offset)
-{    
-    std::vector<std::vector<cv::Point>> cvContours;
-    for(IVector<Point>^ row : contours)
-    {
-        std::vector<cv::Point> newRow;
-        for (Point col : row)
-        {
-            newRow.push_back(cv::Point(col.X, col.Y));
-        }
-        cvContours.push_back(newRow);
-    }
-
-    cv::findContours(image->RawMat(), cvContours, mode, method, cv::Point(offset.X, offset.Y));
-
-    for(auto row : CvContour)    
-}
-
-void cvRT::ImgProc::findContours(Mat ^ image, IVector<IVector<Point>^>^ contours, Mat ^ hierarchy, int mode, int method, Point offset)
-{    
-    cv::findContours(image->RawMat(), contours, hierarchy->RawMat(), mode, method, cv::Point(offset.X, offset.Y));
-}
-
-void cvRT::ImgProc::drawContours(Mat ^ image, IVector<IVector<Point>^>^ contours, int contourIdx, Windows::UI::Color color, int thickness, int lineType, Mat ^ hierarchy, int maxLevel, Point offset)
-{    
-    cv::drawContours(image->RawMat(), contours, contourIdx, cv::Scalar(color.R, color.G, color.B), thickness, lineType, hierarchy->RawMat(), maxLevel, cv::Point(offset.X, offset.Y));
-
-}
-*/
-

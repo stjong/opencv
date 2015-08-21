@@ -1,4 +1,29 @@
-// #TBD copyrights stuffs
+// Copyright (c) 2015, Microsoft Open Technologies, Inc.
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without modification,
+// are permitted provided that the following conditions are met:
+//
+// - Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+// - Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+// - Neither the name of Microsoft Open Technologies, Inc. nor the names
+//   of its contributors may be used to endorse or promote products derived
+//   from this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+// PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+// CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+// EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+// PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+// OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+// WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+// OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+// ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #pragma once
 
@@ -66,7 +91,7 @@ namespace cvRT
     };  
 
     //
-    // Comment TBD
+    //  for cv::InputArrayOfArrays or cv::OutputArrayOfArrays
     //
     public ref class VectorOfPoint sealed
     {
@@ -78,16 +103,16 @@ namespace cvRT
     };
 
     //
-    // Comment TBD
+    // for cv::InputArray or cv::OutputArray
     //
     public ref class VectorOfVec4i sealed
     {
     public:
-        VectorOfVec4i() { cvVecV4i = new std::vector<cv::Vec4i>(); }
+        VectorOfVec4i() { ; }
     internal:
-        std::vector<cv::Vec4i>& Get() { return *cvVecV4i; }
+        std::vector<cv::Vec4i>& Get() { return cvVecV4i; }
     private:
-        std::vector<cv::Vec4i>* cvVecV4i;
+        std::vector<cv::Vec4i> cvVecV4i;
     };
     
     //
@@ -109,99 +134,4 @@ namespace cvRT
     private:
         std::vector<std::vector<cv::Point>> cvVoVoPoint;
     };
-
-    
-    /*
-    //
-    // cv::Vec4i
-    //
-    public ref class Vec4i sealed
-    {
-    public:
-    Vec4i(int i1, int i2, int i3, int i4)
-    {
-    cvVec4i = new cv::Vec4i(i1, i2, i3, i4);
-    }
-
-    internal:
-    Vec4i(cv::Vec4i& x)
-    {
-    cvVec4i = new cv::Vec4i(x);
-    }
-
-    cv::Vec4i GetVec4i() { return *cvVec4i; }
-
-    private:
-    cv::Vec4i* cvVec4i;
-    };
-        
-    ///////////////////////////////////////////////////////////////////////////
-    // cv::InputArray
-    public ref class InputArray sealed
-    {
-    public:
-        
-    internal:
-        cv::InputArray GetCvInputArray() { return cvInputArray; }
-
-    private:
-        cv::_InputArray cvInputArray;
-    };
-
-    ///////////////////////////////////////////////////////////////////////////
-    // cv::OutputArray
-    public ref class OutputArray sealed
-    {
-    public:
-
-    internal:
-        cv::OutputArray GetCvOutputArray() { return cvOutputArray; }
-
-    private:
-        cv::_OutputArray cvOutputArray;
-    };    
-
-    ///////////////////////////////////////////////////////////////////////////
-    // cv::InputOutputArray
-    public ref class InputOutputArray sealed
-    {
-    public:
-
-    internal:
-        cv::InputOutputArray GetCvInputOutputArray() { return cvInputOutputArray; }
-    private:
-        cv::_InputOutputArray cvInputOutputArray;
-    };
-
-
-    ///////////////////////////////////////////////////////////////////////////
-    // cv::InputArrayOfArrays
-    public ref class InputArrayOfArrays sealed
-    {
-    public:
-
-    internal:
-        cv::InputArrayOfArrays GetCvInputArrayOfArrays() { return cvInputArrayOfArrays; }
-
-    private:
-        cv::_InputArray cvInputArrayOfArrays;
-    };
-
-
-    ///////////////////////////////////////////////////////////////////////////
-    // cv::OutputArrayOfArrays
-    public ref class OutputArrayOfArrays sealed
-    {
-    public:
-
-    internal:
-        cv::OutputArrayOfArrays GetCvOutputArrayOfArrays() { return cvOutputArrayOfArrays; }
-
-    private:
-        cv::_OutputArray cvOutputArrayOfArrays;
-    };
-
-    */
-
-
 }
